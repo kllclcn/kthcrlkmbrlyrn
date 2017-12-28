@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h1>Transaction Page: this is a test</h1>
-	
+	<h2>My name is carl</h2>
 </div>
 
 </body>
