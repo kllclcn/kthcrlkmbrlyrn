@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Success!</h1>
+	<h1>Transaction Page:</h1>
 	
 </div>
 
