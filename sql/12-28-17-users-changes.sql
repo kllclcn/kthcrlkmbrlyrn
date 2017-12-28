@@ -1,0 +1,1 @@
+ALTER TABLE `user_desc` ADD `Age` INT(3) NOT NULL AFTER `name`, ADD `Gender` VARCHAR(1) NOT NULL AFTER `Age`;
