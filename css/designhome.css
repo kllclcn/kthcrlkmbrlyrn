@@ -1,0 +1,83 @@
+body{
+	background-color: #dc4343;
+}
+ul {
+	margin:0;
+	padding:0;
+}
+
+.mainbutton{
+  background-color: #BFC9CA;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  padding:10px;
+  font: 20px "Trebuchet MS", sans-serif;
+
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 5px;
+	margin-left: 140px;
+}
+
+.mainbutton li a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li a:hover{
+	color: #fff;
+}
+
+#p3,#p2,#p4;{
+	display: none;
+}
+
+.leftbtn{
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	bottom: 470px;
+	left: 140px;
+	outline: none;
+	border:none;
+}
+.rightbtn{
+	float:right;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	bottom: 465px;
+	right: 200px;
+	outline: none;
+	border:none;
+}
+#nb1{
+	margin-right: 12.5%;
+	margin-top: 22%;
+	float: right;
+	height: 80px;
+}
+
+#bb1{
+	margin-left: 1%;
+	margin-top: 22%;
+	float: left;
+	height: 80px;
+}
+.mySlides{
+	 -webkit-animation: fadein .7s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0.7; }
+    to   { opacity: 1; }
