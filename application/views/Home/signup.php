@@ -14,7 +14,7 @@ background-color: #dc4343;
 	<title> PUP Buy and Sell </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designsignup.css">
-	<img src="<?php echo base_url(); ?>images/main.png" alt="Background" style='width: 100%;'/>
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 </head>
 
