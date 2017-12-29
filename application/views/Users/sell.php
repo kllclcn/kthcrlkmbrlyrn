@@ -13,15 +13,16 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>css/designsell.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designsellz.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
-	
 	
 </head>
 
 <body>	
+    <div class="layy">
+        <h> SELL ITEM </h>
+    </div>
     <div class="acc">
-		<h1>Sell Item</h1>
 		<label>What are you selling?</label><br/><br/>
 		<input type="text" name="stitle" required><br/><br/>
 		<label>Category</label><br/><br/>
