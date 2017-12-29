@@ -51,7 +51,7 @@ class Home extends CI_Controller {
                 if(count($result)>0)
                 {
 				echo "success";
-				$this->redirect('/buynsell/Users/buy');
+				$this->redirect('/buynsell/Users/usermain');
                 }
 		else
 		{
