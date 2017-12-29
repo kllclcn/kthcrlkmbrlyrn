@@ -68,9 +68,22 @@ class Home extends CI_Controller {
 	
 	public function Signup()
 	{
-		$this->load->view("Home/signup");
+            if(isset($_POST['prev1']))
+            { 
+                $this->load->view('Home/login');
+            }
+            else if(isset($_POST['next2']))
+            {   
+                extract($_POST);
+                if($password == $Cpassword)
+                {
+                $this->load->view('Home/login');
+                }   
+            }
+            else
+            {
+                $this->load->view("Home/signup");
+            }		
 	}
-	
-	
-	
+
 }
