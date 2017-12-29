@@ -36,7 +36,7 @@ background-color: #dc4343;
 <div id="container">
 	
 	
-	<form>
+	<form method="post">
 
 		<div class="container">
 		<label id="lbl1"><b>Enter Username:</b></label>

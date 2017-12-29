@@ -53,24 +53,26 @@ input[type=text]{
     padding: 12px 20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin-top: 200px
+    position: relative;
+    bottom:520px;
+    left: 465px;
 }
 
 input[type=password] {
     width: 200px;
     padding: 12px 20px;
-    margin: 20px 0;
+    position: relative;
+    bottom:470px;
+    left: 120px;
     border: 1px solid #ccc;
-
     box-sizing: border-box;
 }
-button {
+.loginbtn{
     background-color: #dc4343;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
     width: 150px;
     margin-left: 47%;
 }
@@ -85,7 +87,7 @@ button:hover {
 }
 
 .container {
-    padding: 16px;
+    padding: 16px;  
 }
 
 span.psw {
@@ -96,13 +98,15 @@ span.psw {
 
 #lbl1{
 	font: 18px "Trebuchet MS", sans-serif;
-	margin-left: 40%;
-	margin-right: 3%;
+  position: relative;
+  bottom: 520px;
 	color: #2C3E50;
+  left: 450px;
 }
 #lbl2{
 	font: 18px "Trebuchet MS", sans-serif;
-	margin-left: 40%;
-	margin-right: 3.5%;
+  position: relative;
+  bottom: 470px;
+  left: 100px;
 	color: #2C3E50;
 }

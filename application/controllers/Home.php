@@ -42,24 +42,22 @@ class Home extends CI_Controller {
 	
 	public function Login()
 	{
-		if(isset($_POST['login']))
-        {
+            if(isset($_POST['login']))
+            {
 			extract($_POST);
             
-            $result = $this->model->AuthenticateUser($username,$password);
+                $result = $this->model->AuthenticateUser($username,$password);
 
-            if(count($result)>0)
-            {
+                if(count($result)>0)
+                {
 				echo "success";
 				$this->redirect('/buynsell/Users/buy');
+                }
+		else
+		{
+			echo("Login failed");
+		}
             }
-			else
-			{
-				echo("Login failed");
-			}
-
-            
-        }
         else
         {
             $this->load->view('Home/login');
