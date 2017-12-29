@@ -34,13 +34,6 @@ background-color: #dc4343;
 			<option value="oc6">Beauty / Health / Grocery</option>
 			<option value="oc7">Clothes / Accessories</option>
 			<option value="oc8">Books / Sports / Hobbies</option>
-			<!--<option value="o9">Baby Stuff / Toys</option>
-			<option value="o10">Real Estate</option>
-			<option value="o11">Cars / Automotives</option>
-			<option value="o12">Motorcycles / Scooters</option>
-			<option value="o13">Services</option>
-			<option value="o14">Jobs</option>
-			<option value="o15">Business / Earning Opportunities</option>-->
 		</select><br/><br/>
 		<label>Price</label><br/><br/>
 		<input type="text" name="nprice" required><br/><br/>
