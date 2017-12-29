@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/logindesign.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/designsell.css">
 	<img src="<?php echo base_url(); ?>images/main.png" alt="Background" style='width: 100%;'/>
 	
 	
@@ -22,8 +22,8 @@ background-color: #dc4343;
 <body>	
     <div class="acc">
 		<h1>Sell Item</h1>
-		<label>What are you selling?</label>
-                <input type="text" name="stitle" required><br/><br/>
+		<label>What are you selling?</label><br/><br/>
+		<input type="text" name="stitle" required><br/><br/>
 		<label>Category</label><br/><br/>
 		<select name="category">
 			<option value="oc1">Mobile Phones / Tablets</option>
@@ -42,11 +42,11 @@ background-color: #dc4343;
 			<option value="o14">Jobs</option>
 			<option value="o15">Business / Earning Opportunities</option>-->
 		</select><br/><br/>
-                <label>Price</label>
+		<label>Price</label><br/><br/>
 		<input type="text" name="nprice" required><br/><br/>
 		<label>Description</label><br/><br/>
 		<textarea rows="4" cols="50">
-		</textarea><br/>
+		</textarea><br/><br/>
 		<label>Meetup Place</label>
 		<input type="text" name="nplace" required><br/><br/>
 		<input type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Item is posted!')"><br/>
