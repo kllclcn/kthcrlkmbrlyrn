@@ -23,19 +23,20 @@ background-color: #dc4343;
 
 <div class="mainbutton">
 	<ul>
-  		<li><a href="home.html">HOME</a></li>
-		
-  		<li><a href="about.html" >ABOUT</a></li>
+  		<li><a href="home">HOME</a></li>
+  		<li><a href="about" >ABOUT</a></li>
   		<li><a href="signup" >SIGN UP</a></li>
+  		<li style="color: #000; background-color: #f8f9f9;">LOG IN</li>
   		
 	</ul>
 	</div>
 	
+<img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 100%;'/>
 
 <div id="container">
 	
 	
-	<form method = "post" >
+	<form>
 
 		<div class="container">
 		<label id="lbl1"><b>Enter Username:</b></label>
