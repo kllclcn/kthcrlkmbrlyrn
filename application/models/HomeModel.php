@@ -44,6 +44,12 @@ Class HomeModel extends CI_Model {
             exit;
         }
     }
+    
+    public function InsertUsersDesc()
+    {
+        
+    }
+    
 
 }
 ?>
