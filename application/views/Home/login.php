@@ -23,7 +23,7 @@ background-color: #dc4343;
 
 <div class="mainbutton">
 	<ul>
-  		<li><a href="home">HOME</a></li>
+  		<li><a href="homes">HOME</a></li>
   		<li><a href="about" >ABOUT</a></li>
   		<li><a href="signup" >SIGN UP</a></li>
   		<li style="color: #000; background-color: #f8f9f9;">LOG IN</li>
