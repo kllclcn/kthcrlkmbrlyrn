@@ -45,10 +45,50 @@ Class HomeModel extends CI_Model {
         }
     }
     
-    public function InsertUsersDesc()
+    
+    public function InsertUsers($username,$password) 
     {
-        
+        try
+        {
+            $password = sha1($password);
+            $sql = "INSERT INTO users
+                    SET username = ?,
+                    password = ?,
+                    active = ?
+                    ";
+            $stmt = $this->pdo->query($sql,array($username,$password,2));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
     }
+    
+    public function InsertUsersDesc($fullname,$gender,$address,$bdate,$mobnum,$email)
+    {
+        try
+        {
+            $sql = "INSERT INTO user_desc
+                SET user_id = ?,
+                name = ?,
+                Gender = ?,
+                address = ?,
+                Birthday = ?,
+                contact = ?,
+                email = ?
+                ";
+            $stmt = $this->pdo->query($sql,array(1,$fullname,$gender,$address,$bdate,$mobnum,$email));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+    
     
 
 }

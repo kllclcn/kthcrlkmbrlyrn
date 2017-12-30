@@ -68,15 +68,17 @@ class Home extends CI_Controller {
 	
 	public function Signup()
 	{
-            if(isset($_POST['prev1']))
-            { 
-                $this->load->view('Home/login');
-            }
-            else if(isset($_POST['next2']))
+            //if(isset($_POST['prev1']))
+            //{ 
+               // $this->load->view('Home/login');
+            //}
+            if(isset($_POST['next2']))
             {   
                 extract($_POST);
                 if($password == $Cpassword)
                 {
+                $this->model->InsertUsers($username,$password);
+                $this->model->InsertUsersDesc($fullname,$gender,$address,$bdate,$mobnum,$email);
                 $this->load->view('Home/login');
                 }   
             }
