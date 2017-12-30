@@ -56,12 +56,15 @@ background-color: #dc4343;
 		<label id="sulbl"><b> Confirm Password:</b></label>
 		<input type="password" placeholder="Confirm Password" name="Cpassword" required><br/><br/>
                                 
-                <label id="sulbl"><b>Full Name:</b></label>
+                                            <label id="sulbl"><b>Full Name:</b></label>
 		<input type="text" placeholder="Full Name" name="fullname" required><br/><br/>
                 
-                <label id="sulbl"><b>Gender:</b></label><br/>
+                                            <label id="sulbl"><b>Gender:</b></label><br/>
 		<input type="radio" name="gender" value="male" required> Male<br/>
 		<input type="radio" name="gender" value="female" required> Female<br/><br/>
+                
+                                            <label id="sulbl"><b>Address:</b></label>
+		<input type="text" name="address" required><br/><br/>
 
 		<label id="sulbl"><b>Birthday:</b></label>
 		<input type="date" name="bdate" required><br/><br/>
