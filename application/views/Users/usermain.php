@@ -21,7 +21,7 @@ background-color: #dc4343;
 
 <body>
     <div class="layy">
-        <h> Welcome <?php echo $_POST['username'] ?></h>
+        <h> Welcome!</h>
     </div>
     <div class="badi">
         <a href="sell">SELL</a>
