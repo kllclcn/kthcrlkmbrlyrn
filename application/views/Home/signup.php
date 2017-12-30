@@ -14,7 +14,7 @@ background-color: #dc4343;
 	<title> PUP Buy and Sell </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designsignup.css">
-	<img src="<?php echo base_url(); ?>images/main.png" alt="Background" style='width: 100%;'/>
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 </head>
 
@@ -37,16 +37,18 @@ background-color: #dc4343;
   		<li>STEP 4</li>
 	</ul>
 
-        <form method="post">
-            <div class="container">
-                <input type="submit" name="prev1" value="PREVIOUS"><br/><br/>
-            </div>
-         </form>
 	
-	<form method = "post">
-            <div class="container">
+    <form>
+        <div class ="conntainer">
+        <input type="submit" name="prev1" value="PREVIOUS"><br/><br/>
+        </div>
+    </form>
+    
+		<form method="post">
+			<div class="container">
 		<label id="sulbl"><b>Create Username:</b></label>
 		<input type="text" placeholder="Username" name="username" required><br/><br/>
+
 
 		<label id="sulbl"><b>Password:</b></label>
 		<input type="password" placeholder="Password" name="password" required><br/><br/>
@@ -61,9 +63,6 @@ background-color: #dc4343;
 		<input type="radio" name="gender" value="male" required> Male<br/>
 		<input type="radio" name="gender" value="female" required> Female<br/><br/>
 
-		<label id="sulbl"><b>Address:</b></label>
-		<input type="text" placeholder="Address" name="address" required><br/><br/>
-
 		<label id="sulbl"><b>Birthday:</b></label>
 		<input type="date" name="bdate" required><br/><br/>
 
@@ -73,13 +72,9 @@ background-color: #dc4343;
                 <label id="sulbl"><b>Email Address:</b></label>
 		<input type="email" placeholder="Email Address" name="email" required><br/><br/>
 
-                 <input type="submit"  name="next2" value="NEXT"><br/><br/><br/>
-		</div>
-	</form>
-    
-    
+		<input type="submit" name="next2" value="NEXT"><br/><br/><br/>
+			</div>
+		</form>				
 
-            
-	
 </body>
 </html>

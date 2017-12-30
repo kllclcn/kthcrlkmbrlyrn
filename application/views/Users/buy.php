@@ -2,12 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
-<head>
 
+    <style>
+body{
+background-color: #dc4343;
+}
+</style>
+
+<head>
+	<title>LOGIN / PUP BUY AND SELL </title>
+	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designbuy.css">
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
+	
 </head>
 <body>
 
-<div id="container">
+   <div class="layy">
+        <h> BUY ITEM </h>
+    </div> 
+    
+<div class="container">
 	<h1>Welcome Buyer!</h1>
 	<table border="1" style="border-color: #000; border-collapse:collapse;">
 	<tr>
