@@ -51,7 +51,7 @@ class Home extends CI_Controller {
                 if(count($result)>0)
                 {
 				echo "success";
-				$this->redirect('/buynsell/Users/usermain');
+				$this->redirect('/buynsell/Users/buy');
                 }
 		else
 		{
@@ -61,16 +61,34 @@ class Home extends CI_Controller {
         else
         {
             $this->load->view('Home/login');
-         }
+		
+		}
 			
 	}
 	
 	public function Signup()
 	{
-		$this->load->view("Home/signup");
+            //if(isset($_POST['prev1']))
+            //{ 
+               // $this->load->view('Home/login');
+            //}
+            if(isset($_POST['next2']))
+            {   
+                extract($_POST);
+                if($password == $Cpassword)
+                {
+                $this->model->InsertUsers($username,$password);
+                $this->model->InsertUsersDesc($fullname,$gender,$address,$bdate,$mobnum,$email);
+                $this->load->view('Home/login');
+                }   
+            }
+            else
+            {
+                $this->load->view("Home/signup");
+            }		
 	}
         
-                        public function about()
+                                public function about()
 	{
 		$this->load->view("Home/about");
 	}
@@ -79,7 +97,5 @@ class Home extends CI_Controller {
 	{
 		$this->load->view("Home/homes");
 	}
-            
-	
-	
+
 }
