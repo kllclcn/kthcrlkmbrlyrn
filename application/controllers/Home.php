@@ -42,8 +42,8 @@ class Home extends CI_Controller {
 	
 	public function Login()
 	{
-            if(isset($_POST['login']))
-            {
+                         if(isset($_POST['login']))
+                        {
 			extract($_POST);
             
                 $result = $this->model->AuthenticateUser($username,$password);
@@ -88,7 +88,7 @@ class Home extends CI_Controller {
             }		
 	}
         
-                                public function about()
+                       public function about()
 	{
 		$this->load->view("Home/about");
 	}
