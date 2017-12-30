@@ -61,8 +61,7 @@ class Home extends CI_Controller {
         else
         {
             $this->load->view('Home/login');
-		
-		}
+         }
 			
 	}
 	
@@ -70,7 +69,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->view("Home/signup");
 	}
-	
+            
 	
 	
 }
