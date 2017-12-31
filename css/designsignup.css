@@ -65,3 +65,15 @@ ul {
 	height: 80px;
 }
 
+.mainn{
+     background-color:#fff;
+  height:800px;
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  font: 16px "Arial", sans-serif;
+  width: 1310px;
+}
+

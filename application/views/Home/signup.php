@@ -13,8 +13,8 @@ background-color: #dc4343;
 <head>
 	<title> PUP Buy and Sell </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designsignup.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designsignupz.css">
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 </head>
 
@@ -28,24 +28,19 @@ background-color: #dc4343;
   		<li><a href="login" >LOG IN</a></li>
 	</ul>
 	</div>
-	 
-
-	<ul class="ul2">
-  		<li>STEP 1</li>
-  		<li>STEP 2</li>
-  		<li>STEP 3</li>
-  		<li>STEP 4</li>
-	</ul>
-
+<div class="mainn">	 
 	
-    <form>
+    <!--<form>
         <div class ="conntainer">
         <input type="submit" name="prev1" value="PREVIOUS"><br/><br/>
         </div>
-    </form>
+    </form>-->
     
-		<form method="post">
-			<div class="container">
+	<form method="post">
+                                <div class="container">
+                                    
+                                    <div class="brdr">
+                                    <h2 class="ul2">STEP 1 [Account Set Up]</h2><br/><br/>
 		<label id="sulbl"><b>Create Username:</b></label>
 		<input type="text" placeholder="Username" name="username" required><br/><br/>
 
@@ -55,13 +50,15 @@ background-color: #dc4343;
 
 		<label id="sulbl"><b> Confirm Password:</b></label>
 		<input type="password" placeholder="Confirm Password" name="Cpassword" required><br/><br/>
+                                    </div>
                                 
+                                  <h2 class="ul2">STEP 2 [Personal Information]</h2><br/><br/>
                                             <label id="sulbl"><b>Full Name:</b></label>
 		<input type="text" placeholder="Full Name" name="fullname" required><br/><br/>
                 
                                             <label id="sulbl"><b>Gender:</b></label><br/>
-		<input type="radio" name="gender" value="male" required> Male<br/>
-		<input type="radio" name="gender" value="female" required> Female<br/><br/>
+		<input  id= "sulbl" type="radio" name="gender" value="male" required> Male<br/>
+		<input id="sulbl" type="radio" name="gender" value="female" required> Female<br/><br/>
                 
                                             <label id="sulbl"><b>Address:</b></label>
 		<input type="text" name="address" required><br/><br/>
@@ -72,12 +69,12 @@ background-color: #dc4343;
 		<label id="sulbl"><b>Mobile Number:</b></label>
 		<input type="number" placeholder="MobileNumber" name="mobnum" required><br/><br/>
                 
-                <label id="sulbl"><b>Email Address:</b></label>
+                                            <label id="sulbl"><b>Email Address:</b></label>
 		<input type="email" placeholder="Email Address" name="email" required><br/><br/>
 
 		<input type="submit" name="next2" value="NEXT"><br/><br/><br/>
-			</div>
-		</form>				
-
+                                 </div>
+                      </form>				
+</div>
 </body>
 </html>
