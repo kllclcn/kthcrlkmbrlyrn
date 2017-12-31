@@ -1,0 +1,29 @@
+.layy
+{  
+  background-color:#EAEDED;
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  padding:10px;
+  font-size: 20px;
+  font-family: Trebuchet MS;
+  width: 1310px;
+}
+
+.layy h{
+    font-size: 30px;
+    font-family: Trebuchet MS;
+}
+
+.container{  
+  background-color:#fff;
+  height:500px;
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  font: 16px "Arial", sans-serif;
+  width: 1310px;
+}
