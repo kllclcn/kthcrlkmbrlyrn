@@ -11,7 +11,7 @@ Class AdminModel extends CI_Model {
         try
         {
             $sql = "SELECT * FROM users 
-                    WHERE active = 1";
+                    WHERE active = 2";
             $stmt = $this->pdo->query($sql);
             return $stmt;
         } 
@@ -22,11 +22,11 @@ Class AdminModel extends CI_Model {
         }
     }
     
-    public function GetAppUserById($id)
+    public function GetUserInfoById($id)
     {
         try
         {
-            $sql = "SELECT id,firstname,lastname,position,username,is_admin FROM app_users WHERE id = ?";
+            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];
@@ -56,11 +56,11 @@ Class AdminModel extends CI_Model {
     }
 	
 
-    public function AddUser($username,$password) {
+    public function AddAdmin($username,$password) {
         try
         {
             $password = sha1($password);
-            $sql = "INSERT INTO users
+            $sql = "INSERT INTO admin
                     SET username = ?,
                     password = ?,
                     active = ?
@@ -121,8 +121,10 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM app_users where username = ? and password = ?";
+            $sql = "SELECT id FROM admin where username = ? and password = ?";
+			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
+			
             return $stmt->result();
         } 
         catch (Exception $ex) 

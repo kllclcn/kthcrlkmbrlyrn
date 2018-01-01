@@ -66,21 +66,38 @@ Class HomeModel extends CI_Model {
         }
     }
     
-    public function InsertUsersDesc($fullname,$gender,$address,$bdate,$mobnum,$email)
+    public function InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email)
     {
         try
         {
             $sql = "INSERT INTO user_desc
                 SET user_id = ?,
-                name = ?,
+				name = ?,
                 Gender = ?,
                 address = ?,
                 Birthday = ?,
                 contact = ?,
                 email = ?
                 ";
-            $stmt = $this->pdo->query($sql,array(1,$fullname,$gender,$address,$bdate,$mobnum,$email));
+            $stmt = $this->pdo->query($sql,array($temp,$fullname,$gender,$address,$bdate,$mobnum,$email));
             return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function GetID($username,$password)
+    {
+        try
+        {
+			$password = sha1($password);
+            $sql = "SELECT id FROM users WHERE username = ? AND password = ?";
+            $stmt = $this->pdo->query($sql,array($username,$password));
+            $result = $stmt->result();
+            return (array) $result[0];
         } 
         catch (Exception $ex) 
         {

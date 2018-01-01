@@ -8,8 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Add User</h1>
-	<b>Hi User</b>
+	<h1>Add Admin</h1>
+	<b>Hello</b>
 	<form method="post">
 	<input type="text" placeholder="Username" name="username"><br/>
 	<input type="password" placeholder="Password" name="password"><br/>

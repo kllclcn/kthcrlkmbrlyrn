@@ -78,7 +78,8 @@ class Home extends CI_Controller {
                 if($password == $Cpassword)
                 {
                 $this->model->InsertUsers($username,$password);
-                $this->model->InsertUsersDesc($fullname,$gender,$address,$bdate,$mobnum,$email);
+				$temp = $this->model->GetID($username,$password);
+                $this->model->InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email);
                 $this->load->view('Home/login');
                 }   
             }

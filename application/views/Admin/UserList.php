@@ -2,7 +2,6 @@
 	<td><?php echo $id; ?></td>
 	<td><?php echo $username; ?></td>
 	<td>
-		<a href='Admin/Update/?id=<?php echo $id; ?>'>Edit</a> |
-		<a href="#" onclick="delete_user(<?php echo $id; ?>)">Delete</a>
+		<a href='ConfirmUsers/?id=<?php echo $id; ?>'>Confirm</a> 
 	</td>
 </tr>

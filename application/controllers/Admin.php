@@ -32,6 +32,17 @@ class Admin extends CI_Controller {
 	 
 	public function index()
 	{
+		
+	}
+	
+	public function Admin()
+	{
+		$this->load->view('Admin/Admin');
+	}
+	
+	
+	public function Users()
+	{
 		$data = array();
 		$data['list'] = '';
 		$stmt = $this->model->GetUsers();
@@ -40,7 +51,55 @@ class Admin extends CI_Controller {
             $data['list'] .= $this->load->view('Admin/UserList',$row,TRUE);
         }
 		
-		$this->load->view("Admin/Admin",$data);
+		$this->load->view("Admin/Users",$data);
+	}
+	
+	public function ConfirmUsers()
+	{
+		
+		$data = array();
+		$data['id'] = 0;
+		
+		
+		if(isset($_GET['id']))
+		{
+			$data['id'] = $_GET['id'];
+			$temp = $this->model->GetUserInfoById($data['id']);
+			foreach($temp->result()as $row)
+			{
+				$data['list'] .= $row;
+			}
+			
+			
+		}
+		var_dump($temp);
+		$this->load->view('Admin/ConfirmUsers',$data['list']);
+	}
+	
+	public function Login()
+	{
+        if(isset($_POST['login']))
+		{
+			extract($_POST);
+            
+            $result = $this->model->AuthenticateUser($username,$password);
+
+            if(count($result)>0)
+            {
+				echo "success";
+				$this->load->view('Admin/Admin');
+            }
+			else
+			{
+				echo("Login failed");
+			}
+		}
+        else
+        {
+            $this->load->view('Admin/login');
+		
+		}
+			
 	}
 	
 	public function Add()
@@ -58,7 +117,7 @@ class Admin extends CI_Controller {
 			}
 			else
 			{
-				$this->model->AddUser($username,$password);
+				$this->model->AddAdmin($username,$password);
 				echo "Success";
 			}
 		}
@@ -129,4 +188,5 @@ class Admin extends CI_Controller {
 	
 		$this->redirect('/buynsell/admin');
     }
+	
 }

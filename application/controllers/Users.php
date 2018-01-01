@@ -57,12 +57,12 @@ class Users extends CI_Controller {
 		$this->load->view("Users/Btrans");
 	}
         
-        public function sell()
+    public function sell()
 	{
 		$this->load->view("Users/sell");
 	}
         
-        public function usermain()
+    public function usermain()
 	{
 		$this->load->view("Users/usermain");
 	}
