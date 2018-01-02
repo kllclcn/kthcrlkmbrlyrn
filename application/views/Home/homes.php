@@ -9,7 +9,6 @@ body{
 background-color: #dc4343;
 }
 </style>
-<script src="homescript.js"></script>
 
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
@@ -33,12 +32,30 @@ background-color: #dc4343;
   <div class="Slides">
     <img class="mySlides" src="<?php echo base_url(); ?>images/p1.png" style="width:1330px;">
     <img class="mySlides" src="<?php echo base_url(); ?>images/p2.png" style="width:1330px;display: none;">
-    <img class="mySlides" src="<?php echo base_url(); ?>images/p3.pngsrc="images/p3.png" style="width:1330px;display: none;">
+    <img class="mySlides" src="<?php echo base_url(); ?>images/p3.png" style="width:1330px;display: none;">
     <img class="mySlides" src="<?php echo base_url(); ?>images/p4.png" style="width:1330px;display: none;">
-    <button class="leftbtn" onclick="plusDivs(-1)"><img src="back1.png" id="nb1" onmouseover="this.src='back.png';" onmouseout="this.src='back1.png';" alt="Back"/></button>
-    <button class="rightbtn" onclick="plusDivs(1)"><img src="next.png" id="nb1" onmouseover="this.src='next1.png';" onmouseout="this.src='next.png';" alt="Next"/></button>
+    <button class="leftbtn" onclick="plusDivs(-1)"><img src="<?php echo base_url(); ?>images/back1.png" id="nb1" onmouseover="this.src='<?php echo base_url(); ?>images/back.png';" onmouseout="this.src='<?php echo base_url(); ?>images/back1.png';" alt="Back"/></button>
+    <button class="rightbtn" onclick="plusDivs(1)"><img src="<?php echo base_url(); ?>images/next.png" id="nb1" onmouseover="this.src='<?php echo base_url(); ?>images/next1.png';" onmouseout="this.src='<?php echo base_url(); ?>images/next.png';" alt="Next"/></button>
   </div>
 
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1;}    
+  if (n < 1) {slideIndex = x.length;}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </body>
 </html>

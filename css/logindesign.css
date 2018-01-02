@@ -74,7 +74,9 @@ input[type=password] {
     margin: 8px 0;
     border: none;
     width: 150px;
-    margin-left: 47%;
+    margin-left: 45%;
+    position:relative;
+    bottom:440px;
 }
 
 button:hover {
