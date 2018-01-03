@@ -95,7 +95,25 @@ background-color: #dc4343;
                                                                   <option value="crs13">College of Tourism, Hospitality and Transportation Management(CTHTM))</option>
 			<option value="crs14">Institute of Technology (ITECH)</option>
 		</select><br/><br/>
-                
+                      <script>
+const source = document.querySelector("#course");
+const target = document.querySelector("#dept1");
+const targets = document.querySelector("#dept2");
+
+const displayWhenSelected = (source, value, target) => {
+    const selectedIndex = source.selectedIndex;
+    const isSelected = source[selectedIndex].value === value;
+    target.classList[isSelected
+        ? "add"
+        : "remove"
+    ]("show");
+};
+source.addEventListener("change", (evt) =>
+    displayWhenSelected(source, "crs1", target)
+);
+source.addEventListener("change", (evt) =>
+    displayWhenSelected(source, "crs2", targets));
+</script>
                                             <label id="sulbl"><b>Department:</b></label>
                                             <select id="dept1" name="term">
                                                 <option value="da1">Bachelor of Science in Accountancy (BSA)</option>
@@ -123,25 +141,5 @@ background-color: #dc4343;
                                   
                       </form>				
 </div>
-<script>
- const source = document.querySelector("#course");
-const target = document.querySelector("#dept1");
-const targets = document.querySelector("#dept2");
-
-const displayWhenSelected = (source, value, target) => {
-    const selectedIndex = source.selectedIndex;
-    const isSelected = source[selectedIndex].value === value;
-    target.classList[isSelected
-        ? "add"
-        : "remove"
-    ]("show");
-};
-source.addEventListener("change", (evt) =>
-    displayWhenSelected(source, "crs1", target)
-);
-source.addEventListener("change", (evt) =>
-    displayWhenSelected(source, "crs2", targets)
-}
-</script>
 </body>
 </html>

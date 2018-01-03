@@ -23,6 +23,7 @@ background-color: #dc4343;
     <div class="layy">
         <h> Welcome!</h>
     </div>
+    <div class="mainn"></div>
     <div class="badi">
         <a href="sell">SELL</a>
         <a href="buy">BUY</a>
