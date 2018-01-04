@@ -13,8 +13,8 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/logindesignz.css">
-        <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/logindesign.css">
+        <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	
 </head>
@@ -27,11 +27,10 @@ background-color: #dc4343;
   		<li><a href="about" >ABOUT</a></li>
   		<li><a href="signup" >SIGN UP</a></li>
   		<li style="color: #000; background-color: #f8f9f9;">LOG IN</li>
-  		
 	</ul>
 	</div>
 	
-<img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 100%;'/>
+<img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 1330px;'/>
 
 <div id="container">
 	

@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designusermain.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designusermainz.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 	
@@ -21,12 +21,10 @@ background-color: #dc4343;
 
 <body>
     <div class="layy">
-        <h> Welcome!</h>
+                <li><a href="homes">ACCOUNT</a></li>
+                <li><a href="buy" >BUY</a></li>
+                <li><a href="sell" >SELL</a></li>
     </div>
     <div class="mainn"></div>
-    <div class="badi">
-        <a href="sell">SELL</a>
-        <a href="buy">BUY</a>
-    </div>
 </body>
 </html>

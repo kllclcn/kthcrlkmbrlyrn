@@ -20,6 +20,7 @@ Class UsersModel extends CI_Model {
             echo $ex;
             exit;
         }
+        
     }
     
 
