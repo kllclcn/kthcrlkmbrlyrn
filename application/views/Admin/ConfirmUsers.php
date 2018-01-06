@@ -13,8 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<form method="post">
 	<input type="number" placeholder="ID" name="id" value="<?php echo $id; ?>" disabled><br/>
 	<input type="text" placeholder="Name" name="name" value=" <?php echo $name; ?>" disabled><br/>
-	<input type="text" placeholder="Gender" name="Gender" <?php echo $Gender; ?> disabled><br/>
-	<input type="text" placeholder="address" name="address" <?php echo $address; ?> disabled><br/>
+	<input type="text" placeholder="Gender" name="Gender" value="<?php echo $Gender; ?>" disabled><br/>
+	<input type="text" placeholder="address" name="address" value="<?php echo $address; ?>" disabled><br/>
 	
 	<input type="submit" name="submit" value="Submit">
 	</form>

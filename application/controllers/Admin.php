@@ -65,15 +65,16 @@ class Admin extends CI_Controller {
 		{
 			$data['id'] = $_GET['id'];
 			$temp = $this->model->GetUserInfoById($data['id']);
-			foreach($temp->result()as $row)
-			{
-				$data['list'] .= $row;
-			}
+			$data['name'] = $temp['name'];
+			$data['Gender'] = $temp['Gender'];
+			$data['address'] = $temp['address'];
+			
+
 			
 			
 		}
 		var_dump($temp);
-		$this->load->view('Admin/ConfirmUsers',$data['list']);
+		$this->load->view('Admin/ConfirmUsers',$data);
 	}
 	
 	public function Login()
