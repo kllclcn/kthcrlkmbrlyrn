@@ -38,6 +38,7 @@ class Home extends CI_Controller {
 				</script>
 			";
 	}
+
 	
 	
 	public function Login()
@@ -50,12 +51,12 @@ class Home extends CI_Controller {
 
                 if(count($result)>0)
                 {
-				echo "success";
 				$this->redirect('/buynsell/Users/usermain');
                 }
 		else
 		{
-			echo("Login failed");
+                                                                                        echo"<script>alert('Incorrect Username or Password!')</script>";
+                                                                                        $this->load->view('Home/login');
 		}
             }
         else
