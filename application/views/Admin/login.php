@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>ADMIN LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/logindesign.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminlogin.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 	
@@ -22,7 +22,7 @@ background-color: #dc4343;
 <body>	
 
 <div class="mainbutton">
-	
+    <li>Admin Login</li>
 	</div>
 	
 <img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 100%;'/>

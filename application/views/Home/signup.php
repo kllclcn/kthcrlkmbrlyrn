@@ -30,11 +30,6 @@ background-color: #dc4343;
 	</div>
 <div class="mainn">	 
 	
-    <!--<form>
-        <div class ="conntainer">
-        <input type="submit" name="prev1" value="PREVIOUS"><br/><br/>
-        </div>
-    </form>-->
     
 	<form method="post">
                                 <div class="container">
@@ -42,36 +37,36 @@ background-color: #dc4343;
                                     <div class="brdr">
                                         <h2 class="ul2">STEP 1 -</h2><h2 class="ul3"> Account Set Up</h2><br/><br/>
 		<label id="sulbl"><b>Create Username:</b></label>
-		<input type="text" placeholder="Username" name="username" required><br/><br/>
+		<input type="text" placeholder="Username" name="username" required style="margin-left: 20px;"><br/><br/>
 
 
 		<label id="sulbl"><b>Password:</b></label>
-		<input type="password" placeholder="Password" name="password" required><br/><br/>
+		<input type="password" placeholder="Password" name="password" required style="margin-left: 74px;"><br/><br/>
 
 		<label id="sulbl"><b> Confirm Password:</b></label>
-		<input type="password" placeholder="Confirm Password" name="Cpassword" required><br/><br/>
+		<input type="password" placeholder="Confirm Password" name="Cpassword" required style="margin-left: 7px;"><br/><br/>
                                     </div><br/>
                                 <div class="brdr">
                                   <h2 class="ul2">STEP 2 -</h2><h2 class="ul3"> Personal Information</h2><br/><br/>
                                     
                                             <label id="sulbl"><b>Full Name:</b></label>
-		<input type="text" placeholder="Full Name" name="fullname" required><br/><br/>
+		<input type="text" placeholder="Full Name" name="fullname" required style="margin-left:63px;"><br/><br/>
                 
                                             <label id="sulbl"><b>Gender:</b></label><br/>
-		<input  id= "sulbl" type="radio" name="gender" value="male" required> Male<br/>
-		<input id="sulbl" type="radio" name="gender" value="female" required> Female<br/><br/>
+		<input  id= "sulbl" type="radio" name="gender" value="male" required style="margin-left:185px;"> Male<br/>
+		<input id="sulbl" type="radio" name="gender" value="female" required style="margin-left:185px;"> Female<br/><br/>
                 
                                             <label id="sulbl"><b>Address:</b></label>
-		<input type="text" name="address" required><br/><br/>
+		<input type="text" name="address" required style="margin-left:73px;"><br/><br/>
 
 		<label id="sulbl"><b>Birthday:</b></label>
-		<input type="date" name="bdate" required><br/><br/>
+		<input type="date" name="bdate" required style="margin-left:71px;"><br/><br/>
 
 		<label id="sulbl"><b>Mobile Number:</b></label>
-		<input type="number" placeholder="MobileNumber" name="mobnum" required><br/><br/>
+		<input type="number" placeholder="MobileNumber" name="mobnum" required style="margin-left:20px;"><br/><br/>
                 
                                             <label id="sulbl"><b>Email Address:</b></label>
-		<input type="email" placeholder="Email Address" name="email" required><br/><br/>
+		<input type="email" placeholder="Email Address" name="email" required style="margin-left:21px;"><br/><br/>
 
                                             </div>
                                    

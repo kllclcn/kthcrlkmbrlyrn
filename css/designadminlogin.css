@@ -6,9 +6,9 @@ ul {
 .mainbutton{
   background-color: #BFC9CA;
   list-style: none;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  color: #000;
+  color: #fff;  
   padding:10px;
   font: 20px "Trebuchet MS", sans-serif;
   width: 1310px;
@@ -17,7 +17,7 @@ ul {
 .mainbutton li{
 	display: inline-block;
 	padding: 5px;
-	margin-left: 140px;
+	margin-left:10px;
 }
 
 .mainbutton li a{
