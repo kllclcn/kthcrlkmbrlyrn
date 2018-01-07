@@ -43,6 +43,8 @@ background-color: #dc4343;
 		</textarea><br/><br/>
 		<label>Meetup Place</label>
 		<input type="text" name="nplace" required><br/><br/>
+                                            <label>Product Image</label>
+                                            <input type="file" name="pic" accept="image/*">
 		<input type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Item is posted!')"><br/>
 
 	</div>
