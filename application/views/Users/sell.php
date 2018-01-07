@@ -13,14 +13,16 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designsellz.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designsell.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 </head>
 
 <body>	
-    <div class="layy">
-        <h> SELL ITEM </h>
+   <div class="layy">
+                <li><a href="usermain">ACCOUNT</a></li>
+                <li><a href="buy" >BUY</a></li>
+                <li style="color: #000; background-color: #f8f9f9;">SELL</li>
     </div>
     <div class="acc">
 		<label>What are you selling?</label><br/><br/>
@@ -44,7 +46,7 @@ background-color: #dc4343;
 		<label>Meetup Place</label>
 		<input type="text" name="nplace" required><br/><br/>
                                             <label>Product Image</label>
-                                            <input type="file" name="pic" accept="image/*">
+                                            <input type="file" name="pic" accept="image/*" id="fileToUpload">
 		<input type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Item is posted!')"><br/>
 
 	</div>
