@@ -133,6 +133,26 @@ Class AdminModel extends CI_Model {
             exit;
         }
     }
+	
+	public function Confirm($id)
+	{
+		$stmt = "SUCCESS";
+		try
+		{
+			$sql = "ALTER TABLE users
+					SET active = 1
+					WHERE id = ?";
+					
+			$this->pdo->query($sql,array($id));
+			return $stmt;
+		}
+		catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
 
 }
 ?>
