@@ -24,6 +24,7 @@ background-color: #dc4343;
                 <li><a href="buy" >BUY</a></li>
                 <li style="color: #000; background-color: #f8f9f9;">SELL</li>
     </div>
+	<form method="post">
     <div class="acc">
 		<label>What are you selling?</label><br/><br/>
 		<input type="text" name="stitle" required><br/><br/>
@@ -41,7 +42,7 @@ background-color: #dc4343;
 		<label>Price</label><br/><br/>
 		<input type="text" name="nprice" required><br/><br/>
 		<label>Description</label><br/><br/>
-		<textarea rows="4" cols="50">
+		<textarea name= "desc" rows="4" cols="50">
 		</textarea><br/><br/>
 		<label>Meetup Place</label>
 		<input type="text" name="nplace" required><br/><br/>
@@ -50,5 +51,6 @@ background-color: #dc4343;
 		<input type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Item is posted!')"><br/>
 
 	</div>
+	</form>
 </body>
 </html>

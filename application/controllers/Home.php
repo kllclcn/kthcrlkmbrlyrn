@@ -43,22 +43,23 @@ class Home extends CI_Controller {
 	
 	public function Login()
 	{
-                         if(isset($_POST['login']))
-                        {
+        if(isset($_POST['login']))
+        {
 			extract($_POST);
             
-                $result = $this->model->AuthenticateUser($username,$password);
+            $result = $this->model->AuthenticateUser($username,$password);
 
-                if(count($result)>0)
-                {
+             if(count($result)>0)
+            {
+				//$id = $this->model->GetID($username,$password);
 				$this->redirect('/buynsell/Users/usermain');
-                }
-		else
-		{
-                                                                                        echo"<script>alert('Incorrect Username or Password!')</script>";
-                                                                                        $this->load->view('Home/login');
-		}
             }
+			else
+			{
+				echo"<script>alert('Incorrect Username or Password!')</script>";
+                $this->load->view('Home/login');
+			}
+        }
         else
         {
             $this->load->view('Home/login');

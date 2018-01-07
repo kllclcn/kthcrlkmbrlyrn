@@ -59,12 +59,22 @@ class Users extends CI_Controller {
         
     public function sell()
 	{
-                            
-		$this->load->view("Users/sell");
+		if(isset($_POST['sbmt']))
+		{
+			extract($_POST);
+			$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace);
+			
+		}
+		else
+		{
+			$this->load->view("Users/sell");
+		}
+		
 	}
         
     public function usermain()
 	{
+		
 		$this->load->view("Users/usermain");
 	}
 	
