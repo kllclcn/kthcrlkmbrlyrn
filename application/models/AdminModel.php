@@ -121,7 +121,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ?";
+            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
 			
@@ -139,7 +139,7 @@ Class AdminModel extends CI_Model {
 		$stmt = "SUCCESS";
 		try
 		{
-			$sql = "ALTER TABLE users
+			$sql = "UPDATE users
 					SET active = 1
 					WHERE id = ?";
 					
