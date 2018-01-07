@@ -121,7 +121,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ?";
+            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
 			
@@ -133,6 +133,26 @@ Class AdminModel extends CI_Model {
             exit;
         }
     }
+	
+	public function Confirm($id)
+	{
+		$stmt = "SUCCESS";
+		try
+		{
+			$sql = "UPDATE users
+					SET active = 1
+					WHERE id = ?";
+					
+			$this->pdo->query($sql,array($id));
+			return $stmt;
+		}
+		catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
 
 }
 ?>

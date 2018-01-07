@@ -56,25 +56,35 @@ class Admin extends CI_Controller {
 	
 	public function ConfirmUsers()
 	{
-		
 		$data = array();
 		$data['id'] = 0;
-		
-		
-		if(isset($_GET['id']))
+		$data['id'] = $_GET['id'];
+		if(isset($_POST['Confirm']))
 		{
-			$data['id'] = $_GET['id'];
-			$temp = $this->model->GetUserInfoById($data['id']);
-			$data['name'] = $temp['name'];
-			$data['Gender'] = $temp['Gender'];
-			$data['address'] = $temp['address'];
-			
-
-			
-			
+			$stmt = $this->model->Confirm($data['id']);
+			echo ($stmt);
 		}
-		var_dump($temp);
-		$this->load->view('Admin/ConfirmUsers',$data);
+		else
+		{
+			
+			if(isset($_GET['id']))
+			{
+				
+				$temp = $this->model->GetUserInfoById($data['id']);
+				$data['name'] = $temp['name'];
+				$data['Gender'] = $temp['Gender'];
+				$data['address'] = $temp['address'];
+				$data['Birthday'] = $temp['Birthday'];
+				$data['id_no'] = $temp['id_no'];
+				$data['course'] = $temp['course'];
+				$data['contact'] = $temp['contact'];
+				$data['email'] = $temp['email'];
+				
+			}
+			
+			$this->load->view('Admin/ConfirmUsers',$data);
+		}
+		
 	}
 	
 	public function Login()
