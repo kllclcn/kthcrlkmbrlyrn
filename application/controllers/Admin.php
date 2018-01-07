@@ -97,12 +97,12 @@ class Admin extends CI_Controller {
 
             if(count($result)>0)
             {
-				echo "success";
-				$this->load->view('Admin/Admin');
+				$this->load->view('Admin/admin');
             }
 			else
 			{
-				echo("Login failed");
+				echo"<script>alert('Incorrect Username or Password!')</script>";
+                                                                                        $this->load->view(' Admin/login');
 			}
 		}
         else
@@ -130,9 +130,8 @@ class Admin extends CI_Controller {
 			{
 				$this->model->AddAdmin($username,$password);
 				echo "Success";
-			}
-		}
-		
+                                                                    }
+                                            }
 		$this->load->view('Admin/Add');
 		
 		

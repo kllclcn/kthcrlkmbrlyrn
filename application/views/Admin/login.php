@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>ADMIN LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminlogin.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminloginn.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 	
@@ -22,7 +22,7 @@ background-color: #dc4343;
 <body>	
 
 <div class="mainbutton">
-    <li>Admin Login</li>
+    <li>ADMIN LOGIN</li>
 	</div>
 	
 <img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 100%;'/>
@@ -39,7 +39,7 @@ background-color: #dc4343;
 		<label id="lbl2"><b>Enter Password:</b></label>
 		<input type="password" placeholder="Password" name="password" required><br/><br/>
 			
-		<input type="submit" name="login" value="LOGIN"><br/>
+		<input class="loginbtn" type="submit" name="login" value="LOGIN"><br/>
 
 	</form>
 	

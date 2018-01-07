@@ -45,7 +45,7 @@ background-color: #dc4343;
 
 		<label id="sulbl"><b> Confirm Password:</b></label>
 		<input type="password" placeholder="Confirm Password" name="Cpassword" required style="margin-left: 7px;"><br/><br/>
-                                    </div><br/>
+                                    </div>
                                 <div class="brdr">
                                   <h2 class="ul2">STEP 2 -</h2><h2 class="ul3"> Personal Information</h2><br/><br/>
                                     

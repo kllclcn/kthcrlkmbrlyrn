@@ -6,24 +6,18 @@ ul {
 .mainbutton{
   background-color: #BFC9CA;
   list-style: none;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: #000;
-  padding:10px;
-  font: 20px "Trebuchet MS", sans-serif;
+  padding:8px;
+  font: 24px "Trebuchet MS", sans-serif;
   width: 1310px;
-}
-
-.fpp{
-    position: relative;
-    bottom:400px;
-    margin-left: 300px;
 }
 
 .mainbutton li{
 	display: inline-block;
 	padding: 5px;
-	margin-left: 140px;
+	margin-left:10px;
 }
 
 .mainbutton li a{

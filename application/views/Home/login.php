@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/logindesign.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designloginn.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	
@@ -45,6 +45,7 @@ background-color: #dc4343;
 		<input type="password" placeholder="Password" name="password" required><br/><br/>
 			
 		<input  class="loginbtn" type="submit" name="login" value="LOGIN"><br/>
+                                            <a href="#" class="fpp">Forgot password?</a>
 
 	</form>
 	
