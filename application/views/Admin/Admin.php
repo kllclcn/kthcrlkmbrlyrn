@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<ul>
   		<li><a href="users">CONFIRM NEW USERS</a></li><br/>
                                             <li><a href="products">CONFIRM NEW PRODUCTS</a></li><br/>
-                                            <li><a href="add">ADD ADMIN</a></li><br/>
+                                            <li><a href="Add">ADD ADMIN</a></li><br/>
                                             <li><a href="viewad">VIEW ADMINS</a></li>
   		
 	</ul><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

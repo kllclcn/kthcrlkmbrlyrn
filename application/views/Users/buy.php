@@ -10,17 +10,19 @@ background-color: #dc4343;
 </style>
 
 <head>
-	<title>LOGIN / PUP BUY AND SELL </title>
+	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
                       <link rel="stylesheet" href="<?php echo base_url(); ?>css/designbuy.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 </head>
 <body>
 
    <div class="layy">
-        <h> BUY ITEM </h>
-    </div> 
+                <li><a href="usermain">ACCOUNT</a></li>
+                <li style="color: #000; background-color: #f8f9f9;">BUY</li>
+                 <li><a href="sell" >SELL</a></li>
+    </div>
     
 <div class="container">
 	<h1>Welcome Buyer!</h1>
@@ -39,7 +41,7 @@ background-color: #dc4343;
 	<?php
 		echo $list;
 	?>
-	</table>
+        </table><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 </body>

@@ -11,10 +11,10 @@ background-color: #dc4343;
 </style>
 
 <head>
-	<title>LOGIN / PUP BUY AND SELL </title>
+	<title>ACCOUNT / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
                       <link rel="stylesheet" href="<?php echo base_url(); ?>css/designusermain.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
+	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	
 </head>
