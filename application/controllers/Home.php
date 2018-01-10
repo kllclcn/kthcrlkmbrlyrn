@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         //$this->load->library('session'); 
+		$this->load->library('session'); 
         $this->load->model('HomeModel','model');
         $this->load->helper('url');
         if(!session_id())
@@ -29,6 +30,14 @@ class Home extends CI_Controller {
             session_start();
         }
     }
+	
+	
+	
+	
+	
+	
+	
+	
 	 
 	public function redirect($url)
 	{
@@ -51,8 +60,10 @@ class Home extends CI_Controller {
 
              if(count($result)>0)
             {
-				//$id = $this->model->GetID($username,$password);
-				$this->redirect('/buynsell/Users/usermain');
+				
+				//$temp = $this->model->GetID($username,$password);
+				//$this->redirect('/buynsell/Users/usermain',$id);
+				header("Location: http://localhost/buynsell/Users/usermain?username=".$_POST['username']);
             }
 			else
 			{

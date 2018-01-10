@@ -32,6 +32,7 @@ class Users extends CI_Controller {
 	 
 	
 	
+	
 	public function index()
 	{
 		
@@ -54,6 +55,16 @@ class Users extends CI_Controller {
 	
 	public function Btrans()
 	{
+		$data = array();
+		$data['id'] = 0;
+		
+		
+		if(isset($_GET['id']))
+		{
+			$data['id'] = $_GET['id'];
+		}
+		//var_dump($data['id']);
+		$this->model->bought($data['id']);
 		$this->load->view("Users/Btrans");
 	}
         
@@ -64,10 +75,13 @@ class Users extends CI_Controller {
 			extract($_POST);
 			$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace);
 			
+			header("Location: http://localhost/buynsell/Users/usermain");
 		}
 		else
 		{
+			
 			$this->load->view("Users/sell");
+			//header("Location: http://localhost/buynsell/Users/sell?username=".$_GET['username']);
 		}
 		
 	}
@@ -75,7 +89,9 @@ class Users extends CI_Controller {
     public function usermain()
 	{
 		
-		$this->load->view("Users/usermain");
+			$this->load->view("Users/usermain");
+		
+		//header("Location: http://localhost/buynsell/Users/usermain?username=".$_GET['username']);
 	}
 	
 }

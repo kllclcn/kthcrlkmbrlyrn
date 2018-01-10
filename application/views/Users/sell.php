@@ -31,14 +31,14 @@ background-color: #dc4343;
 		<input type="text" name="stitle" required style="margin-left: 30px;"><br/><br/>
 		<b style="margin-left: 30px;">Category:</b>
 		<select name="category" style="margin-left: 120px;">
-			<option value="oc1">Mobile Phones / Tablets</option>
-			<option value="oc2">Computers</option>
-			<option value="oc3">Consumer Electronics</option>
-			<option value="oc4">Pets / Animals</option>
-			<option value="oc5">Home / Furniture</option>
-			<option value="oc6">Beauty / Health / Grocery</option>
-			<option value="oc7">Clothes / Accessories</option>
-			<option value="oc8">Books / Sports / Hobbies</option>
+			<option value="Mobile Phones / Tablets">Mobile Phones / Tablets</option>
+			<option value="Computers">Computers</option>
+			<option value="Consumer Electronics">Consumer Electronics</option>
+			<option value="Pets / Animals">Pets / Animals</option>
+			<option value="Home / Furniture">Home / Furniture</option>
+			<option value="Beauty / Health / Grocery">Beauty / Health / Grocery</option>
+			<option value="Clothes / Accessories">Clothes / Accessories</option>
+			<option value="Books / Sports / Hobbies">Books / Sports / Hobbies</option>
 		</select><br/><br/>
 		<b style="margin-left: 30px;">Price:</b>
 		<input type="text" name="nprice" required style="margin-left: 150px;"><br/><br/>

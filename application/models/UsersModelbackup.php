@@ -10,7 +10,7 @@ Class UsersModel extends CI_Model {
 	{
         try
         {
-            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, date_posted, status FROM products
+            $sql = "SELECT prod_name, price, place FROM products
                     WHERE status = 'available'";
             $stmt = $this->pdo->query($sql);
             return $stmt;

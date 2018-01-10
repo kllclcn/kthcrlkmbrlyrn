@@ -26,5 +26,6 @@ background-color: #dc4343;
                 <li><a href="sell" >SELL</a></li>
     </div>
     <div class="mainn"></div>
+	
 </body>
 </html>

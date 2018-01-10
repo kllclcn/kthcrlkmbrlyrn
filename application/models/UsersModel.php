@@ -6,11 +6,11 @@ Class UsersModel extends CI_Model {
         $this->pdo = $this->load->database('pdo', true);
     }
     
-    public function GetProducts() 
+	public function GetProducts() 
 	{
         try
         {
-            $sql = "SELECT prod_name, price, place FROM products
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, date_posted, status FROM products
                     WHERE status = 'available'";
             $stmt = $this->pdo->query($sql);
             return $stmt;
@@ -22,30 +22,50 @@ Class UsersModel extends CI_Model {
         }
         
     }
+	
+	
+    
     
 	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace)
 	{
-		//try
-		//{
-			//$dte = .date("Y-m-d");
-			//$sql = "INSERT INTO products
-			//		SET prod_name = ?,
-			//		category = ?,
-			//		price = ?,
-			//		prod_desc = ?,
-			//		place = ?,
-		//			date_posted = ?,
-		//			status = 'available',
-                                            //            `                                                      user_id = ?";
-		//	$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte,
+		try
+		{
+			$dte = date("Y-m-d");
+			$sql = "INSERT INTO products
+					SET prod_name = ?,
+					category = ?,
+					price = ?,
+					prod_desc = ?,
+					place = ?,
+					date_posted = ?,
+					status = 'available'";
+			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte));
 			
-		//}
-		//catch (Exception $ex) 
-       // {
-         //   echo $ex;
-           // exit;
-        //}
+		}
+		catch (Exception $ex) 
+		{
+            echo $ex;
+            exit;
+        }
         
+	}
+	
+	public function bought($prod_id)
+	{
+		try
+		{
+			$dte = date("Y-m-d");
+			$sql = "INSERT INTO bought
+					SET prod_id = ?,
+					date_of_purchase= ?";
+			$this->pdo->query($sql,array($prod_id,$dte));		
+		}
+		catch (Exception $ex) 
+		{
+            echo $ex;
+            exit;
+        }
+		
 	}
 	
 	
