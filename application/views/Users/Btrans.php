@@ -18,9 +18,9 @@ background-color: #dc4343;
 <body>
 
 <div id="container">
-	<h1>Transaction is on Process!</h1>
-        <p>We'll notify you if your item has been posted!</p> 
-</div><br><br><br><br><br><br><br><br><br><br>
+	<h1>Transaction Success!</h1> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button class ="bbtn"><a href="/buynsell/Users/usermain">Back to Menu</a></button><br><br><br><br><br><br>
+</div>
 
 </body>
 </html>

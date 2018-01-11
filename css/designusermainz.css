@@ -43,3 +43,22 @@
   font: 16px "Arial", sans-serif;
   width: 700px;
 }
+
+.lg{
+    background-color: #dc4343;
+    border: none;
+    width: 100px;
+    margin-left: 402px;
+    position:relative;
+    left:819px; 
+    bottom:110px;
+}
+
+.lg a{
+    color:#D0D3D4;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.lg a:hover{
+    color:white;}
