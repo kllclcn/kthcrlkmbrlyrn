@@ -68,6 +68,23 @@ Class UsersModel extends CI_Model {
 		
 	}
 	
+	public function bought2($prod_id)
+	{
+		try
+		{
+			$sql = "UPDATE products
+					SET status = 'unavailable'
+					WHERE prod_id = ?";
+			$this->pdo->query($sql,array($prod_id));
+			
+		}
+		catch (Exception $ex) 
+		{
+            echo $ex;
+            exit;
+        }
+	}
+	
 	
 
 

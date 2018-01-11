@@ -65,6 +65,7 @@ class Users extends CI_Controller {
 		}
 		//var_dump($data['id']);
 		$this->model->bought($data['id']);
+		$this->model->bought2($data['id']);
 		$this->load->view("Users/Btrans");
 	}
         
