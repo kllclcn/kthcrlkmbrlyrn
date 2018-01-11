@@ -197,6 +197,17 @@ class Admin extends CI_Controller {
 	
 	
 		$this->redirect('/buynsell/admin');
-    }
-	
+                     }
+                       public function viewad()
+	{
+		$data = array();
+		$data['list'] = '';
+		$stmt = $this->model->GetProducts();
+                                             foreach($stmt->result() as $row)
+                                            {
+                                                    $data['list'] .= $this->load->view('Admin/unList',$row,TRUE);
+                                            }
+		
+		$this->load->view("Admin/viewad",$data);
+	}
 }

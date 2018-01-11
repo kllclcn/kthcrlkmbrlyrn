@@ -152,6 +152,23 @@ Class AdminModel extends CI_Model {
             exit;
         }
 	}
+        
+        	public function GetProducts() 
+	{
+        try
+        {
+            $sql = "SELECT id,username FROM admin
+                    WHERE active = 1";
+            $stmt = $this->pdo->query($sql);
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
 	
 
 }
