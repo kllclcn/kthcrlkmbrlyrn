@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>CONFIRM</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminusers.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminusers.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 </head>
 <body>

@@ -11,9 +11,9 @@ background-color: #dc4343;
 </style>
 
 <head>
-	<title>LOGIN / PUP BUY AND SELL </title>
+    <title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designhomes.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhome.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	
@@ -23,7 +23,11 @@ background-color: #dc4343;
 	<div class="mainbutton">
 	<ul>
   		<li style="color: #000; background-color: #f8f9f9;">HOME</li>
-  		<li><a href="about" >ABOUT</a></li>
+  		<li id="abt"><a href="about" >ABOUT</a></li>
+                                            <div class="drpcntnt">
+                                                <a href="homemission">Mission</a>
+                                                <a href="homevision">Vision</a>
+                                            </div>
   		<li><a href="signup" >SIGN UP</a></li>
   		<li><a href="login" >LOG IN</a></li>
 	</ul>

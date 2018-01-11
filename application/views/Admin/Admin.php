@@ -10,7 +10,7 @@ background-color: #dc4343;
 <head>
 	<title>ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminadminz.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadminz.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 </head>
 <body>

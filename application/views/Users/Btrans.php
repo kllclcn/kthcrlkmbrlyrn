@@ -12,7 +12,7 @@ background-color: #dc4343;
     
             <title>SUCCESS! / PUP BUY AND SELL </title>
             <link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-            <link rel="stylesheet" href="<?php echo base_url(); ?>css/designbtrans.css">
+            <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbtrans.css">
             <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 </head>
 <body>
