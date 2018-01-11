@@ -22,7 +22,7 @@ background-color: #dc4343;
                     <h3>Choose Transaction:</h3>
 	<ul>
   		<li><a href="users">CONFIRM NEW USERS</a></li><br/>
-                                            <li><a href="products">CONFIRM NEW PRODUCTS</a></li><br/>
+                                            <li><a href="prods">CONFIRM NEW PRODUCTS</a></li><br/>
                                             <li><a href="Add">ADD ADMIN</a></li><br/>
                                             <li><a href="viewad">VIEW ADMINS</a></li>
   		

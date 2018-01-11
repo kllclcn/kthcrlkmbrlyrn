@@ -210,4 +210,47 @@ class Admin extends CI_Controller {
 		
 		$this->load->view("Admin/viewad",$data);
 	}
+	
+	public function Prods()
+	{
+		$data = array();
+		$data['list'] = '';
+		$stmt = $this->model->GetProds();
+        foreach($stmt->result() as $row)
+        {
+            $data['list'] .= $this->load->view('Admin/AdminProductList',$row,TRUE);
+        }
+		
+		$this->load->view("Admin/Prods",$data);
+		
+	}
+	
+	public function ConfirmProd()
+	{
+		$data = array();
+		$data['id'] = 0;
+		$data['id'] = $_GET['id'];
+		if(isset($_POST['Confirm']))
+		{
+			$stmt = $this->model->Confirm($data['id']);
+			echo ($stmt);
+		}
+		
+		if(isset($_GET['id']))
+		{
+			
+			$temp = $this->model->GetProdInfo($data['id']);
+			$data['prod_name'] = $temp['prod_name'];
+			$data['category'] = $temp['category'];
+			$data['price'] = $temp['price'];
+			$data['prod_desc'] = $temp['prod_desc'];
+			$data['place'] = $temp['place'];
+			$data['date_posted'] = $temp['date_posted'];
+			
+		}
+		
+		$this->load->view('Admin/ConfirmProd',$data);
+		
+	}
+	
 }

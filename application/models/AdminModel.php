@@ -153,7 +153,7 @@ Class AdminModel extends CI_Model {
         }
 	}
         
-        	public function GetProducts() 
+    public function GetProducts() 
 	{
         try
         {
@@ -169,6 +169,39 @@ Class AdminModel extends CI_Model {
         }
         
     }
+	
+	
+	public function GetProds() 
+	{
+        try
+        {
+            $sql = "SELECT * FROM products 
+                    WHERE status = 'submit'";
+            $stmt = $this->pdo->query($sql);
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function GetProdInfo($id)
+	{
+		try
+        {
+            $sql = "SELECT prod_name, category, price, prod_desc, place, date_posted FROM products WHERE prod_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
 	
 
 }
