@@ -38,7 +38,7 @@ Class UsersModel extends CI_Model {
 					prod_desc = ?,
 					place = ?,
 					date_posted = ?,
-					status = 'submit'";
+					status = 'available'";
 			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte));
 			
 		}

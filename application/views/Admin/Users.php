@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>CONFIRM</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminuser.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminusers.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 </head>
 <body>
@@ -25,7 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php
 		echo $list;
 	?>
-        </table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <button class ="bbtn"><a href="/buynsell/Admin/Admin">Back to Admin Menu</a></button><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          
+
 </div>
 
 </body>

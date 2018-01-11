@@ -29,3 +29,7 @@ border-color:#BFC9CA;
       color: white;
           text-decoration: none;
 }
+
+.bbtn a:hover{
+    color:gray;
+}

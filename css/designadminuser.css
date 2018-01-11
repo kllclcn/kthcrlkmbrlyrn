@@ -28,6 +28,20 @@
   width: 1310px;
 }
 
+.bbtn{
+    background-color: #dc4343;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 150px;
+    margin-left: 402px;
+}
+
+.bbtn a{
+      color: white;
+          text-decoration: none;
+}
+
 
 body{
 background-color: #dc4343;

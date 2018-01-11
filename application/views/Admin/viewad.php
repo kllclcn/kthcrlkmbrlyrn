@@ -35,7 +35,7 @@ background-color: #dc4343;
 		echo $list;
 	?>
         </table><br><br><br><br><br><br><br><br><br><br>
-        <button class ="bbtn"><a href="/buynsell/Users/usermain">Back to Menu</a></button><br><br><br><br><br><br>
+        <button class ="bbtn"><a href="/buynsell/Admin/Admin">Back to Menu</a></button><br><br><br><br><br><br>
 </div>
 </body>
 </html>

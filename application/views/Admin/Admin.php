@@ -10,7 +10,7 @@ background-color: #dc4343;
 <head>
 	<title>ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminadmins.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminadminz.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 </head>
 <body>
@@ -18,6 +18,11 @@ background-color: #dc4343;
     <div class="mainbutton">
     <li>WELCOME ADMIN!</li>
 	</div>
+    
+        <div class="lgt">
+        <button class="lg"><a href="/buynsell/Admin/login">LOGOUT</a></button>
+    </div>
+    
 <div id="container">
                     <h3>Choose Transaction:</h3>
 	<ul>
