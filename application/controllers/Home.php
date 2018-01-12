@@ -112,4 +112,11 @@ class Home extends CI_Controller {
 		$this->load->view("Home/homes");
 	}
 
+                        public function homevision(){
+                            $this->load->view("Home/homevision");
+                        }
+                        
+                        public function homemission(){
+                            $this->load->view("Home/homemission");
+                        }
 }

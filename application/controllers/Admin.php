@@ -97,7 +97,7 @@ class Admin extends CI_Controller {
 
             if(count($result)>0)
             {
-				$this->load->view('Admin/admin');
+				$this->load->view('Admin/Admin');
             }
 			else
 			{
@@ -126,11 +126,16 @@ class Admin extends CI_Controller {
 			{
 				echo "Please fill-out password.";
 			}
-			else
+			if($password == $Cpassword)
 			{
+                                                                                        echo"<script>alert('Admin added!');</script>";
 				$this->model->AddAdmin($username,$password);
-				echo "Success";
+                                                                                        $this->load->view('Admin/Admin');
                                                                     }
+                                                                   else{
+                                                                       echo"<script>alert('Password did not match! Please try again')</script>";
+                                                                       $this->load->view('Admin/Add');
+                                                                   }
                                             }
 		$this->load->view('Admin/Add');
 		
@@ -210,4 +215,10 @@ class Admin extends CI_Controller {
 		
 		$this->load->view("Admin/viewad",$data);
 	}
+        
+        public function delad()
+        {
+
+                                                    $this->load->view("Admin/delad");
+        }
 }

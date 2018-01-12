@@ -92,6 +92,7 @@ Class AdminModel extends CI_Model {
             exit;
         }
     }
+
     
     public function UpdateUser($id,$username,$password) {
         try

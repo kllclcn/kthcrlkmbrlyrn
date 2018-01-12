@@ -29,7 +29,8 @@ background-color: #dc4343;
   		<li><a href="users">CONFIRM NEW USERS</a></li><br/>
                                             <li><a href="products">CONFIRM NEW PRODUCTS</a></li><br/>
                                             <li><a href="Add">ADD ADMIN</a></li><br/>
-                                            <li><a href="viewad">VIEW ADMINS</a></li>
+                                            <li><a href="viewad">VIEW ADMINS</a></li><br/>
+                                            <li><a href="delad">DELETE ADMINS</a></li>
   		
 	</ul><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
