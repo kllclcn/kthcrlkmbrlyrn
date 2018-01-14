@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>ADMIN LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/designadminloginn.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminloginn.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
 	
 	

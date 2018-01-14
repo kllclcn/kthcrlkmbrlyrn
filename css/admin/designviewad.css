@@ -40,3 +40,6 @@ border-color:#BFC9CA;
           text-decoration: none;
 }
 
+.bbtn a:hover{
+      color: gray;
+}

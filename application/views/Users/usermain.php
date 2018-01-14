@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>ACCOUNT / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designusermainz.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designusermainz.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	

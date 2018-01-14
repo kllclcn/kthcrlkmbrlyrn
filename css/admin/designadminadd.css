@@ -45,5 +45,29 @@ background-color: #dc4343;
     margin: 8px 0;
     border: none;
     width: 150px;
-    margin-left: 38%;
+    margin-left: 20%;
 }
+
+.addbutton:hover{
+    color:gray;
+}
+.bbtn{
+    background-color: #dc4343;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 180px;
+    position:relative;
+    bottom:113px;
+    left:330px;
+}
+
+.bbtn a{
+      color: white;
+          text-decoration: none;
+}
+
+.bbtn a:hover{
+    color:gray;
+}
+

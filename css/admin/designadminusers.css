@@ -1,10 +1,10 @@
-#container{
-border-color:#BFC9CA;
+#container{  
+    border-color:#BFC9CA;
     border-radius: 10px;
     border-style: solid;
     border-width:5px;
     margin-top: 50px;
-    margin-left: 120px;
+    margin-left: 300px;
     margin-bottom: 50px;
      background-color:#fff;
   list-style: none;
@@ -13,7 +13,19 @@ border-color:#BFC9CA;
   color: #000;
   padding: 10px;
   font: 16px "Arial", sans-serif;
-  width: 1000px;
+  width: 700px;
+}
+.layy
+{  
+  background-color:#EAEDED;
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  padding:10px;
+  font-size: 20px;
+  font-family: Trebuchet MS;
+  width: 1310px;
 }
 
 .bbtn{
@@ -21,11 +33,20 @@ border-color:#BFC9CA;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    width: 150px;
-    margin-left: 402px;
+    width: 180px;
+    margin-left: 260px;
 }
 
 .bbtn a{
       color: white;
           text-decoration: none;
 }
+
+.bbtn a:hover{
+    color:gray;
+}
+
+body{
+background-color: #dc4343;
+}
+

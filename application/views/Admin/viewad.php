@@ -13,7 +13,7 @@ background-color: #dc4343;
 <head>
 	<title>ACCOUNT / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designviewad.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designviewad.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 	
@@ -35,7 +35,7 @@ background-color: #dc4343;
 		echo $list;
 	?>
         </table><br><br><br><br><br><br><br><br><br><br>
-        <button class ="bbtn"><a href="/buynsell/Users/usermain">Back to Menu</a></button><br><br><br><br><br><br>
+        <button class ="bbtn"><a href="/buynsell/Admin/Admin">Back to Menu</a></button><br><br><br><br><br><br>
 </div>
 </body>
 </html>

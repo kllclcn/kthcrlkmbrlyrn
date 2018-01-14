@@ -12,7 +12,7 @@ background-color: #dc4343;
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/designbuyy.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyy.css">
 	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 	
 </head>
