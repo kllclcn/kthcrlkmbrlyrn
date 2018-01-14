@@ -221,7 +221,7 @@ class Admin extends CI_Controller {
             $data['list'] .= $this->load->view('Admin/AdminProductList',$row,TRUE);
         }
 		
-		$this->load->view("Admin/Prods",$data);
+		$this->load->view("/Prods",$data);
 		
 	}
 	
@@ -232,7 +232,7 @@ class Admin extends CI_Controller {
 		$data['id'] = $_GET['id'];
 		if(isset($_POST['Confirm']))
 		{
-			$stmt = $this->model->Confirm($data['id']);
+			$stmt = $this->model->ConProd($data['id']);
 			echo ($stmt);
 		}
 		
@@ -250,6 +250,11 @@ class Admin extends CI_Controller {
 		}
 		
 		$this->load->view('Admin/ConfirmProd',$data);
+		
+	}
+	
+	public function ConPRod()
+	{
 		
 	}
 	
