@@ -204,6 +204,24 @@ Class AdminModel extends CI_Model {
         }
 	}
 	
+	public function ConProd($id)
+	{
+		try
+		{
+			$sql = "UPDATE products
+					SET status = 'available'
+					WHERE prod_id = ?";
+					
+			$this->pdo->query($sql,array($id));
+			
+		}
+		catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
 
 }
 ?>

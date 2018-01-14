@@ -226,25 +226,25 @@ class Admin extends CI_Controller {
             $data['list'] .= $this->load->view('Admin/AdminProductList',$row,TRUE);
         }
 		
-		$this->load->view("/Prods",$data);
+		$this->load->view("Admin/Prods",$data);
 		
 	}
 	
 	public function ConfirmProd()
 	{
 		$data = array();
-		$data['id'] = 0;
-		$data['id'] = $_GET['id'];
+		$data['prod_id'] = 0;
+		$data['prod_id'] = $_GET['id'];
 		if(isset($_POST['Confirm']))
 		{
-			$stmt = $this->model->ConProd($data['id']);
-			echo ($stmt);
+			$stmt = $this->model->ConProd($data['prod_id']);
+			echo ('success!');
 		}
 		
 		if(isset($_GET['id']))
 		{
 			
-			$temp = $this->model->GetProdInfo($data['id']);
+			$temp = $this->model->GetProdInfo($data['prod_id']);
 			$data['prod_name'] = $temp['prod_name'];
 			$data['category'] = $temp['category'];
 			$data['price'] = $temp['price'];
@@ -258,16 +258,11 @@ class Admin extends CI_Controller {
 		
 	}
 	
-	public function ConPRod()
-	{
-		
-	}
 	
-
         
-        public function delad()
-        {
-            $this->load->view("Admin/delad");
-        }
+    public function delad()
+    {
+        $this->load->view("Admin/delad");
+    }
 
 }
