@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
         <title>CONFIRM USER</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminuser.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminusers.css">
         <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
 </head>
 <body>
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <label>Email Address:</label>
 	<input type="text" placeholder="email" name="email" value="<?php echo $email; ?>" disabled><br/>
 	
-	<input type="submit" name="Confirm" value="Confirm">
+	<input class="bbtn" type="submit" name="Confirm" value="Confirm">
 	</form>
 </div>
 

@@ -52,7 +52,7 @@ background-color: #dc4343;
 		<input type="text" name="nplace" required style="margin-left: 80px;"><br/><br/>
                                             <b style="margin-left: 30px;">Product Image:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 70px;"><br/></br>
-		<input id="sbmt" type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Item is posted!')"><br/>
+		<input id="sbmt" type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Your item is on process!')"><br/>
 
 	</div>
 	</form>
