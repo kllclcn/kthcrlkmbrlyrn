@@ -202,8 +202,9 @@ class Admin extends CI_Controller {
 	
 	
 		$this->redirect('/buynsell/admin');
-                     }
-                       public function viewad()
+    }
+	
+    public function viewad()
 	{
 		$data = array();
 		$data['list'] = '';
@@ -262,7 +263,17 @@ class Admin extends CI_Controller {
         
     public function delad()
     {
-        $this->load->view("Admin/delad");
+		$data = array();
+		$data['list'] = '';
+		$stmt = $this->model->GetAdmins();
+        foreach($stmt->result() as $row)
+        {
+            $data['list'] .= $this->load->view('Admin/AdminList',$row,TRUE);
+        }
+		
+        $this->load->view("Admin/delad",$data);
     }
+	
+	
 
 }

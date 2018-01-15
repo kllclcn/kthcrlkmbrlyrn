@@ -3,6 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+		function delete_user(id)
+		{
+			var response = confirm("Are you sure you want to delete id #"+id);
+			if(response)
+			{
+				window.location.href='/buynsell/admin/delad/?id=' +id;
+			}
+		}
+	</script>
+
+
     	<title>DELETE ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadd.css">
@@ -21,5 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<th>Username</th>
 		<th>Action</th>
 	</tr>
+	<?php
+		echo $list;
+	?>
         </table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <button class ="bbtn"><a href="/buynsell/Admin/Admin">Back to Admin Menu</a></button><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

@@ -79,7 +79,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "DELETE from users
+            $sql = "DELETE from admin
                     WHERE id = ?
                     ";
             $stmt = $this->pdo->query($sql,array($id));
@@ -222,6 +222,41 @@ Class AdminModel extends CI_Model {
         }
 	}
 	
+	public function GetAdmins() 
+	{
+        try
+        {
+            $sql = "SELECT * FROM admin
+                    WHERE active = 1";
+            $stmt = $this->pdo->query($sql);
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function Delete($id)
+    {
+        try
+        {
+            $sql = "DELETE from admin
+                    WHERE id = ?
+                    ";
+            $stmt = $this->pdo->query($sql,array($id));
+
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+
+    
 
 }
 ?>
