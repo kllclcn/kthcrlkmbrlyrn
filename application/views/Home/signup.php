@@ -10,11 +10,11 @@ background-color: #dc4343;
 }
 </style>
 
-<head>
+<head style="border-style:solid;">
 	<title>SIGN UP / PUP BUY AND SELL</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupp.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupz.css">
+                      <img src="<?php echo base_url(); ?>images/logo.png" alt="Background" style="margin-left:450px;" />
 	
 </head>
 
@@ -56,7 +56,7 @@ background-color: #dc4343;
                                             <label id="sulbl"><b>Full Name:</b></label>
 		<input type="text" placeholder="Full Name" name="fullname" required style="margin-left:63px;"><br/><br/>
                 
-                                            <label id="sulbl"><b>Gender:</b></label><br/>
+                                            <label id="sulbl"><b>Sex:</b></label><br/>
 		<input  id= "sulbl" type="radio" name="gender" value="male" required style="margin-left:185px;"> Male<br/>
 		<input id="sulbl" type="radio" name="gender" value="female" required style="margin-left:185px;"> Female<br/><br/>
                 

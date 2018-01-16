@@ -13,8 +13,8 @@ background-color: #dc4343;
 <head>
     <title>HOME / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhome.css">
-        <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhomes.css">
+        <img src="<?php echo base_url(); ?>images/logo.png" alt="Background" style='margin-left:450px;'/>
 	
 	
 </head>
@@ -34,10 +34,10 @@ background-color: #dc4343;
 	</div>
 
   <div class="Slides">
-    <img class="mySlides" src="<?php echo base_url(); ?>images/p1.png" style="width:1340px;">
-    <img class="mySlides" src="<?php echo base_url(); ?>images/p2.png" style="width:1340px;display: none;">
-    <img class="mySlides" src="<?php echo base_url(); ?>images/p3.png" style="width:1340px;display: none;">
-    <img class="mySlides" src="<?php echo base_url(); ?>images/p4.png" style="width:1340px;display: none;">
+    <img class="mySlides" src="<?php echo base_url(); ?>images/pp1.png" style="width:1330px;">
+    <img class="mySlides" src="<?php echo base_url(); ?>images/pp2.png" style="width:1330px;display: none;">
+    <img class="mySlides" src="<?php echo base_url(); ?>images/pp3.png" style="width:1330px;display: none;">
+    <img class="mySlides" src="<?php echo base_url(); ?>images/pp4.png" style="width:1330px;display: none;">
     <button class="leftbtn" onclick="plusDivs(-1)"><img src="<?php echo base_url(); ?>images/back1.png" id="nb1" onmouseover="this.src='<?php echo base_url(); ?>images/back.png';" onmouseout="this.src='<?php echo base_url(); ?>images/back1.png';" alt="Back"/></button>
     <button class="rightbtn" onclick="plusDivs(1)"><img src="<?php echo base_url(); ?>images/next.png" id="nb1" onmouseover="this.src='<?php echo base_url(); ?>images/next1.png';" onmouseout="this.src='<?php echo base_url(); ?>images/next.png';" alt="Next"/></button>
   </div>

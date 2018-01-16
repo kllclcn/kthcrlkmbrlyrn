@@ -49,7 +49,14 @@ background-color: #dc4343;
 		<textarea style="margin-left: 30px;" name= "desc" rows="4" cols="50">
 		</textarea><br/><br/>
 		<b style="margin-left: 30px;">Meetup Place:</b>
-		<input type="text" name="nplace" required style="margin-left: 80px;"><br/><br/>
+                                            <select name="nplace">
+                                                <option value="Lagoon">Lagoon</option>
+                                                <option value="Freedom Park">Freedom Park</option>
+                                                <option value="Chapel">Chapel</option>
+                                                <option value="Gymnasium">Gymnasium</option>
+                                                <option value="Oval">Oval</option>
+                                                <option value="Sampaguita">Sampaguita</option>
+                                            </select><br/><br/>
                                             <b style="margin-left: 30px;">Product Image:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 70px;"><br/></br>
 		<input id="sbmt" type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Your item is on process!')"><br/>
