@@ -9,7 +9,6 @@
   height:800px;
   margin-left: 10px;
 }
-
 #picc{
     border-width:5px;
     border-color: white;
@@ -24,7 +23,6 @@
            text-align: center;
            margin-left: -9px;
 }
-
 .layyy li{
                       width:290px;
                       background-color: #EBEDEF;
@@ -36,7 +34,6 @@
                       margin-top: 2px;
                       border-color:#34495E;
 }
-
 .layyy li a{
 	text-decoration: none;
 	color: #000;

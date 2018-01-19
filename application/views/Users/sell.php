@@ -8,7 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
                       <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designsellx.css">
 </head>
-
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
     <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
     <div class="layy">
@@ -51,7 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <b style="margin-left: 30px;">Product Image:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 70px;"><br/></br>
 		<input id="sbmt" type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Your item is on process!')"><br/>
-
 	</div>
 	</form>
 </body>
