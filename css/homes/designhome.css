@@ -1,0 +1,94 @@
+
+body{
+	background-color: #dc4343;
+}
+ul {
+	margin:0;
+	padding:0;
+}
+
+.mainbutton{
+  background-color: #BFC9CA;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font: 17px "Somatic ",sans-serif;
+  width: 100%;
+}
+
+.drpcntnt{
+    display: none;
+    position: absolute;
+    left:542px;
+    background-color: #f9f9f9;
+    width: 160px;
+    z-index: 1;
+}
+
+.drpcntnt a{
+    display:none;
+        color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#abt:hover ~ .drpcntnt, .drpcntnt:hover{
+    display: block;
+}
+
+.drpcntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 5px;
+	margin-left: 150px;
+}
+
+.mainbutton li a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li a:hover{
+	color: #fff;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.slideshow-container {
+  width:1330px;
+  position: relative;
+  margin-left:200px;
+}
+
+.mySlides {display: none;}
+.mySlides img {
+    vertical-align: middle;
+    margin-left: -20px;
+    width: 1000px;
+    height:500px;
+}

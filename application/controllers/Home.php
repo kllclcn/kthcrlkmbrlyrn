@@ -29,16 +29,7 @@ class Home extends CI_Controller {
         {
             session_start();
         }
-    }
-	
-	
-	
-	
-	
-	
-	
-	
-	 
+    } 
 	public function redirect($url)
 	{
 			echo "
@@ -47,9 +38,6 @@ class Home extends CI_Controller {
 				</script>
 			";
 	}
-
-	
-	
 	public function Login()
 	{
         if(isset($_POST['login']))

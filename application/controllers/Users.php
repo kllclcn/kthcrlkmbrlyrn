@@ -44,10 +44,10 @@ class Users extends CI_Controller {
 		$data = array();
 		$data['list'] = '';
 		$stmt = $this->model->GetProducts();
-        foreach($stmt->result() as $row)
-        {
-            $data['list'] .= $this->load->view('Users/productList',$row,TRUE);
-        }
+                                            foreach($stmt->result() as $row)
+                                            {
+                                                $data['list'] .= $this->load->view('Users/productList',$row,TRUE);
+                                            }
 		
 		$this->load->view("Users/buy",$data);
 	}

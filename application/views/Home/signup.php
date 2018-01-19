@@ -3,23 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 
 <html lang="en">
-
-<style>
-body{
-background-color: #dc4343;
-}
-</style>
-
-<head style="border-style:solid;">
+<head>
 	<title>SIGN UP / PUP BUY AND SELL</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupz.css">
-                      <img src="<?php echo base_url(); ?>images/logo.png" alt="Background" style="margin-left:450px;" />
-	
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupz.css">	
 </head>
-
-<body>	
-
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
+                      <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
 	<div class="mainbutton">
 	<ul>
   		<li><a href="homes">HOME</a></li>

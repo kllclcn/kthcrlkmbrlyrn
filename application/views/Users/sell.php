@@ -3,31 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 
 <html lang="en">
-
-<style>
-body{
-background-color: #dc4343;
-}
-</style>
-
 <head>
 	<title>SELL / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designsell.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
-	
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designsellx.css">
 </head>
 
-<body>	
-   <div class="layy">
-                <li><a href="usermain">ACCOUNT</a></li>
-                <li><a href="buy" >BUY</a></li>
-                <li style="color: #000; background-color: #f8f9f9;">SELL</li>
-    </div>
-        <div class="lgt">
-        <button class="lg"><a href="/buynsell/home/homes">LOGOUT</a></button>
-    </div>
-	<form method="post">
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
+    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
+    <div class="layy">
+        <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br><br><br><br>
+                <div class="layyy">
+                <li><a href="usermain">ACCOUNT</a></li><br>
+                <li><a href="buy" >BUY</a></li><br>
+                <li id="click">SELL</li><br>
+                <li><a href="transact">TRANSACTION</a></li></div></div>
+<form method="post">
     <div id="container">
                                             <h2 style="font-family: Trebuchet MS; margin-left: 15px;"> SELL ITEM </h2>
                                             <br/><b style="margin-left: 30px;">What are you selling?</b>

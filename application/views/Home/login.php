@@ -14,15 +14,11 @@ background-color: #dc4343;
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designlogin.css">
-                      <img src="<?php echo base_url(); ?>images/logo.png" alt="Background" style='margin-left:450px;'/>
-	
-	
 </head>
-
-<body>	
-
-<div class="mainbutton">
-	<ul>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
+                        <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
+                        <div class="mainbutton">
+                                <ul>
   		<li><a href="homes">HOME</a></li>
   		<li id="abt"><a href="about" >ABOUT</a></li>
                                             <div class="drpcntnt">
@@ -34,7 +30,7 @@ background-color: #dc4343;
 	</ul>
 	</div>
 	
-<img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 1330px;'/>
+<img src="<?php echo base_url(); ?>images/libgg.png" alt="Background" style='width: 500px; margin-left: 425px; margin-top: 50px;'/>
 
 <div id="container">
 	
