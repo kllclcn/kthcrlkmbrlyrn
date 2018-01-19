@@ -9,7 +9,6 @@ body{
 background-color: #dc4343;
 }
 </style>
-
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
@@ -29,9 +28,7 @@ background-color: #dc4343;
   		<li style="color: #000; background-color: #f8f9f9;">LOG IN</li>
 	</ul>
 	</div>
-	
 <img src="<?php echo base_url(); ?>images/libgg.png" alt="Background" style='width: 500px; margin-left: 425px; margin-top: 50px;'/>
-
 <div id="container">
 	
 	

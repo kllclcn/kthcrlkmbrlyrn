@@ -23,8 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</ul>
 	</div>
 <div class="mainn">	 
-	
-    
 	<form method="post">
                                 <div class="container">
                                     

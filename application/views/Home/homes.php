@@ -1,15 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <title>HOME / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhome.css">	
 </head>
-
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
                       <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
 	<div class="mainbutton">
