@@ -29,7 +29,6 @@ ul {
 .mainbutton{
   background-color: #BFC9CA;
   list-style: none;
-  text-align: center;
   text-decoration: none;
   color: #000;
   padding:1px;
@@ -61,45 +60,60 @@ ul {
 }
 
 .mainn{
-    border-color:#BFC9CA;
+    border-color:#898989;
     border-radius: 7px;
     border-style: solid;
-    border-width:3px;
+    border-width:4px;
     margin-top: 50px;
-    margin-left: 70px;
+    margin-left: 335px;
     margin-bottom: 50px;
      background-color:#fff;
-  height:1600px;
-  list-style: none;
-  text-align: left;
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-  font: 16px "Arial", sans-serif;
-  width: 1150px;
+    height:800px;
+    list-style: none;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font: 16px "Arial", sans-serif;
+    width: 650px;
 }
 #sulbl{
-    margin-left: 40px;
+    margin-left: 100px;
+    font: 20px "Bahnschrift", sans-serif;
 }
-.brdr{
-    border-color: #566573;
-    border-radius: 5px;
+#brdr2,#brdr3,#brdr4{
+    display:none;
+}
+#brdr1,#brdr2,#brdr3,#brdr4{
     margin-right: 20px;
     margin-top:20px;
     margin-left: 20px;
-    border-style: solid;
 }
 
-#submitbtn{
-        background-color: #dc4343;
+#submitbtn, #nextbtn, #nextbtn1{
+    background-color: #dc4343;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
+    border-radius: 4px;
     width: 150px;
-    margin-left: 40%;
+    margin-left: 38%;
     position:relative;
-    bottom:-400px;
+    bottom:-50px;
+}
+
+#submitbtn:hover, #nextbtn:hover, #nextbtn1:hover{
+    background-color: #e24f4f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    width: 150px;
+    margin-left: 38%;
+    position:relative;
+    bottom:-50px;
 }
 #dept1{
     display: none;
@@ -137,4 +151,31 @@ ul {
 
 .drpcntnt a:hover{
     background-color: #f1f1f1;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots {
+  height: 15px;
+  width: 15px;
+  background-color: #dc4343;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+input[type=text],input[type=password],input[type=number],input[type=email]{
+    border-radius: 4px;
+    height:30px;
+    width:350px;
+    border-width: 2px;
+}
+
+input[type=text]:focus,input[type=password]:focus,input[type=number]:focus,input[type=email]:focus{
+    border: 3px solid #555;
 }
