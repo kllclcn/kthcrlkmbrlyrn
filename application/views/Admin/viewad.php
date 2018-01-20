@@ -43,7 +43,7 @@ background-color: #dc4343;
 	<tr>
         <th>Admin ID</th>
 		<th>Admin Username</th>
-		<th>Action</th>
+		
 	</tr>
 	<?php
 		echo $list;

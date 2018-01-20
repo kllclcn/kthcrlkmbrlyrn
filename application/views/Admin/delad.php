@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<script>
-		function delete_user(id)
+		function delete_ad(id)
 		{
 			var response = confirm("Are you sure you want to delete id #"+id);
 			if(response)
 			{
-				window.location.href='/buynsell/admin/delad/?id=' +id;
+				window.location.href='/buynsell/admin/Delete/?id=' +id;
 			}
 		}
 	</script>

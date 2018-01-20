@@ -8,6 +8,9 @@ background-color: #dc4343;
 }
 </style>
 <head>
+
+
+
 	<title>ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadmin.css">
@@ -20,7 +23,7 @@ background-color: #dc4343;
 	</div>
     
         <div class="lgt">
-        <button class="lg"><a href="/buynsell/Admin/login">LOGOUT</a></button>
+        <button class="lg"><a href="/buynsell/Admin/LogOut">LOGOUT</a></button>
     </div>
     
 <div id="container">

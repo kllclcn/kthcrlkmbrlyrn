@@ -75,7 +75,7 @@ Class AdminModel extends CI_Model {
         }
     }
     
-    public function DeleteUser($id)
+    public function DeleteAdmin($id)
     {
         try
         {
@@ -125,8 +125,8 @@ Class AdminModel extends CI_Model {
             $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
-			
-            return $stmt->result();
+			$result = $stmt->result();
+            return (array) $result[0];
         } 
         catch (Exception $ex) 
         {
