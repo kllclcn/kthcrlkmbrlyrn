@@ -12,7 +12,7 @@ background-color: #dc4343;
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyx.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyxx.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
     <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
@@ -24,7 +24,7 @@ background-color: #dc4343;
                 <li><a href="sell" >SELL</a></li><br>
                 <li><a href="transact">TRANSACTION</a></li></div></div>
     <div class="container">
-	<h1>Welcome Buyer!</h1>
+        <img src="<?php echo base_url(); ?>images/buy.png" style="margin-left:370px;"><br><br><br>
 	<table  id="brdr" border="1">
 	<tr>
 		<th>Product ID</th>

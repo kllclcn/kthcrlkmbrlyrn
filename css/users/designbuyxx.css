@@ -1,27 +1,5 @@
-body{
-background-color: #dc4343;
-}
-
-#container{  
-    border-color:#85929E;
-    border-style: solid;
-    border-width:5px;
-    margin-left: 300px;
-    background-color:#fff;
-    height:790px;
-    list-style: none;
-    text-align: left;
-    text-decoration: none;
-    color: #000;
-    padding: 10px;
-    font: 16px "Arial", sans-serif;
-    width: 990px;
-    position:relative;
-    bottom:820px;
-    border-left: none;
-}
-
 .layy{  
+    border-color: #34495E;
  background-color: #85929E;
   text-align: left;
   text-decoration: none;
@@ -31,6 +9,8 @@ background-color: #dc4343;
   width: 270px;
   height:800px;
   margin-left: 10px;
+  border-style: solid;
+  border-width: 5px;
 }
 
 #picc{
@@ -45,7 +25,7 @@ background-color: #dc4343;
 }
 .layyy{
            text-align: center;
-           margin-left: -9px;
+           margin-left: -14px;
 }
 
 .layyy li{
@@ -68,17 +48,25 @@ background-color: #dc4343;
 .layyy li a:hover{
 	color: #fff;
 }
-
-#sbmt{
-        background-color: #dc4343;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    width: 150px;
-    
-    margin-left: 402px;
+.container{  
+    border-color: #34495E;
+    border-style: solid;
+    border-width:5px;
+    margin-left: 280px;
+    background-color:#fff;
+    height:800px;
+    list-style: none;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font: 16px "Arial", sans-serif;
+    width: 990px;
+    position:relative;
+    left:25px;
+    bottom:830px;
 }
+
 .lg{
     background-color: #dc4343;
     border: none;
@@ -96,9 +84,29 @@ background-color: #dc4343;
 }
 
 .lg a:hover{
-    color:white;}
+    color:white;
+}
 
 #click{
     background-color:#34495E;
     color: #fff;
+}
+
+#brdr{
+    border-color: #85929E;
+    border-collapse:collapse;
+    width:980px;
+}
+#brdr th{
+    color:white;
+    padding:10px;
+    height:40px;
+    border-width: 3px;
+    border-color: #85929E;
+    background-color:  #34495E  ;
+    text-align: center;
+    border-style: none;
+}
+#brdr td{
+    background-color:#85929E;
 }

@@ -12,7 +12,7 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designlogin.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designloginx.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
                         <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
@@ -35,11 +35,11 @@ background-color: #dc4343;
 	<form method="post">
 
 		<div class="container">
-		<label id="lbl1"><b>Enter Username:</b></label>
-		<input type="text" placeholder="Username" name="username" required>
+		<label id="lbl1"><b>Username:</b></label>
+		<input type="text" name="username" required>
 
-		<label id="lbl2"><b>Enter Password:</b></label>
-		<input type="password" placeholder="Password" name="password" required><br/><br/>
+		<label id="lbl2"><b>Password:</b></label>
+		<input type="password"name="password" required><br/><br/>
 			
 		<input  class="loginbtn" type="submit" name="login" value="LOGIN"><br/>
                                             <a href="#" class="fpp">Forgot password?</a>

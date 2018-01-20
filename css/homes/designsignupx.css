@@ -68,7 +68,7 @@ ul {
     margin-left: 335px;
     margin-bottom: 50px;
      background-color:#fff;
-    height:800px;
+    height:1900px;
     list-style: none;
     text-align: left;
     text-decoration: none;
@@ -81,16 +81,13 @@ ul {
     margin-left: 100px;
     font: 20px "Bahnschrift", sans-serif;
 }
-#brdr2,#brdr3,#brdr4{
-    display:none;
-}
 #brdr1,#brdr2,#brdr3,#brdr4{
     margin-right: 20px;
     margin-top:20px;
     margin-left: 20px;
 }
 
-#submitbtn, #nextbtn, #nextbtn1{
+#submitbtn{
     background-color: #dc4343;
     color: white;
     padding: 14px 20px;
@@ -102,8 +99,7 @@ ul {
     position:relative;
     bottom:-50px;
 }
-
-#submitbtn:hover, #nextbtn:hover, #nextbtn1:hover{
+#submitbtn:hover{
     background-color: #e24f4f;
     color: white;
     padding: 14px 20px;
@@ -169,7 +165,7 @@ ul {
   display: inline-block;
 }
 
-input[type=text],input[type=password],input[type=number],input[type=email]{
+input[type=text],input[type=password],input[type=number],input[type=email],select{
     border-radius: 4px;
     height:30px;
     width:350px;
