@@ -13,19 +13,26 @@ background-color: #dc4343;
 <head>
 	<title>ACCOUNT / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designviewad.css">
-	<img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 1330px;'/>
-	
-	
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminusersx.css">	
 </head>
-<body>
+
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
+    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
     
-        <div class="mainbutton">
-    <li>VIEW ADMINS</li>
+<div class="layy">
+                   <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br>
+	<div class="layyy">
+              		<li><a href="admin">ACCOUNT</a></li><br/>
+                                            <li><a href="users">CONFIRM NEW USERS</a></li><br/>
+                                            <li id="click">CONFIRM NEW PRODUCTS</li><br/>
+                                            <li><a href="Add">ADD ADMIN</a></li><br/>
+                                            <li><a href="viewad">VIEW ADMINS</a></li><br/>
+                                            <li><a href="delad">DELETE ADMINS</a></li>	
 	</div>
+</div>
     
         <div id="container">
-                        <h2>List of Products to Confirm:</h2>
+            <img id="pic" src="<?php echo base_url(); ?>images/ad2.png"><br><br>
 	<table border="1" style="border-color: #000; border-collapse:collapse;">
 	<tr>
 		<th>Product ID</th>
@@ -41,7 +48,6 @@ background-color: #dc4343;
 	<?php
 		echo $list;
 	?>
-        </table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        </div>
+        </table><br/><br/><br/></div>
         </body>
 </html>

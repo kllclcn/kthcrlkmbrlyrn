@@ -1,0 +1,92 @@
+body{
+background-color: #dc4343;
+}
+
+.mainbutton{
+  background-color: #34495e;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  font: 24px "Trebuchet MS", sans-serif;
+  margin-left:408px;
+  width: 519px;
+  height:50px;
+  border-radius:5px;
+  position:relative;
+  bottom:-4px;
+}
+
+.mainbutton p{
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+input[type=text]{
+    width: 170px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    bottom:660px;
+    left: 505px;
+}
+
+input[type=password] {
+    width: 170px;
+    padding: 12px 20px;
+    position: relative;
+    bottom:600px;
+    left: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+    background-color: #F7F9F9;
+}
+
+.loginbtn{
+    background-color: #dc4343;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 150px;
+    margin-left: 44%;
+    position:relative;
+    bottom:580px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.container {
+    padding: 16px;  
+}
+
+span.psw {
+    margin-left: 48.5%;
+    padding-top: 16px;
+    font:14px "Arial", sans-serif;
+}
+
+#lbl1{
+  font: 18px "Bahnschrift", sans-serif;
+  position: relative;
+  bottom: 660px;
+  color: #34495E;
+  left: 470px;
+}
+#lbl2{
+ font: 18px "Bahnschrift", sans-serif;
+  position: relative;
+  bottom: 600px;
+  left: 162px;
+color: #34495E;
+}
