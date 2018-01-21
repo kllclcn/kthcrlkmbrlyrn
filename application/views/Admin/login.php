@@ -4,28 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <html lang="en">
 
-<style>
-body{
-background-color: #dc4343;
-}
-</style>
-
 <head>
 	<title>ADMIN LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminloginn.css">
-        <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
-	
-	
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminloginx.css">
 </head>
 
-<body>	
-
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
+    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
 <div class="mainbutton">
-    <li>ADMIN LOGIN</li>
+    <p>Admin Login</p>
 	</div>
 	
-<img src="<?php echo base_url(); ?>images/libg.png" alt="Background" style='width: 100%;'/>
+<img src="<?php echo base_url(); ?>images/logbg.png" alt="Background" style='width: 100%;'/>
 
 <div id="container">
 	
@@ -33,11 +24,11 @@ background-color: #dc4343;
 	<form method="post">
 
 		<div class="container">
-		<label id="lbl1"><b>Enter Username:</b></label>
-		<input type="text" placeholder="Username" name="username" required>
+		<label id="lbl1"><b>Username:</b></label>
+		<input type="text" name="username" required>
 
-		<label id="lbl2"><b>Enter Password:</b></label>
-		<input type="password" placeholder="Password" name="password" required><br/><br/>
+		<label id="lbl2"><b>Password:</b></label>
+		<input type="password" name="password" required><br/><br/>
 			
 		<input class="loginbtn" type="submit" name="login" value="LOGIN"><br/>
 
