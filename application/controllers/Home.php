@@ -25,10 +25,8 @@ class Home extends CI_Controller {
 		$this->load->library('session'); 
         $this->load->model('HomeModel','model');
         $this->load->helper('url');
-        if(!session_id())
-        {
-            session_start();
-        }
+        
+		
     } 
 	public function redirect($url)
 	{
@@ -49,9 +47,9 @@ class Home extends CI_Controller {
              if(count($result)>0)
             {
 				
-				//$temp = $this->model->GetID($username,$password);
-				//$this->redirect('/buynsell/Users/usermain',$id);
-				header("Location: http://localhost/buynsell/Users/usermain?username=".$_POST['username']);
+				$_SESSION['id'] = $result['id'];
+				$_SESSION['log'] = 1;
+				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
             }
 			else
 			{
@@ -91,21 +89,23 @@ class Home extends CI_Controller {
             }		
 	}
         
-                       public function about()
+    public function about()
 	{
 		$this->load->view("Home/about");
 	}
         
-                        public function homes()
+    public function homes()
 	{
 		$this->load->view("Home/homes");
 	}
 
-                        public function homevision(){
-                            $this->load->view("Home/homevision");
-                        }
-                        
-                        public function homemission(){
-                            $this->load->view("Home/homemission");
-                        }
+    public function homevision()
+	{
+         $this->load->view("Home/homevision");
+    }
+       
+    public function homemission()
+	{
+        $this->load->view("Home/homemission");
+    }
 }

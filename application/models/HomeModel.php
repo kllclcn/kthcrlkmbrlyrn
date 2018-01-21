@@ -35,8 +35,8 @@ Class HomeModel extends CI_Model {
             $sql = "SELECT id FROM users where username = ? and password = ?";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
-			
-            return $stmt->result();
+			$result = $stmt->result();
+            return (array) $result[0];
         } 
         catch (Exception $ex) 
         {
