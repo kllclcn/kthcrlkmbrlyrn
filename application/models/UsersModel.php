@@ -10,7 +10,7 @@ Class UsersModel extends CI_Model {
 	{
         try
         {
-            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, date_posted, status FROM products
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
                     WHERE status = 'available'";
             $stmt = $this->pdo->query($sql);
             return $stmt;
@@ -26,7 +26,9 @@ Class UsersModel extends CI_Model {
 	
     
     
-	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$id)
+
+	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picprodpic,$id)
+
 	{
 		try
 		{
@@ -37,10 +39,12 @@ Class UsersModel extends CI_Model {
 					price = ?,
 					prod_desc = ?,
 					place = ?,
+                                        imageproduct = ?,
 					date_posted = ?,
 					status = 'submit',
 					user_id = ?";
-			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte,$id));
+			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$picprodpic,$dte,$id));
+
 			
 		}
 		catch (Exception $ex) 

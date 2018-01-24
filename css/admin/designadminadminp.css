@@ -1,0 +1,126 @@
+body{
+background-color: #dc4343;
+}
+
+
+#hdr{
+    background-color: #f35a5a;
+    height:70px;
+    width:1350px;
+    margin-top: -8px;
+    margin-left:-10px;
+}
+
+#logo{
+    margin-left:20px;
+    height:70px;
+   position:relative;
+   bottom:70px;
+}
+
+.mainbutton{
+  list-style: none;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+  font: 17px "Torque Sense Regular",sans-serif;
+  width: 100%;
+  position:relative;
+  bottom:162px;
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 25px 25px 25px 25px;
+                       margin-right:40px;
+}
+
+.hv, .hv a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li:hover{
+	background-color: #dc4343;
+}
+
+.admncntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:940px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.admncntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#ad:hover ~ .admncntnt, .admncntnt:hover{
+    display: block;
+}
+
+.admncntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+.usrcntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:940px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.usrcntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#us:hover ~ .usrcntnt, .usrcntnt:hover{
+    display: block;
+}
+
+.usrcntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+.prodcntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:940px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.prodcntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#pr:hover ~ .prodcntnt, .prodcntnt:hover{
+    display: block;
+}
+
+.prodcntnt a:hover{
+    background-color: #f1f1f1;
+}

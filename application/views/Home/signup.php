@@ -6,19 +6,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>SIGN UP / PUP BUY AND SELL</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupx.css">	
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupxx.css">	
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
-                      <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                      <div id="hdr"></div>
+                       <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
 	<div class="mainbutton">
-	<ul>
-                                            <li style="margin-left:320px;"><a href="homes">HOME</a></li>
+	<ul>    
+                                            <li><a href="homes" >HOME</a></li>
   		<li id="abt"><a href="about" >ABOUT</a></li>
                                             <div class="drpcntnt">
+                                                <a href="aboutbns">About</a>
+                                                <a href="aboutdev">Developers</a>
                                                 <a href="homemission">Mission</a>
                                                 <a href="homevision">Vision</a>
+                                                <a href="contact">Contact Us</a>
                                             </div>
-  		<li style="color: #000; background-color: #f8f9f9;">SIGN UP</li>
+                		<li style="color: #000; background-color: #E5E8E8;">SIGN UP</li>
   		<li><a href="login" >LOG IN</a></li>
 	</ul>
 	</div>

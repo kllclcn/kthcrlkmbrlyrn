@@ -110,13 +110,17 @@ class Users extends CI_Controller {
 	{
 		if(isset($_SESSION['user']['user_log']))
 		{
+
 			if(isset($_POST['sbmt']))
 			{
 				extract($_POST);
 				$id = $_SESSION['user']['user_id'];
 				//var_dump ($id);
 				//$id = $_SESSION['user']['id'];
-				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$id);
+                                $prodpic = $_POST['pic'];
+                                $path = "\buynsell\images\\";
+                                $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
+				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);
 				
 				header("Location: http://localhost/buynsell/Users/usermain");
 			}
@@ -128,6 +132,7 @@ class Users extends CI_Controller {
 				$this->load->view("Users/sell");
 				//header("Location: http://localhost/buynsell/Users/sell?username=".$_GET['username']);
 			}
+
 		}
 		else
 		{

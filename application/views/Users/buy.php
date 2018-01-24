@@ -3,45 +3,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 
-    <style>
-body{
-background-color: #dc4343;
-}
-</style>
-
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyxx.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyc.css">
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
-    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+    <div id="hdr"></div>
+    <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+    	<div class="mainbutton">
+                      <ul>
+  		<li><a href="usermain" >ACCOUNT</a></li>
+                                            <li style="color: #000; background-color: #E5E8E8;">BUY</li>
+  		<li><a href="sell" >SELL</a></li>
+  		<li><a href="transact" >TRANSACTIONS</a></li>
+                                            <li><a href="../Home/homes">LOG OUT</a></li>
+	</ul>
+	</div>
     <div class="layy">
-        <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br><br><br><br>
-                <div class="layyy">
-                <li><a href="usermain">ACCOUNT</a></li><br>
-                <li id="click">BUY</li><br>
-                <li><a href="sell" >SELL</a></li><br>
-                <li><a href="transact">TRANSACTION</a></li></div></div>
+                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+        </div>
+    <div class="contt"></div>
     <div class="container">
-        <img src="<?php echo base_url(); ?>images/buy.png" style="margin-left:370px;"><br><br><br>
-	<table  id="brdr" border="1">
-	<tr>
-		<th>Product ID</th>
-		<th>Product Name</th>
-		<th>Category</th>
-		<th>Price</th>
-		<th>Product Description</th>
-		<th>Meet up Place</th>
-		<th>Date Posted</th>
-		<th>Status</th>
-		<th>Action</th>
-                      </tr>
-                        <?php
+        <img src="<?php echo base_url(); ?>images/buy.png" style="margin-left:370px; margin-top: 20px;"><br><br><br>
+                        <table id="tble">
+                            <tr><?php
 		echo $list;
-                        ?>
-        </table><br><br><br><br><br><br><br><br><br><br>
+                           ?><tr></table>
 </div>
+    
 
 </body>
 </html>

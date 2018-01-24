@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </select><br/><br/>
                                             <b id="lbl">Product Image:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 70px;"><br/></br>
+                                            
 		<input id="sbmt" type="submit" name="sbmt" value="SELL ITEM" onclick="alert('Your item is on process!')"><br/>
 	</div>
 	</form>
