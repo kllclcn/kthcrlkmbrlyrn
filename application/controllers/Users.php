@@ -45,20 +45,29 @@ class Users extends CI_Controller {
 	
 	 public function usermain()
 	{
-		if(isset($_SESSION['user']['user_log']))
+		if(isset($_GET['id']))
+		{
+			$_SESSION['user_id']= $_GET['id'];
+			$_SESSION['user_log'] = 1;
+		}
+		
+		
+		if(isset($_SESSION['user_log']))
 		{
 			//$data = array();
 			//$data['id'] = $_GET['id'];
 			//$_SESSION['user']['user_id'] = $data['id'];
-			var_dump ($_SESSION['user']['user_id']);
+			//var_dump ($_SESSION['user_id']);
 			
 			//$_SESSION['user']['user_log'] = 1;
-			var_dump($_SESSION['user']['user_log']);
+			//var_dump($_SESSION['user_log']);
 			$this->load->view("Users/usermain");
 		}
 		else
 		{
-			header('Location: http://localhost/buynsell/Home/login');
+			var_dump ($_SESSION['user_id']);
+			var_dump($_SESSION['user_log']);
+			//header('Location: http://localhost/buynsell/Home/login');
 		}
 		
 		
@@ -67,7 +76,7 @@ class Users extends CI_Controller {
 	
 	public function Buy()
 	{
-		if(isset($_SESSION['user']['user_log']))
+		if(isset($_SESSION['user_log']))
 		{
 			$data = array();
 			$data['list'] = '';
@@ -108,7 +117,7 @@ class Users extends CI_Controller {
         
     public function sell()
 	{
-		if(isset($_SESSION['user']['user_log']))
+		if(isset($_SESSION['user_log']))
 		{
 
 			if(isset($_POST['sbmt']))
@@ -117,9 +126,9 @@ class Users extends CI_Controller {
 				$id = $_SESSION['user']['user_id'];
 				//var_dump ($id);
 				//$id = $_SESSION['user']['id'];
-                                $prodpic = $_POST['pic'];
-                                $path = "\buynsell\images\\";
-                                $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
+                $prodpic = $_POST['pic'];
+                $path = "\buynsell\images\\";
+                $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
 				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);
 				
 				header("Location: http://localhost/buynsell/Users/usermain");
@@ -127,10 +136,10 @@ class Users extends CI_Controller {
 			else
 			{
 				//var_dump ($_SESSION['user']['user_id']);
-				$id = $_SESSION['user']['user_id'];
+				$id = $_SESSION['user_id'];
 				//var_dump ($id);
 				$this->load->view("Users/sell");
-				//header("Location: http://localhost/buynsell/Users/sell?username=".$_GET['username']);
+				//header("Location: http://localhost/buynsell/Users/sell");
 			}
 
 		}
@@ -138,7 +147,7 @@ class Users extends CI_Controller {
 		{
 			header('Location: http://localhost/buynsell/Home/login');
 		}
-		//unset ($_SESSION['user']['user_log']);
+		
 	}
         
    

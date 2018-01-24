@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <div class="prodcntnt">
                                                 <a href="aboutbns">Confirm New Products</a>
                                                 </div>    
-  		<li class="hv"><a href="home/homes" >Log Out</a></li>
+  		<li class="hv"><a href="/buynsell/Admin/LogOut" >Log Out</a></li>
 	</ul>
 	</div>
     
