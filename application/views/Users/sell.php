@@ -19,8 +19,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li><a href="transact">TRANSACTION</a></li></div></div>
 <form method="post">
     <div id="container">
-                                            <img src="<?php echo base_url(); ?>images/sell.png" style="margin-left:370px;"><br><br><br><br><br><br>
-                                            <br/><b id="lbl">What are you selling?</b>
+        <img src="<?php echo base_url(); ?>images/sell.png" style="margin-left:370px;"><br><br><br><br><br><br>
+        <br/><b id="lbl">What are you selling?</b>
 		<input type="text" name="stitle" required style="margin-left: 30px;"><br/><br/>
 		<b id="lbl">Category:</b>
 		<select name="category" style="margin-left: 120px;">

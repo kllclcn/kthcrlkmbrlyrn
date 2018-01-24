@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <li style="color: #000; background-color: #E5E8E8;">BUY</li>
   		<li><a href="sell" >SELL</a></li>
   		<li><a href="transact" >TRANSACTIONS</a></li>
-                                            <li><a href="../Home/homes">LOG OUT</a></li>
+        <li><a href="/buynsell/Users/LogOut">LOG OUT</a></li>
 	</ul>
 	</div>
     <div class="layy">

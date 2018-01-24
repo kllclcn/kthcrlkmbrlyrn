@@ -11,7 +11,7 @@ Class UsersModel extends CI_Model {
         try
         {
             $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
-                    WHERE status = 'available'";
+                    WHERE status IN ('available','reserved')";
             $stmt = $this->pdo->query($sql);
             return $stmt;
         } 
@@ -39,7 +39,7 @@ Class UsersModel extends CI_Model {
 					price = ?,
 					prod_desc = ?,
 					place = ?,
-                                        imageproduct = ?,
+                    imageproduct = ?,
 					date_posted = ?,
 					status = 'submit',
 					user_id = ?";
@@ -78,7 +78,7 @@ Class UsersModel extends CI_Model {
 		try
 		{
 			$sql = "UPDATE products
-					SET status = 'unavailable'
+					SET status = 'reserved'
 					WHERE prod_id = ?";
 			$this->pdo->query($sql,array($prod_id));
 			
@@ -90,7 +90,55 @@ Class UsersModel extends CI_Model {
         }
 	}
 	
+	public function GetTrans($id) 
+	{
+        try
+        {
+            $sql = "SELECT prod_id, prod_name, date_posted, status FROM products
+                    WHERE user_id = ? AND status = 'reserved'";
+            $stmt = $this->pdo->query($sql,array($id));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
 	
+	public function GetProdInfo($id)
+	{
+		try
+        {
+            $sql = "SELECT prod_name, category, price, prod_desc, place, date_posted FROM products WHERE prod_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
+	public function ConTrans($prod_id)
+	{
+		try
+		{
+			$sql = "UPDATE products
+					SET status = 'seller confirmed'
+					WHERE prod_id = ?";
+			$this->pdo->query($sql,array($prod_id));
+			
+		}
+		catch (Exception $ex) 
+		{
+            echo $ex;
+            exit;
+        }
+	}
 
 
 }

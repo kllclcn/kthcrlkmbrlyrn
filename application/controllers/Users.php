@@ -108,7 +108,7 @@ class Users extends CI_Controller {
 				$data['id'] = $_GET['id'];
 			}
 			//var_dump($data['id']);
-			$this->model->bought($data['id']);
+			//$this->model->bought($data['id']);
 			$this->model->bought2($data['id']);
 			$this->load->view("Users/Btrans");
 			
@@ -120,11 +120,12 @@ class Users extends CI_Controller {
 		if(isset($_SESSION['user_log']))
 		{
 
+			$id = $_SESSION['user_id'];
+			//var_dump ($id);
 			if(isset($_POST['sbmt']))
 			{
 				extract($_POST);
-				$id = $_SESSION['user']['user_id'];
-				//var_dump ($id);
+				
 				//$id = $_SESSION['user']['id'];
                 $prodpic = $_POST['pic'];
                 $path = "\buynsell\images\\";
@@ -150,6 +151,71 @@ class Users extends CI_Controller {
 		
 	}
         
+	
+	public function transact()
+	{
+		if(isset($_SESSION['user_log']))
+		{
+			$id = $_SESSION['user_id'];
+			//var_dump ($id);
+			$data = array();
+				$data['list'] = '';
+				$stmt = $this->model->GetTrans($id);
+				foreach($stmt->result() as $row)
+				{
+					$data['list'] .= $this->load->view('Users/transList',$row,TRUE);
+				}
+			$this->load->view("Users/transact",$data);
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/Home/login');
+		}
+	}
+	
+	public function ConfirmTrans()
+	{
+		if(isset($_SESSION['user_log']))
+		{
+			$data = array();
+			$data['prod_id'] = 0;
+			$data['prod_id'] = $_GET['id'];
+			if(isset($_POST['Confirm']))
+			
+			{
+				$this->model->bought($data['prod_id']);
+				$stmt = $this->model->Contrans($data['prod_id']);
+				header("Location: http://localhost/buynsell/Users/usermain");
+			}
+			
+			if(isset($_GET['id']))
+			{
+				
+				$temp = $this->model->GetProdInfo($data['prod_id']);
+				$data['prod_name'] = $temp['prod_name'];
+				$data['category'] = $temp['category'];
+				$data['price'] = $temp['price'];
+				$data['prod_desc'] = $temp['prod_desc'];
+				$data['place'] = $temp['place'];
+				$data['date_posted'] = $temp['date_posted'];
+				
+			}
+				
+			$this->load->view('Users/ConfirmTrans',$data);
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/Home/login');
+		}
+	}
+	
+	public function LogOut()
+	{
+		unset ($_SESSION['user_log']);
+		header('Location: http://localhost/buynsell/Home/login');
+		
+		
+	}
    
 	
 }
