@@ -363,7 +363,7 @@ class Admin extends CI_Controller {
 
 	public function LogOut()
 	{
-		session_unset();
+		unset ($_SESSION['log']);
 		$this->load->view('Admin/login');
 		header('Location: http://localhost/buynsell/admin/login');
 		

@@ -26,7 +26,7 @@ Class UsersModel extends CI_Model {
 	
     
     
-	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace)
+	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$id)
 	{
 		try
 		{
@@ -38,8 +38,9 @@ Class UsersModel extends CI_Model {
 					prod_desc = ?,
 					place = ?,
 					date_posted = ?,
-					status = 'submit'";
-			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte));
+					status = 'submit',
+					user_id = ?";
+			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte,$id));
 			
 		}
 		catch (Exception $ex) 

@@ -47,8 +47,8 @@ class Home extends CI_Controller {
              if(count($result)>0)
             {
 				
-				$_SESSION['id'] = $result['id'];
-				$_SESSION['log'] = 1;
+				$_SESSION['user']['id'] = $result['id'];
+				$_SESSION['user']['user_log'] = 1;
 				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
             }
 			else

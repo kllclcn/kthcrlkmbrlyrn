@@ -14,9 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br><br><br><br>
                 <div class="layyy">
                  <li id="click">ACCOUNT</li><br>
-                <li><a href="buy" >BUY</a></li><br>
-                <li><a href="sell" >SELL</a></li>
-                <li><a href="transact">TRANSACTION</a></li></div>
+                <li><a href="http://localhost/buynsell/Users/buy" >BUY</a></li><br>
+                <li><a href="http://localhost/buynsell/Users/sell" >SELL</a></li>
+                <li><a href="http://localhost/buynsell/Users/transact">TRANSACTION</a></li></div>
         <div class="mainn">
             <img src="<?php echo base_url(); ?>images/acd.png" alt="Background" style='margin-left:350px;'/><br><br><br>
             <label id="lbl">Username:</label><br><br>
