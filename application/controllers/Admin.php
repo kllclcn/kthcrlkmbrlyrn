@@ -119,13 +119,11 @@ class Admin extends CI_Controller {
         if(isset($_POST['login']))
 		{
 			extract($_POST);
-            
-            $result = $this->model->AuthenticateUser($username,$password);
+                                                                  $result = $this->model->AuthenticateUser($username,$password);
 			var_dump($result);
-			
 
             if(count($result)>0)
-            {
+            {       
 				$_SESSION['id'] = $result['id'];
 				//echo $_SESSION['id'];
 				$_SESSION['log'] = 1;

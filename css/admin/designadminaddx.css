@@ -1,3 +1,7 @@
+body{
+background-color: #dc4343;
+}
+
 .layy{  
     border-color: #34495E;
  background-color: #85929E;
@@ -12,42 +16,9 @@
   border-style: solid;
   border-width: 5px;
 }
-#picc{
-    border-width:5px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 120px;
-    margin-left: 20px;
-    margin-top: 20px;
-    width:220px;
-    height:220px;
-}
-.layyy{
-           text-align: center;
-           margin-left: -14px;
-}
-.layyy li{
-                      width:290px;
-                      background-color: #EBEDEF;
-	display: inline-block;
-                      padding-top:10px;
-                      padding-bottom: 10px;
-                      border-style: solid;
-                      border-width: 3px;
-                      margin-top: 2px;
-                      border-color:#34495E;
-}
-.layyy li a{
-	text-decoration: none;
-	color: #000;
-}
 
-.layyy li a:hover{
-	color: #fff;
-}
-
-.mainn{
-    border-color: #34495E;
+#container{  
+   border-color: #34495E;
     border-style: solid;
     border-width:5px;
     margin-left: 280px;
@@ -61,33 +32,87 @@
     font: 16px "Arial", sans-serif;
     width: 990px;
     position:relative;
-    bottom:588px;
+    left:25px;
+    bottom:830px;
+}
+
+#sulbl{
+    margin-left: 40px;
+}
+
+.addbutton
+{
+     background-color: #dc4343;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 150px;
+    margin-left: 20%;
+}
+
+.addbutton:hover{
+    color:gray;
+}
+.bbtn{
+    background-color: #dc4343;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 180px;
+    position:relative;
+    bottom:113px;
+    left:330px;
+}
+
+.bbtn a{
+      color: white;
+          text-decoration: none;
+}
+
+.bbtn a:hover{
+    color:gray;
+}
+
+#picc{
+    border-width:5px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width:220px;
+    height:220px;
+}
+
+.layyy{
+           text-align: center;
+           margin-left: -14px;
+           margin-top: 50px;
+}
+
+.layyy li{
+                      width:290px;
+                      background-color: #EBEDEF;
+	display: inline-block;
+                      padding-top:10px;
+                      padding-bottom: 10px;
+                      border-style: solid;
+                      border-width: 3px;
+                      margin-top: 2px;
+                      border-color:#34495E;
+}
+
+.layyy li a{
+	text-decoration: none;
+	color: #000;
+}
+
+.layyy li a:hover{
+	color: #fff;
 }
 
 #click{
     background-color:#34495E;
     color: #fff;
-}
-.lg{
-    background-color: #dc4343;
-    border: none;
-    width: 100px;
-    margin-left: 402px;
-    position:relative;
-    left:819px; 
-    bottom:110px;
-}
-
-.lg a{
-    color:#D0D3D4;
-    font-weight: bolder;
-    font-size: 16px;
-}
-
-.lg a:hover{
-    color:white;}
-
-#lbl{
-        margin-left: 50px;
-    font: 20px "Bahnschrift", sans-serif;
 }

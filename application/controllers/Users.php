@@ -74,7 +74,10 @@ class Users extends CI_Controller {
 		if(isset($_POST['sbmt']))
 		{
 			extract($_POST);
-			$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace);
+                                                                  $prodpic = $_POST['pic'];
+                                                                  $path = "\buynsell\images\\";
+                                                                  $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
+			$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath);
 			
 			header("Location: http://localhost/buynsell/Users/usermain");
 		}

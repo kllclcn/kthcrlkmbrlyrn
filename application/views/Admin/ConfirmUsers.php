@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<input type="number" placeholder="ID" name="id" value="<?php echo $id; ?>" disabled><br/>
                        <label>Name:</label>
 	<input type="text" placeholder="Name" name="name" value=" <?php echo $name; ?>" disabled><br/>
-                       <label>Gender:</label>
+                       <label>Sex:</label>
 	<input type="text" placeholder="Gender" name="Gender" value="<?php echo $Gender; ?>" disabled><br/>
                        <label>Address:</label>
 	<input type="text" placeholder="address" name="address" value="<?php echo $address; ?>" disabled><br/>

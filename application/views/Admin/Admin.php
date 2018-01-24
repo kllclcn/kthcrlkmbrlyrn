@@ -1,44 +1,42 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
+
 <html lang="en">
-        <style>
-body{
-background-color: #dc4343;
-}
-</style>
+    
 <head>
-
-
-
 	<title>ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadminx.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadminp.css">
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
-    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
-
-    <div class="mainbutton">
-	</div>
     
-        <div class="lgt">
-        <button class="lg"><a href="/buynsell/Admin/LogOut">LOGOUT</a></button>
-    </div>
-    
-<div class="layy">
-                   <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br>
-	<div class="layyy">
-                                            <li id="click">ACCOUNT</li><br/>
-  		<li><a href="users">CONFIRM NEW USERS</a></li><br/>
-                                            <li><a href="prods">CONFIRM NEW PRODUCTS</a></li><br/>
-                                            <li><a href="Add">ADD ADMIN</a></li><br/>
-                                            <li><a href="viewad">VIEW ADMINS</a></li><br/>
-                                            <li><a href="delad">DELETE ADMINS</a></li>	
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                    <div id="hdr"></div>
+                      <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+	<div class="mainbutton">
+	<ul>    
+  		<li style="color: #000; background-color: #E5E8E8;">ACCOUNT</li>
+  		<li id="ad" class="hv">ADMIN</li>
+                                            <div class="admncntnt">
+                                                <a href="aboutbns">View Admins</a>
+                                                <a href="aboutdev">Add Admin</a>
+                                                <a href="homemission">Delete Admin</a>
+                                            </div>
+  		<li id="us" class="hv">USERS</li>
+                                                <div class="usrcntnt">
+                                                    <a href="aboutbns">Confirm New Users</a>
+                                                    <a href="aboutdev">Delete User</a></div>
+                                            <li id="pr" class="hv">PRODUCTS</li>
+                                                <div class="prodcntnt">
+                                                <a href="aboutbns">Confirm New Products</a>
+                                                </div>    
+  		<li class="hv"><a href="home/homes" >Log Out</a></li>
+	</ul>
 	</div>
-</div>
     
     <div id="container">
         <img id="pic" src="<?php echo base_url(); ?>images/acdd.png"><br><br>
+        hello <?php echo"$_SESSION[id]"; ?>
      </div
 
 </body>
