@@ -99,7 +99,7 @@ $db['default'] = array(
         'dsn'   => 'mysql:host=localhost;dbname=buynsell',
         //'hostname' => 'localhost',
         'username' => 'root',
-        'password' => '',
+        'password' => '1998',
         'database' => 'buynsell',
         'dbdriver' => 'pdo',
         'dbprefix' => '',

@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuyc.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbtransx.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
     <div id="hdr"></div>
@@ -14,9 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	<div class="mainbutton">
                       <ul>
   		<li><a href="usermain" >ACCOUNT</a></li>
-        <li><a href="buy" >BUY</li>
+                                            <li style="color: #000; background-color: #E5E8E8;">BUY</li>
   		<li><a href="sell" >SELL</a></li>
-  		<li style="color: #000; background-color: #E5E8E8;">TRANSACTIONS</a></li>
+  		<li><a href="transact" >TRANSACTIONS</a></li>
         <li><a href="/buynsell/Users/LogOut">LOG OUT</a></li>
 	</ul>
 	</div>
@@ -25,8 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     <div class="contt"></div>
     <div class="container">
-        
-    <h1>Confirm Transaction</h1>
+            <h1>Confirm Transaction</h1>
 	<b>Hello Seller! Is this transaction already completed?</b><br/><br/>
 	<form method="post">
                       <label style="margin-left:50px;">Product ID:</label>

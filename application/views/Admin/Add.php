@@ -1,31 +1,45 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
+
 <html lang="en">
-<head>
-    	<title>ADD ADMIN</title>
-	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminaddx.css">
-</head>
-
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
-    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
     
-    <div class="layy">
-                           <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br>
-	<div class="layyy">
-                                            <li><a href="admin">ACCOUNT</a></li><br/>
-  		<li><a href="users">CONFIRM NEW USERS</a></li><br/>
-                                            <li><a href="prods">CONFIRM NEW PRODUCTS</a></li><br/>
-                                             <li id="click">ADD ADMIN</li><br/>
-                                            <li><a href="viewad">VIEW ADMINS</a></li><br/>
-                                            <li><a href="delad">DELETE ADMINS</a></li>	
+<head>
+	<title>ADMIN</title>
+	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminaddz.css">
+</head>
+    
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                    <div id="hdr"></div>
+                      <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+	<div class="mainbutton">
+	<ul>    
+                                            <li class="hv"><a href="Admin">ACCOUNT</a></li>
+                                            <li id="ad" style="color: #000; background-color: #E5E8E8;">ADMIN</li>
+                                            <div class="admncntnt">
+                                                <a href="viewad">View Admins</a>
+                                                <a href="add">Add Admin</a>
+                                                <a href="delad">Delete Admin</a>
+                                            </div>
+  		<li id="us" class="hv">USERS</li>
+                                                <div class="usrcntnt">
+                                                    <a href="Users">Confirm New Users</a>
+                                                    <a href="delus">Delete User</a></div>
+                                            <li id="pr" class="hv">PRODUCTS</li>
+                                                <div class="prodcntnt">
+                                                <a href="Prods">Confirm New Products</a>
+                                                </div>    
+  		<li class="hv"><a href="/buynsell/Admin/LogOut" >Log Out</a></li>
+	</ul>
 	</div>
-    </div> 
-
-<div id="container">
-                 
-                      <h2 style="margin-left: 20px;">Add another Administrator:</h2><br/>
+       <div class="layy">
+                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+        </div>
+    <div class="contt"></div>
+                      
+    <div id="container">
+                       <img src="<?php echo base_url(); ?>images/addad.png" alt="Background" id="title"/><br><br><br>
 	<form method="post">
                       <label id="sulbl"><b>Create Admin Username:</b></label>
 	<input type="text" placeholder="Username" name="username" style="margin-left: 10px" required><br/><br/>
@@ -34,9 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <label id="sulbl"><b>Confirm Password:</b></label>
                         <input type="password" placeholder="Password" name="Cpassword" style="margin-left: 65px; " required><br/><br/><br/><br/><br/>
 	<input class="addbutton" type="submit" name="submit" value="Submit"><br/><br/><br/><br/>
-                      <button class ="bbtn"><a href="/buynsell/Admin/Admin">Back to Admin Menu</a></button>
 	</form>
-</div>
+    </div>
 
 </body>
 </html>

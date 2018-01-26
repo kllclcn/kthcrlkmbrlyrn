@@ -1,0 +1,156 @@
+body{
+background-color: #dc4343;
+}
+
+.layy{  
+    border-color: #34495E;
+     background-color: #85929E;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  padding:10px;
+  font: 20px "Trebuchet MS", sans-serif;
+  width: 270px;
+  height:250px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  position:relative;
+  bottom:169px;
+}
+
+#picc{
+    border-width:3px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 120px;
+    margin-left: 73px;
+    margin-top: 10px;
+    width:120px;
+    height:120px;
+}
+#container{  
+    border-color: #34495E;
+    border-style: solid;
+    border-radius: 20px;
+    border-width:3px;
+    margin-left: 315px;
+    background-color:#F8F9F9;
+    list-style: none;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font: 16px "Arial", sans-serif;
+    width: 990px;
+    margin-top: -652px;
+}
+
+
+#sbmt{
+        background-color: #dc4343;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 150px;
+    
+    margin-left: 402px;
+}
+.lg{
+    background-color: #dc4343;
+    border: none;
+    width: 100px;
+    margin-left: 402px;
+    position:relative;
+    left:819px; 
+    bottom:110px;
+}
+
+.lg a{
+    color:#D0D3D4;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.lg a:hover{
+    color:white;}
+
+#click{
+    background-color:#34495E;
+    color: #fff;
+}
+
+#lbl{
+     margin-left: 100px;
+    font: 20px "Bahnschrift", sans-serif;
+}
+
+input[type=text],select{
+    border-radius: 4px;
+    height:30px;
+    width:350px;
+    border-width: 2px;
+    border-color: #34495E;
+}
+
+#logo{
+    margin-left:20px;
+    height:70px;
+   position:relative;
+   bottom:70px;
+}
+
+#hdr{
+    background-color: #f35a5a;
+    height:70px;
+    width:1350px;
+    margin-top: -8px;
+    margin-left:-10px;
+}
+
+.mainbutton{
+  list-style: none;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+  font: 17px "Torque Sense Regular",sans-serif;
+  width: 100%;
+  position:relative;
+  bottom:162px;
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 25px 25px 25px 25px;
+                       margin-right:20px;
+}
+
+.mainbutton li a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li:hover{
+	background-color: #dc4343;
+}
+
+#title{
+    position:relative;
+    bottom:-10px;
+    left: 350px;
+}
+
+.contt{
+    border-color: #34495E;
+    background-color: #F8F9F9;
+  padding:10px;
+  width: 270px;
+  height:340px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  margin-top:-159px;
+}

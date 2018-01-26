@@ -5,6 +5,7 @@
   text-decoration: none;
   color: #000;
   padding:10px;
+  font: 20px "Trebuchet MS", sans-serif;
   width: 270px;
   height:250px;
   margin-left: 10px;
@@ -14,18 +15,18 @@
   position:relative;
   bottom:169px;
 }
+
 #picc{
     border-width:3px;
     border-color: white;
     border-style: solid;
     border-radius: 120px;
-    margin-left: 10px;
+    margin-left: 73px;
     margin-top: 10px;
-    width:100px;
-    height:100px;
+    width:120px;
+    height:120px;
 }
-
-.mainn{
+.container{  
     border-color: #34495E;
     border-style: solid;
     border-radius: 20px;
@@ -37,15 +38,30 @@
     text-decoration: none;
     color: #000;
     padding: 10px;
+    font: 16px "Arial", sans-serif;
     width: 990px;
     margin-top: -652px;
+    height:630px;
 }
 
-#lbl{
-    margin-left: 50px;
-    font: 20px "Berlin Sans FB", sans-serif;
+#brdr{
+    border-color: #85929E;
+    border-collapse:collapse;
+    width:980px;
 }
-
+#brdr th{
+    color:white;
+    padding:10px;
+    height:40px;
+    border-width: 3px;
+    border-color: #85929E;
+    background-color:  #34495E  ;
+    text-align: center;
+    border-style: none;
+}
+#brdr td{
+    background-color:#85929E;
+}
 #logo{
     margin-left:20px;
     height:70px;
@@ -104,4 +120,13 @@
   border-width: 3px;
   border-radius: 20px;
   margin-top:-159px;
+}
+
+#tble{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #34495E;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top:-90px;
 }

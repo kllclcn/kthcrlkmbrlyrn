@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>ADMIN</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadminp.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminadmin.css">
 </head>
     
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
@@ -18,26 +18,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   		<li style="color: #000; background-color: #E5E8E8;">ACCOUNT</li>
   		<li id="ad" class="hv">ADMIN</li>
                                             <div class="admncntnt">
-                                                <a href="aboutbns">View Admins</a>
-                                                <a href="aboutdev">Add Admin</a>
-                                                <a href="homemission">Delete Admin</a>
+                                                <a href="viewad">View Admins</a>
+                                                <a href="add">Add Admin</a>
+                                                <a href="delad">Delete Admin</a>
                                             </div>
   		<li id="us" class="hv">USERS</li>
                                                 <div class="usrcntnt">
-                                                    <a href="aboutbns">Confirm New Users</a>
-                                                    <a href="aboutdev">Delete User</a></div>
+                                                    <a href="Users">Confirm New Users</a>
+                                                    <a href="delus">Delete User</a></div>
                                             <li id="pr" class="hv">PRODUCTS</li>
                                                 <div class="prodcntnt">
-                                                <a href="aboutbns">Confirm New Products</a>
+                                                <a href="Prods">Confirm New Products</a>
                                                 </div>    
   		<li class="hv"><a href="/buynsell/Admin/LogOut" >Log Out</a></li>
 	</ul>
 	</div>
-    
+       <div class="layy">
+                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+        </div>
+    <div class="contt"></div>
+                      
     <div id="container">
         <img id="pic" src="<?php echo base_url(); ?>images/acdd.png"><br><br>
-        hello <?php echo"$_SESSION[id]"; ?>
-     </div
+           <label id="lbl">Username:</label><br><br>
+            <label id="lbl">Full Name:</label><br><br>
+            <label id="lbl">Sex:</label><br><br>
+            <label id="lbl">Address:</label><br><br>
+            <label id="lbl">Birthday:</label><br><br>
+            <label id="lbl">Mobile Number:</label><br><br>
+            <label id="lbl">Email Address:</label><br><br>
+             <label id="lbl">Student Number:</label><br><br>
+            <label id="lbl">College:</label><br><br>
+             <label id="lbl">Department:</label><br><br>
+             <label id="lbl">Year and Section:</label><br><br><br><br><br><br>
+    </div>
 
 </body>
 </html>
