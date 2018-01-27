@@ -127,12 +127,13 @@ class Users extends CI_Controller {
 				extract($_POST);
 				
 				//$id = $_SESSION['user']['id'];
-                $prodpic = $_POST['pic'];
+                //$prodpic = $_POST['pic'];
                 $path = "\buynsell\images\\";
                 $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
+				$this->SaveImage();
 				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);
-				
-				header("Location: http://localhost/buynsell/Users/usermain");
+				echo "done";
+				//header("Location: http://localhost/buynsell/Users/usermain");
 			}
 			else
 			{
@@ -144,12 +145,76 @@ class Users extends CI_Controller {
 			}
 
 		}
+		
 		else
 		{
 			header('Location: http://localhost/buynsell/Home/login');
 		}
 		
 	}
+	
+	public function SaveImage()
+    {
+        $status = array();
+        $status['message'] = '';
+        
+        $target_dir = FCPATH.'images/';
+        $filename = basename($_FILES["pic"]["name"]);
+        $target_file = $target_dir.$filename;
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["pic"]["tmp_name"]);
+            if($check !== false) {
+                //echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                $status['message'] .= "File is not an image. ";
+                $uploadOk = 0;
+            }
+        }
+        
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $status['message'] .= "Sorry, file already exists. ";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["pic"]["size"] > 500000) {
+            $status['message'] .= "Sorry, your file is too large (maximum of 5mb). ";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+            $status['message'] .= "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            $status['message'] .= "Sorry, your file was not uploaded. ";
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
+                $status['message'] = "The file ". basename( $_FILES["pic"]["name"]). " has been uploaded.";
+            } else {
+                $status['message'] .= "Sorry, there was an error uploading your file. ";
+            }
+        }
+        
+        if($uploadOk)
+        {
+            $status['success'] = TRUE;
+        }
+        else
+        {
+            $status['success'] = FALSE;
+        }
+        
+        $status['filename'] = $filename;
+        return $status;
+    }
         
 	
 	public function transact()
