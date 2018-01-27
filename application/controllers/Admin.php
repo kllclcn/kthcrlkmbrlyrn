@@ -171,7 +171,6 @@ class Admin extends CI_Controller {
 					$this->load->view('Admin/Add');
 				}
 			}
-			echo $_SESSION['id'];
 			$this->load->view('Admin/Add');
 			
 		}

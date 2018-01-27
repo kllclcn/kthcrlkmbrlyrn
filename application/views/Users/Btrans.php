@@ -2,25 +2,34 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
-    
-    <style>
-body{
-background-color: #dc4343;
-}
-</style>
-<head>
-    
-            <title>SUCCESS! / PUP BUY AND SELL </title>
-            <link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-            <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbtrans.css">
-            <img src="<?php echo base_url(); ?>images/mains.png" alt="Background" style='width: 100%;'/>
-</head>
-<body>
 
-<div id="container">
-	<h1>Transaction Success!</h1> <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button class ="bbtn"><a href="/buynsell/Users/usermain">Back to Menu</a></button><br><br><br><br><br><br>
-</div>
+<head>
+	<title>BUY / PUP BUY AND SELL </title>
+	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbtransx.css">
+</head>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+    <div id="hdr"></div>
+    <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+    	<div class="mainbutton">
+                      <ul>
+  		<li><a href="usermain" >ACCOUNT</a></li>
+                                            <li style="color: #000; background-color: #E5E8E8;">BUY</li>
+  		<li><a href="sell" >SELL</a></li>
+  		<li><a href="transact" >TRANSACTIONS</a></li>
+        <li><a href="/buynsell/Users/LogOut">LOG OUT</a></li>
+	</ul>
+	</div>
+    <div class="layy">
+                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+        </div>
+    <div class="contt"></div>
+    <div class="container">
+        <br><br><br><h1 style="text-align: center;"> ITEM IS RESERVED!  </h1>
+        
+        <a  id="btb" href="buy">Back to buy</a>
+   </div>
+    
 
 </body>
 </html>
