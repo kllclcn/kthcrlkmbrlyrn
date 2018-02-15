@@ -1,0 +1,215 @@
+body{
+background-color: #dc4343;
+}
+
+
+#hdr{
+    background-color: #f35a5a;
+    height:70px;
+    width:1350px;
+    margin-top: -8px;
+    margin-left:-10px;
+}
+
+#logo{
+    margin-left:20px;
+    height:70px;
+   position:relative;
+   bottom:70px;
+}
+
+.mainbutton{
+  list-style: none;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+  font: 17px "Torque Sense Regular",sans-serif;
+  width: 100%;
+  position:relative;
+  bottom:162px;
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 25px 25px 25px 25px;
+                       margin-right:40px;
+}
+
+.hv, .hv a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li:hover{
+	background-color: #dc4343;
+}
+
+.admncntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:700px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.admncntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#ad:hover ~ .admncntnt, .admncntnt:hover{
+    display: block;
+}
+
+.admncntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+.usrcntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:840px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.usrcntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#lbl{
+    margin-left: 50px;
+    font: 20px "Berlin Sans FB", sans-serif;
+}
+
+#us:hover ~ .usrcntnt, .usrcntnt:hover{
+    display: block;
+}
+
+.usrcntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+.prodcntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    left:1000px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.prodcntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#pr:hover ~ .prodcntnt, .prodcntnt:hover{
+    display: block;
+}
+
+.prodcntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+#container{
+    border-color: #34495E;
+    border-style: solid;
+    border-radius: 20px;
+    border-width:3px;
+    margin-left: 315px;
+    background-color:#F8F9F9;
+    list-style: none;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font: 16px "Arial", sans-serif;
+    width: 990px;
+    margin-top: -652px;
+    height:630px;
+}
+
+.layy{  
+    border-color: #34495E;
+     background-color: #85929E;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  padding:10px;
+  font: 20px "Trebuchet MS", sans-serif;
+  width: 270px;
+  height:250px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  position:relative;
+  bottom:169px;
+}
+
+.contt{
+    border-color: #34495E;
+    background-color: #F8F9F9;
+  padding:10px;
+  width: 270px;
+  height:340px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  margin-top:-159px;
+}
+
+#picc{
+    border-width:3px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 120px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width:100px;
+    height:100px;
+}
+
+#pic{
+    position:relative;
+    bottom:-10px;
+    left: 350px;
+}
+
+#title{
+    position:relative;
+    bottom:-10px;
+    left: 320px;
+}
+
+    input[type=text],input[type=password],input[type=number],input[type=email],select{
+    border-radius: 4px;
+    height:30px;
+    width:350px;
+    border-width: 2px;
+}
+
+#sulbl{
+    margin-left:100px;
+    
+}

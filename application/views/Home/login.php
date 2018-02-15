@@ -12,23 +12,28 @@ background-color: #dc4343;
 <head>
 	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designloginx.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designloginxx.css">
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
-                        <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
-                        <div class="mainbutton">
-                                <ul>
-  		<li><a href="homes">HOME</a></li>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                      <div id="hdr"></div>
+                       <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+	<div class="mainbutton">
+	<ul>    
+                                            <li><a href="homes" >HOME</a></li>
   		<li id="abt"><a href="about" >ABOUT</a></li>
                                             <div class="drpcntnt">
+                                                <a href="aboutbns">About</a>
+                                                <a href="aboutdev">Developers</a>
                                                 <a href="homemission">Mission</a>
                                                 <a href="homevision">Vision</a>
+                                                <a href="contact">Contact Us</a>
                                             </div>
-  		<li><a href="signup" >SIGN UP</a></li>
-  		<li style="color: #000; background-color: #f8f9f9;">LOG IN</li>
+                                            <li><a href="signup" >SIGN UP</a></li>
+                		<li style="color: #000; background-color: #E5E8E8;">LOG IN</li>
+                                
 	</ul>
 	</div>
-<img src="<?php echo base_url(); ?>images/libgg.png" alt="Background" style='width: 500px; margin-left: 425px; margin-top: 50px;'/>
+<img src="<?php echo base_url(); ?>images/libgg.png" alt="Background" style='width: 500px; margin-left: 425px; margin-top: -70px;'/>
 <div id="container">
 	
 	

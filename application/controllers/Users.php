@@ -49,8 +49,7 @@ class Users extends CI_Controller {
 		{
 			$_SESSION['user_id']= $_GET['id'];
 			$_SESSION['user_log'] = 1;
-			
-					
+
 		}
 		
 		
@@ -63,6 +62,7 @@ class Users extends CI_Controller {
 			
 			//$_SESSION['user']['user_log'] = 1;
 			//var_dump($_SESSION['user_log']);
+
 			
 			
 			$temp = $this->model->GetUserInfoById($_GET['id']);
@@ -227,6 +227,7 @@ class Users extends CI_Controller {
         {
             $status['success'] = FALSE;
         }
+
         
         $status['filename'] = $filename;
         return $status;
@@ -292,6 +293,7 @@ class Users extends CI_Controller {
 	
 	public function LogOut()
 	{
+
 		unset ($_SESSION['user_log']);
 		header('Location: http://localhost/buynsell/Home/login');
 		

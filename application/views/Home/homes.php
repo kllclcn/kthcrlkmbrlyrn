@@ -5,13 +5,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <title>HOME / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhome.css">	
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designhomexx.css">	
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">	
-                      <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:480px;'/>
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                    <div id="hdr"></div>
+                      <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
 	<div class="mainbutton">
 	<ul>    
-  		<li style="color: #000; background-color: #f8f9f9;">HOME</li>
+  		<li style="color: #000; background-color: #E5E8E8;">HOME</li>
   		<li id="abt"><a href="about" >ABOUT</a></li>
                                             <div class="drpcntnt">
                                                 <a href="aboutbns">About</a>
@@ -26,18 +27,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
       <div class="slideshow-container">
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url(); ?>images/a1.png" />
+                      <img src="<?php echo base_url(); ?>images/h1.png" />
                     </div>
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url(); ?>images/a2.png" />
+                      <img src="<?php echo base_url(); ?>images/h2.png" />
                     </div>
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url(); ?>images/a3.png" />
+                      <img src="<?php echo base_url(); ?>images/h3.png" />
                     </div>
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url(); ?>images/a4.png" />
+                      <img src="<?php echo base_url(); ?>images/h4.png" />
                     </div>
                   </div>
+           <div class="mainn">
+                          
+            </div>
 </body>
 <script>
 var slideIndex = 0;

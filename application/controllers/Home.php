@@ -53,9 +53,6 @@ class Home extends CI_Controller {
 				var_dump ($_SESSION['user_id']);
 				var_dump($_SESSION['user_log']);
 				var_dump($_SESSION['id']);
-				
-				
-				
 				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
             }
 			else

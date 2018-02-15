@@ -119,13 +119,11 @@ class Admin extends CI_Controller {
         if(isset($_POST['login']))
 		{
 			extract($_POST);
-            
             $result = $this->model->AuthenticateUser($username,$password);
 			var_dump($result);
-			
 
             if(count($result)>0)
-            {
+            {       
 				$_SESSION['id'] = $result['id'];
 				//echo $_SESSION['id'];
 				$_SESSION['log'] = 1;
@@ -173,7 +171,6 @@ class Admin extends CI_Controller {
 					$this->load->view('Admin/Add');
 				}
 			}
-			echo $_SESSION['id'];
 			$this->load->view('Admin/Add');
 			
 		}
@@ -364,7 +361,7 @@ class Admin extends CI_Controller {
 	public function LogOut()
 	{
 		unset ($_SESSION['log']);
-		$this->load->view('Admin/login');
+
 		header('Location: http://localhost/buynsell/admin/login');
 		
 		

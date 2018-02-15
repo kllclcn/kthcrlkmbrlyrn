@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuycc.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designtransactt.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
     <div id="hdr"></div>
@@ -25,11 +25,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     <div class="contt"></div>
     <div class="container">
-        <img src="<?php echo base_url(); ?>images/buy.png" style="margin-left:370px; margin-top: 20px;"><br><br><br>
-                        <table id="tble">
-                            <tr><?php
-		echo $list;
-                           ?><tr></table>
+                            <img src="<?php echo base_url(); ?>images/contrac.png" style="margin-left:370px; margin-top: 20px;"><br><br><br>
+                            <table id="tble" style="margin-top: 30px;">
+		<tr>
+			<th>Product ID</th>
+			<th>Product Name</th>
+			<th>Date Posted</th>
+			<th>Status</th>
+			<th>Action</th>
+		</tr>
+        <tr><?php
+			echo $list;
+        ?><tr></table>
 </div>
     
 
