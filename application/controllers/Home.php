@@ -44,17 +44,24 @@ class Home extends CI_Controller {
             
             $result = $this->model->AuthenticateUser($username,$password);
 
-             if(count($result)>0)
+            if(count($result)>0)
             {
 				
-				$_SESSION['id'] = $result['id'];
-				$_SESSION['log'] = 1;
+				$_SESSION['user_id'] = $result['id'];
+				$_SESSION['user_log'] = 1;
+				var_dump($result['id']);
+				var_dump ($_SESSION['user_id']);
+				var_dump($_SESSION['user_log']);
+				var_dump($_SESSION['id']);
+				
+				
+				
 				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
             }
 			else
 			{
 				echo"<script>alert('Incorrect Username or Password!')</script>";
-                $this->load->view('Home/login');
+                $this->redirect('login');
 			}
         }
         else
@@ -80,7 +87,7 @@ class Home extends CI_Controller {
                 $temp = $this->model->GetID($username,$password);
                 $this->model->InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email);
                 echo"<script>alert('Your account is on process.')</script>";
-                $this->load->view('Home/login');
+                $this->redirect('Home/login');
                 }   
             }
             else

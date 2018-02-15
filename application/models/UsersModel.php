@@ -6,6 +6,25 @@ Class UsersModel extends CI_Model {
         $this->pdo = $this->load->database('pdo', true);
     }
     
+	
+	
+	public function GetUserInfoById($id)
+    {
+        try
+        {
+            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	
 	public function GetProducts() 
 	{
         try
@@ -26,7 +45,7 @@ Class UsersModel extends CI_Model {
 	
     
     
-	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace)
+	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$id)
 	{
 		try
 		{
@@ -38,8 +57,9 @@ Class UsersModel extends CI_Model {
 					prod_desc = ?,
 					place = ?,
 					date_posted = ?,
-					status = 'submit'";
-			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte));
+					status = 'submit',
+					user_id = ?";
+			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$dte,$id));
 			
 		}
 		catch (Exception $ex) 
