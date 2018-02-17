@@ -63,7 +63,22 @@ class Users extends CI_Controller {
 			
 			//$_SESSION['user']['user_log'] = 1;
 			//var_dump($_SESSION['user_log']);
-			$this->load->view("Users/usermain");
+
+			
+			
+			$temp = $this->model->GetUserInfoById($_GET['id']);
+				$data['name'] = $temp['name'];
+				$data['Gender'] = $temp['Gender'];
+				$data['address'] = $temp['address'];
+				$data['Birthday'] = $temp['Birthday'];
+				$data['id_no'] = $temp['id_no'];
+				$data['course'] = $temp['course'];
+				$data['contact'] = $temp['contact'];
+				$data['email'] = $temp['email'];
+		//var_dump($data);	
+		$this->load->view("Users/usermain",$data);
+			
+			//$this->load->view("Users/usermain",$data);
 		}
 		else
 		{
@@ -213,6 +228,7 @@ class Users extends CI_Controller {
         {
             $status['success'] = FALSE;
         }
+
         
         $status['filename'] = $filename;
         return $status;
@@ -278,6 +294,7 @@ class Users extends CI_Controller {
 	
 	public function LogOut()
 	{
+
 		unset ($_SESSION['user_log']);
 		header('Location: http://localhost/buynsell/Home/login');
 		

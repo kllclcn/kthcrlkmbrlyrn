@@ -361,6 +361,7 @@ class Admin extends CI_Controller {
 	public function LogOut()
 	{
 		unset ($_SESSION['log']);
+
 		header('Location: http://localhost/buynsell/admin/login');
 		
 		

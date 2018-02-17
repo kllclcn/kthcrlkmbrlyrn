@@ -6,6 +6,24 @@ Class HomeModel extends CI_Model {
         $this->pdo = $this->load->database('pdo', true);
     }
     
+	
+    public function GetUserInfoById($id)
+    {
+        try
+        {
+            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+ 
+    
 
 	public function GetUserById($id)
     {
@@ -31,9 +49,9 @@ Class HomeModel extends CI_Model {
         try
         {
             $sql = "SELECT id FROM users where username = ? and password = ?";
-            $password = sha1($password);
+			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
-            $result = $stmt->result();
+			$result = $stmt->result();
             return (array) $result[0];
         } 
         catch (Exception $ex) 
@@ -91,9 +109,9 @@ Class HomeModel extends CI_Model {
     {
         try
         {
-            $password = sha1($password);
+			$password = sha1($password);
             $sql = "SELECT id FROM users WHERE username = ? AND password = ?";
-           $stmt = $this->pdo->query($sql,array($username,$password));
+            $stmt = $this->pdo->query($sql,array($username,$password));
             $result = $stmt->result();
             return (array) $result[0];
         } 
