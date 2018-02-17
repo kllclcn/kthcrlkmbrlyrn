@@ -22,7 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</ul>
 	</div>
         <div class="layy">
-                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+            <img id="picc" src="<?php echo base_url(); ?>images/woman.png"<br>
+                        <?php $name=($_SESSION['user_id'])?>
+                        <p> hello <?php echo"$name";?></p>
         </div>
          </div>
         <div class="contt"></div>

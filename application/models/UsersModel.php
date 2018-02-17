@@ -39,7 +39,7 @@ Class UsersModel extends CI_Model {
 					price = ?,
 					prod_desc = ?,
 					place = ?,
-                    imageproduct = ?,
+                                                                                                              imageproduct = ?,
 					date_posted = ?,
 					status = 'submit',
 					user_id = ?";
@@ -138,6 +138,7 @@ Class UsersModel extends CI_Model {
             echo $ex;
             exit;
         }
+        
 	}
 
 

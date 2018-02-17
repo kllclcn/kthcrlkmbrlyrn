@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>BUY / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuycc.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designbuy.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
     <div id="hdr"></div>

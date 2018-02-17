@@ -49,6 +49,8 @@ class Users extends CI_Controller {
 		{
 			$_SESSION['user_id']= $_GET['id'];
 			$_SESSION['user_log'] = 1;
+                                                                  $id=($_SESSION['user_id']);
+
 		}
 		
 		
@@ -127,8 +129,8 @@ class Users extends CI_Controller {
 				extract($_POST);
 				
 				//$id = $_SESSION['user']['id'];
-                //$prodpic = $_POST['pic'];
-                $path = "\buynsell\images\\";
+                $prodpic = $_FILES["pic"]["name"];
+                $path = "C:\xampp\htdocs\buynsell\images\\";
                 $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
 				$this->SaveImage();
 				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);

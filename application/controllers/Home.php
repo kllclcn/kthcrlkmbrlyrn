@@ -42,25 +42,25 @@ class Home extends CI_Controller {
         {
 			extract($_POST);
             
-            $result = $this->model->AuthenticateUser($username,$password);
-
+            $result = $this->model->GetID($username,$password);
+            
             if(count($result)>0)
             {
-				
 				$_SESSION['user_id'] = $result['id'];
+                                                                                        $_SESSION['user_name'] = $result['username'];
 				$_SESSION['user_log'] = 1;
 				var_dump($result['id']);
 				var_dump ($_SESSION['user_id']);
 				var_dump($_SESSION['user_log']);
-				var_dump($_SESSION['id']);
-				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
-            }
+				var_dump($_SESSION['user_name']);
+				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['username']);
+           }
 			else
 			{
 				echo"<script>alert('Incorrect Username or Password!')</script>";
-                $this->redirect('login');
+                                                                                        $this->redirect('login');
 			}
-        }
+           }
         else
         {
             $this->load->view('Home/login');

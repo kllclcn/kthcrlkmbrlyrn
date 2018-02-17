@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>SELL / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designsell.css">
+                      <link rel="stylesheet" href="<?php echo base_url(); ?>css/users/designsellx.css">
 </head>
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
     <div id="hdr"></div>
@@ -23,11 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="layy">
 
         <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br>
-                <div class="layyy">
-                <li><a href="usermain">ACCOUNT</a></li><br>
-                <li><a href="buy" >BUY</a></li><br>
-                <li id="click">SELL</li><br>
-                <li><a href="transact">TRANSACTION</a></li></div></div>
+</div>
+    <div class="contt"></div>
 <form method="post" enctype="multipart/form-data">
 
     <div id="container">
