@@ -30,8 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="mainn">
             <img src="<?php echo base_url(); ?>images/acd.png" alt="Background" id="title"/><br><br><br>
-            <label id="lbl">Username:</label><br><br>
-			
+            <label id="lbl">Username:</label>
+			<label id="lbl"><?php echo $username; ?></label><br><br>
             <label id="lbl">Full Name:</label>
             <label id="lbl"><?php echo $name; ?></label><br><br>
             <label id="lbl">Sex:</label>

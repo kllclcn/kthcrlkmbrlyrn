@@ -59,6 +59,8 @@ class Users extends CI_Controller {
 		if(isset($_SESSION['user_log']))
 		{
                 $temp = $this->model->GetUserInfoById($_SESSION['user_id']);
+				$res = $this->model->GetUserInfo($_SESSION['user_id']);
+				$data['username'] = $res['username'];
 				$data['name'] = $temp['name'];
 				$data['Gender'] = $temp['Gender'];
 				$data['address'] = $temp['address'];

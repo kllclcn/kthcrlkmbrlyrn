@@ -22,6 +22,22 @@ Class UsersModel extends CI_Model {
         }
     }
 	
+	public function GetUserInfo($id)
+    {
+        try
+        {
+            $sql = "SELECT username FROM users WHERE id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
 	
 	public function GetProducts() 
 	{
