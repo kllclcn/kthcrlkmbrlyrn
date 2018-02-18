@@ -6,13 +6,11 @@ Class UsersModel extends CI_Model {
         $this->pdo = $this->load->database('pdo', true);
     }
     
-	
-	
-	public function GetUserInfoById($id)
+    public function GetUserInfoById($id)
     {
         try
         {
-            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $sql = "SELECT user_id,name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];

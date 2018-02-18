@@ -23,7 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
         <div class="layy">
             <img id="picc" src="<?php echo base_url(); ?>images/woman.png"<br>
-                        <?php $name=($_SESSION['user_id'])?>
                         <p> hello <?php echo"$name";?></p>
         </div>
          </div>
@@ -33,18 +32,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <img src="<?php echo base_url(); ?>images/acd.png" alt="Background" id="title"/><br><br><br>
             <label id="lbl">Username:</label><br><br>
 			
-            <label id="lbl">Full Name:</label><br><br>
-			<input type="text" placeholder="full name" name="full name" value="<?php echo $name; ?>" disabled><br/><br/>
-            <label id="lbl">Sex:</label><br><br>
-			<input type="text" placeholder="sex" name="sex" value="<?php echo $Gender; ?>" disabled><br/><br/>
-            <label id="lbl">Address:</label><br><br>
-			<input type="text" placeholder="address" name="address" value="<?php echo $address; ?>" disabled><br/><br/>
-            <label id="lbl">Birthday:</label><br><br>
-			<input type="text" placeholder="birthday" name="birthday" value="<?php echo $Birthday; ?>" disabled><br/><br/>
-            <label id="lbl">Mobile Number:</label><br><br>
-			<input type="text" placeholder="mobile number" name="mobile number" value="<?php echo $contact; ?>" disabled><br/><br/>
-            <label id="lbl">Email Address:</label><br><br>
-			<input type="text" placeholder="email address" name="email address" value="<?php echo $email; ?>" disabled><br/><br/>
+            <label id="lbl">Full Name:</label>
+            <label id="lbl"><?php echo $name; ?></label><br><br>
+            <label id="lbl">Sex:</label>
+            <label id="lbl"><?php echo $Gender; ?></label><br><br>
+            <label id="lbl">Address:</label>
+            <label id="lbl"><?php echo $address; ?></label><br><br>
+            <label id="lbl">Birthday:</label>
+            <label id="lbl"><?php echo $Birthday; ?></label><br><br>
+            <label id="lbl">Mobile Number:</label>
+            <label id="lbl"><?php echo $contact; ?></label><br><br>
+            <label id="lbl">Email Address:</label>
+<label id="lbl"><?php echo $email; ?></label><br><br>
              <label id="lbl">Student Number:</label><br><br>
 			
             <label id="lbl">College:</label><br><br>

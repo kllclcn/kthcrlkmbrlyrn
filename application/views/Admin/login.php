@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 
 <head>
-	<title>ADMIN LOGIN / PUP BUY AND SELL </title>
+	<title>LOGIN / PUP BUY AND SELL </title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminloginx.css">
 </head>
@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
     <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
 <div class="mainbutton">
-    <p>Admin Login</p>
+    <p>Admin/Organizer Login</p>
 	</div>
 	
 <img src="<?php echo base_url(); ?>images/logbg.png" alt="Background" style='width: 100%;'/>

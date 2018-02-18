@@ -65,7 +65,7 @@ Class AdminModel extends CI_Model {
                     password = ?,
                     active = ?
                     ";
-            $stmt = $this->pdo->query($sql,array($username,$password,1));
+            $stmt = $this->pdo->query($sql,array($username,$password,2));
             return $stmt;
         } 
         catch (Exception $ex) 
@@ -122,7 +122,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
+            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1 or active = 2;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
 			$result = $stmt->result();
@@ -159,7 +159,7 @@ Class AdminModel extends CI_Model {
         try
         {
             $sql = "SELECT id,username FROM admin
-                    WHERE active = 1";
+                    WHERE active = 2";
             $stmt = $this->pdo->query($sql);
             return $stmt;
         } 

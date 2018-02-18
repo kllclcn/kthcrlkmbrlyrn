@@ -56,17 +56,7 @@ class Users extends CI_Controller {
 		
 		if(isset($_SESSION['user_log']))
 		{
-			//$data = array();
-			//$data['id'] = $_GET['id'];
-			//$_SESSION['user']['user_id'] = $data['id'];
-			//var_dump ($_SESSION['user_id']);
-			
-			//$_SESSION['user']['user_log'] = 1;
-			//var_dump($_SESSION['user_log']);
-
-			
-			
-			$temp = $this->model->GetUserInfoById($_GET['id']);
+                                                                                        $temp = $this->model->GetUserInfoById($_GET['id']);
 				$data['name'] = $temp['name'];
 				$data['Gender'] = $temp['Gender'];
 				$data['address'] = $temp['address'];

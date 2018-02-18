@@ -53,7 +53,7 @@ class Home extends CI_Controller {
 				var_dump ($_SESSION['user_id']);
 				var_dump($_SESSION['user_log']);
 				var_dump($_SESSION['user_name']);
-				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['username']);
+				header("Location: http://localhost/buynsell/Users/usermain/?id=".$result['id']);
            }
 			else
 			{
@@ -84,7 +84,7 @@ class Home extends CI_Controller {
                 $temp = $this->model->GetID($username,$password);
                 $this->model->InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email);
                 echo"<script>alert('Your account is on process.')</script>";
-                $this->redirect('Home/login');
+                $this->redirect('login');
                 }   
             }
             else

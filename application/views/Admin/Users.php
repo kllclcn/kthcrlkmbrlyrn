@@ -1,27 +1,43 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>CONFIRM</title>
-	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminusersx.css">
-</head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png')">
-    <img src="<?php echo base_url(); ?>images/logoo.png" alt="Background" style='margin-left:490px;'/>
-    
-<div class="layy">
-                   <img id="picc" src="<?php echo base_url(); ?>images/woman.png"><br><br><br>
-	<div class="layyy">
-              		<li><a href="admin">ACCOUNT</a></li><br/>
-                                            <li id="click">CONFIRM NEW USERS</li><br/>
-                                            <li><a href="prods">CONFIRM NEW PRODUCTS</a></li><br/>
-                                            <li><a href="Add">ADD ADMIN</a></li><br/>
-                                            <li><a href="viewad">VIEW ADMINS</a></li><br/>
-                                            <li><a href="delad">DELETE ADMINS</a></li>	
-	</div>
-</div>
 
+<html lang="en">
+    
+<head>
+	<title>ADMIN</title>
+	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/designadminaddz.css">
+</head>
+    
+<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+                    <div id="hdr"></div>
+                      <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
+	<div class="mainbutton">
+	<ul>    
+                                            <li class="hv"><a href="Admin">ACCOUNT</a></li>
+                                            <li id="ad" class="hv">ORGANIZERS</li>
+                                            <div class="admncntnt">
+                                                <a href="viewad">View Organizers</a>
+                                                <a href="add">Add Organizer</a>
+                                                <a href="delad">Delete Organizer</a>
+                                            </div>
+  		<li id="us" style="color: #000; background-color: #E5E8E8;">USERS</li>
+                                                <div class="usrcntnt">
+                                                    <a href="Users">Confirm New Users</a>
+                                                    <a href="delus">Delete User</a></div>
+                                            <li id="pr" class="hv">PRODUCTS</li>
+                                                <div class="prodcntnt">
+                                                <a href="Prods">Confirm New Products</a>
+                                                </div>    
+  		<li class="hv"><a href="/buynsell/Admin/LogOut" >Log Out</a></li>
+	</ul>
+	</div>
+       <div class="layy">
+                        <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
+        </div>
+    <div class="contt"></div>
+                      
 <div id="container">
 	 <img id="pic" src="<?php echo base_url(); ?>images/ad1.png">
 	<table border="1" style="border-color: #000; border-collapse:collapse;">

@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
     	<div class="mainbutton">
                       <ul>
-  		<li><a href="usermain" >ACCOUNT</a></li>
+  		<li><a href="usermain   ">ACCOUNT</a></li>
                                             <li style="color: #000; background-color: #E5E8E8;">BUY</li>
   		<li><a href="sell" >SELL</a></li>
   		<li><a href="transact" >TRANSACTIONS</a></li>

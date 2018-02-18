@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<input type="date" name="bdate" style="margin-left:120px;" required><br/><br/>
 
                                             <label id="sulbl"><b>Mobile Number:</b></label><br>
-		<input type="number" placeholder="MobileNumber" name="mobnum" style="margin-left:120px;" required><br/><br/>
+		<input type="text" placeholder="MobileNumber" name="mobnum" style="margin-left:120px;" required><br/><br/>
                 
                                              <label id="sulbl"><b>Email Address:</b></label><br>
 		<input type="email" placeholder="Email Address" name="email" style="margin-left:120px;" required><br/><br/>

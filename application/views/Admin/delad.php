@@ -16,11 +16,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="mainbutton">
 	<ul>    
                                              <li class="hv"><a href="Admin">ACCOUNT</a></li>
-                                            <li id="ad" style="color: #000; background-color: #E5E8E8;">ADMIN</li>
+                                            <li id="ad" style="color: #000; background-color: #E5E8E8;">ORGANIZERS</li>
                                             <div class="admncntnt">
-                                                <a href="viewad">View Admins</a>
-                                                <a href="add">Add Admin</a>
-                                                <a href="delad">Delete Admin</a>
+                                                <a href="viewad">View Organizers</a>
+                                                <a href="add">Add Organizer</a>
+                                                <a href="delad">Delete Organizer</a>
                                             </div>
   		<li id="us" class="hv">USERS</li>
                                                 <div class="usrcntnt">
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="contt"></div>
                       
     <div id="container">
-                      <h2 style="margin-left: 20px;">Delete another Administrator:</h2><br/>
+                      <h2 style="margin-left: 20px;">Delete Organizer    :</h2><br/>
                       	<table border="1" style="border-color: #000; border-collapse:collapse;">
 	<tr>
 		<th>ID</th>
