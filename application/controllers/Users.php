@@ -43,20 +43,22 @@ class Users extends CI_Controller {
 		
 	}
 	
-	 public function usermain()
+	public function usermain()
 	{
+		
 		if(isset($_GET['id']))
 		{
 			$_SESSION['user_id']= $_GET['id'];
 			$_SESSION['user_log'] = 1;
-                                                                  $id=($_SESSION['user_id']);
+            $id=($_SESSION['user_id']);
 
 		}
 		
 		
+		
 		if(isset($_SESSION['user_log']))
 		{
-                                                                                        $temp = $this->model->GetUserInfoById($_GET['id']);
+                $temp = $this->model->GetUserInfoById($_SESSION['user_id']);
 				$data['name'] = $temp['name'];
 				$data['Gender'] = $temp['Gender'];
 				$data['address'] = $temp['address'];
