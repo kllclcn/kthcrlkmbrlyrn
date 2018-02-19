@@ -82,7 +82,7 @@ class Home extends CI_Controller {
                 {
                 $this->model->InsertUsers($username,$password);
                 $temp = $this->model->GetID($username,$password);
-                $this->model->InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email);
+                $this->model->InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec);
                 echo"<script>alert('Your account is on process.')</script>";
                 $this->redirect('login');
                 }   

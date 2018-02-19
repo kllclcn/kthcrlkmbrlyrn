@@ -1,0 +1,1 @@
+ALTER TABLE `user_desc` ADD `yearsec` VARCHAR(15) NOT NULL AFTER `college`;

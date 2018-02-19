@@ -43,12 +43,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <label id="lbl">Mobile Number:</label>
             <label id="lbl"><?php echo $contact; ?></label><br><br>
             <label id="lbl">Email Address:</label>
-<label id="lbl"><?php echo $email; ?></label><br><br>
-             <label id="lbl">Student Number:</label><br><br>
-			
-            <label id="lbl">College:</label><br><br>
-			
+			<label id="lbl"><?php echo $email; ?></label><br><br>
+             <label id="lbl">Student Number:</label>
+			<label id="lbl"><?php echo $id_no; ?></label><br><br>
+            <label id="lbl">College:</label>
+			<label id="lbl"><?php echo $college; ?></label><br><br>
              <label id="lbl">Department:</label><br><br>
-             <label id="lbl">Year and Section:</label><br><br><br><br><br><br>
+             <label id="lbl">Year and Section:</label>
+			 <label id="lbl"><?php echo $yearsec; ?></label><br><br><br><br><br><br>
 </body>
 </html>

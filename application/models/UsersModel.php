@@ -10,7 +10,7 @@ Class UsersModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT user_id,name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $sql = "SELECT user_id,name, Gender,address, Birthday, contact, email, id_no, college, yearsec FROM user_desc WHERE user_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];
@@ -39,13 +39,13 @@ Class UsersModel extends CI_Model {
     }
 	
 	
-	public function GetProducts() 
+	public function GetProducts($id) 
 	{
         try
         {
             $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
-                    WHERE status IN ('available','reserved')";
-            $stmt = $this->pdo->query($sql);
+                    WHERE status IN ('available','reserved') AND NOT user_id = ? ;";
+            $stmt = $this->pdo->query($sql,array($id));
             return $stmt;
         } 
         catch (Exception $ex) 

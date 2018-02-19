@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <a href="homevision">Vision</a>
                                                 <a href="contact">Contact Us</a>
                                             </div>
-                		<li style="color: #000; background-color: #E5E8E8;">SIGN UP</li>
+                 		<li style="color: #000; background-color: #E5E8E8;">SIGN UP</li>
   		<li><a href="login" >LOG IN</a></li>
 	</ul>
 	</div>
@@ -74,30 +74,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                             </div>
                                    
-                                <div id="brdr3">
-                                  <span class="dot" style="margin-left:250px;"></span>
-                                        <span class="dot"></span>
-                                        <span class="dots"></span>
-                                        <span class="dot"></span><br><br>
-                                        <img src="<?php echo base_url(); ?>images/pg3.png" alt="Background" style='margin-left:90px;'/><br/><br/><br><br>
-                                        <label id="sulbl"><b>Student Number:</b></label><br>
-                                        <input type="text" placeholder="201X-XXXXX-XX-X" name="studno" style="margin-left:120px;" required><br/><br/>
-                                        <label id="sulbl"><b>College:</b></label><br>
-                                            <select id="course" name="drop" style="margin-left:120px;">
-			<option value="crs1">College of Accountancy and Finance (CAF)</option>
-			<option value="crs2">College of Architecture and Fine Arts (CAFA)</option>
-			<option value="crs3">College of Arts and Letters (CAL)</option>
-			<option value="crs4">College of Business Administration (CBA)</option>
-			<option value="crs5">College of Communication (COC)</option>
-			<option value="crs6">College of Computer and Information Sciences (CCIS)</option>
-			<option value="crs7">College of Education (COED)</option>
-			<option value="crs8">College of Engineering (CE)</option>
-                                                                  <option value="crs9">College of Human Kinetics (CHK)</option>
-			<option value="crs10">College of Political Science and Public Administration (CPSPA)</option>
-			<option value="crs11">College of Social Sciences and Development (CSSD)</option>
-			<option value="crs12">College of Science (CS)</option>
-                                                                  <option value="crs13">College of Tourism, Hospitality and Transportation Management(CTHTM))</option>
-			<option value="crs14">Institute of Technology (ITECH)</option>
+        <div id="brdr3">
+        <span class="dot" style="margin-left:250px;"></span>
+        <span class="dot"></span>
+        <span class="dots"></span>
+        <span class="dot"></span><br><br>
+        <img src="<?php echo base_url(); ?>images/pg3.png" alt="Background" style='margin-left:90px;'/><br/><br/><br><br>
+        <label id="sulbl"><b>Student Number:</b></label><br>
+        <input type="text" placeholder="201X-XXXXX-XX-X" name="studno" style="margin-left:120px;" required><br/><br/>
+        <label id="sulbl"><b>College:</b></label><br>
+        <select id="course" name="college" style="margin-left:120px;">
+			<option value="College of Accountancy and Finance (CAF)">College of Accountancy and Finance (CAF)</option>
+			<option value="College of Architecture and Fine Arts (CAFA)">College of Architecture and Fine Arts (CAFA)</option>
+			<option value="College of Arts and Letters (CAL)">College of Arts and Letters (CAL)</option>
+			<option value="College of Business Administration (CBA)">College of Business Administration (CBA)</option>
+			<option value="College of Communication (COC)">College of Communication (COC)</option>
+			<option value="College of Computer and Information Sciences (CCIS)</">College of Computer and Information Sciences (CCIS)</option>
+			<option value="College of Education (COED)">College of Education (COED)</option>
+			<option value="College of Engineering (CE">College of Engineering (CE)</option>
+            <option value="College of Human Kinetics (CHK)">College of Human Kinetics (CHK)</option>
+			<option value="College of Political Science and Public Administration (CPSPA)">College of Political Science and Public Administration (CPSPA)</option>
+			<option value="College of Social Sciences and Development (CSSD">College of Social Sciences and Development (CSSD)</option>
+			<option value="College of Science (CS)">College of Science (CS)</option>
+            <option value="College of Tourism, Hospitality and Transportation Management(CTHTM))">College of Tourism, Hospitality and Transportation Management(CTHTM))</option>
+			<option value="Institute of Technology (ITECH)">Institute of Technology (ITECH)</option>
 		</select><br/><br/>
                                             <label id="sulbl"><b>Department:</b></label>
                                             <select id="dept1" name="term">

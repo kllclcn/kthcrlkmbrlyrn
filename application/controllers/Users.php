@@ -65,10 +65,12 @@ class Users extends CI_Controller {
 				$data['Gender'] = $temp['Gender'];
 				$data['address'] = $temp['address'];
 				$data['Birthday'] = $temp['Birthday'];
-				$data['id_no'] = $temp['id_no'];
-				$data['course'] = $temp['course'];
 				$data['contact'] = $temp['contact'];
 				$data['email'] = $temp['email'];
+				$data['id_no'] = $temp['id_no'];
+				$data['college'] = $temp['college'];
+				$data['yearsec'] = $temp['yearsec'];
+				
 		//var_dump($data);	
 		$this->load->view("Users/usermain",$data);
 			
@@ -91,12 +93,13 @@ class Users extends CI_Controller {
 		{
 			$data = array();
 			$data['list'] = '';
-			$stmt = $this->model->GetProducts();
+			$stmt = $this->model->GetProducts($_SESSION['user_id']);
 			foreach($stmt->result() as $row)
 			{
 				$data['list'] .= $this->load->view('Users/productList',$row,TRUE);
 			}
 			
+			//var_dump($data);
 			$this->load->view("Users/buy",$data);
 		}
 		else
@@ -139,7 +142,9 @@ class Users extends CI_Controller {
 				
 				//$id = $_SESSION['user']['id'];
                 $prodpic = $_FILES["pic"]["name"];
-                $path = "buynsell\images\\";
+
+                $path = "\buynsell\images\\";
+
                 $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
 				$this->SaveImage();
 				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);
@@ -192,10 +197,7 @@ class Users extends CI_Controller {
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["pic"]["size"] > 500000) {
-            $status['message'] .= "Sorry, your file is too large (maximum of 5mb). ";
-            $uploadOk = 0;
-        }
+        
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
