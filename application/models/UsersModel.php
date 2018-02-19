@@ -39,13 +39,13 @@ Class UsersModel extends CI_Model {
     }
 	
 	
-	public function GetProducts() 
+	public function GetProducts($id) 
 	{
         try
         {
             $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
-                    WHERE status IN ('available','reserved')";
-            $stmt = $this->pdo->query($sql);
+                    WHERE status IN ('available','reserved') AND NOT user_id = ? ;";
+            $stmt = $this->pdo->query($sql,array($id));
             return $stmt;
         } 
         catch (Exception $ex) 
