@@ -1,0 +1,1 @@
+ALTER TABLE `admin_desc` CHANGE `course` `college` VARCHAR(125) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

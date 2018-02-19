@@ -47,6 +47,20 @@ class Admin extends CI_Controller {
 	{
 		if(isset($_SESSION['log']))
 		{
+			//$temp = $this->model->GetAdminInfoById($_SESSION['id']);
+			//	$res = $this->model->GetAdminInfo($_SESSION['id']);
+			//	$data['username'] = $res['username'];
+			//	$data['name'] = $temp['name'];
+			//	$data['Gender'] = $temp['Gender'];
+			//	$data['address'] = $temp['address'];
+			//	$data['Birthday'] = $temp['Birthday'];
+			//	$data['contact'] = $temp['contact'];
+			//	$data['email'] = $temp['email'];
+			//	$data['id_no'] = $temp['id_no'];
+			//	$data['college'] = $temp['college'];
+			//	$data['yearsec'] = $temp['yearsec'];
+				
+			//$this->load->view('Admin/Admin',$data);
 			$this->load->view('Admin/Admin');
 		}
 		else
@@ -125,9 +139,16 @@ class Admin extends CI_Controller {
             if(count($result)>0)
             {       
 				$_SESSION['id'] = $result['id'];
-				//echo $_SESSION['id'];
-				$_SESSION['log'] = 1;
-				header('Location: http://localhost/buynsell/admin/Admin');
+				if($_SESSION['id']==1)
+				{
+					//echo $_SESSION['id'];
+					$_SESSION['log'] = 1;
+					header('Location: http://localhost/buynsell/admin/Admin');
+				}
+				else
+				{
+					header('Location: http://localhost/buynsell/organizer/admin/?id='.$result['id']);
+				}
             }
 			else
 			{
