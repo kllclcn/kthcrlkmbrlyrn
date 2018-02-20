@@ -26,7 +26,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $sql = "SELECT name, Gender,address, Birthday, contact, email, id_no, college, yearsec FROM user_desc WHERE user_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];
@@ -122,7 +122,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1 or active = 2;";
+            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
 			$result = $stmt->result();

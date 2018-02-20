@@ -142,9 +142,7 @@ class Users extends CI_Controller {
 				
 				//$id = $_SESSION['user']['id'];
                 $prodpic = $_FILES["pic"]["name"];
-
                 $path = "\buynsell\images\\";
-
                 $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
 				$this->SaveImage();
 				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);

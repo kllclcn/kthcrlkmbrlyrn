@@ -1,5 +1,5 @@
 <tr>
-                     <td><img id="pic" src="images//<?php echo base_url(); $imageproduct ?>" height="90" width="90"/></td>
+                     <td><img id="pic" src="<?php echo $imageproduct ?>" height="90" width="90"/></td>
                       <td id="name"><?php echo $prod_name; ?><br></td>
                       <td id="price">&#8369;<?php echo $price; ?></td>
                        <td id="place"><?php echo $place; ?></td>

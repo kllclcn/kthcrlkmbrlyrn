@@ -24,14 +24,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<input type="text" placeholder="address" name="address" value="<?php echo $address; ?>" disabled><br/>
                       <label>Birthday:</label>
 	<input type="text" placeholder="Birthday" name="Birthday" value="<?php echo $Birthday; ?>" disabled><br/>
-                      <label>Student Number:</label>
-	<input type="text" placeholder="id_no" name="id_no" value="<?php echo $id_no; ?>" disabled><br/>
-                      <label>Course:</label>
-	<input type="text" placeholder="course" name="course" value="<?php echo $course; ?>" disabled><br/>
                      <label>Contact Information:</label>
 	<input type="text" placeholder="contact" name="contact" value="<?php echo $contact; ?>" disabled><br/>
                       <label>Email Address:</label>
 	<input type="text" placeholder="email" name="email" value="<?php echo $email; ?>" disabled><br/>
+                       <label>Student Number:</label>
+	<input type="text" placeholder="id_no" name="id_no" value="<?php echo $id_no; ?>" disabled><br/>
+                       <label>Course:</label>
+	<input type="text" placeholder="college" name="college" value="<?php echo $college; ?>" disabled><br/>
+                       <label>Year and Section:</label>
+	<input type="text" placeholder="yearsec" name="yearsec" value="<?php echo $yearsec; ?>" disabled><br/>
 	
 	<input class="bbtn" type="submit" name="Confirm" value="Confirm">
 	</form>
