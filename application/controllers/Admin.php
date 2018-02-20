@@ -134,7 +134,7 @@ class Admin extends CI_Controller {
 		{
 			extract($_POST);
             $result = $this->model->AuthenticateUser($username,$password);
-			var_dump($result);
+			//var_dump($_POST);
 
             if(count($result)>0)
             {       
@@ -147,6 +147,7 @@ class Admin extends CI_Controller {
 				}
 				else
 				{
+					//var_dump($result['id']);
 					header('Location: http://localhost/buynsell/organizer/admin/?id='.$result['id']);
 				}
             }
@@ -184,7 +185,7 @@ class Admin extends CI_Controller {
 				{
 					 echo"<script>alert('Admin added!');</script>";
 					$this->model->AddAdmin($username,$password);
-					$this->load->view('Admin/Admin');
+					header('Location: http://localhost/buynsell/admin/admin');
 				}
 				else
 				{

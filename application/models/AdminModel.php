@@ -161,7 +161,7 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1 or active = 2;";
+            $sql = "SELECT id FROM admin where username = ? and password = ? ;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
 			$result = $stmt->result();

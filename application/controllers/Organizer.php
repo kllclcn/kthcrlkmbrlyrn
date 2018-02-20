@@ -56,6 +56,12 @@ class Organizer extends CI_Controller {
 		if(isset($_SESSION['log']))
 		{
 			$temp = $this->model->GetAdminInfoById($_SESSION['id']);
+			if($temp['name']=="none")
+			{
+				header('Location: http://localhost/buynsell/Organizer/AddDetails');
+			}
+			else
+			{
 				$res = $this->model->GetAdminInfo($_SESSION['id']);
 				$data['username'] = $res['username'];
 				$data['name'] = $temp['name'];
@@ -68,7 +74,9 @@ class Organizer extends CI_Controller {
 				$data['college'] = $temp['college'];
 				$data['yearsec'] = $temp['yearsec'];
 				
-			$this->load->view('Organizer/Admin',$data);
+				$this->load->view('Organizer/Admin',$data);
+			}
+				
 			//$this->load->view('Organizer/Admin');
 		}
 		else
@@ -114,18 +122,30 @@ class Organizer extends CI_Controller {
 				{
 					
 					$temp = $this->model->GetUserInfoById($data['id']);
-					$data['name'] = $temp['name'];
-					$data['Gender'] = $temp['Gender'];
-					$data['address'] = $temp['address'];
-					$data['Birthday'] = $temp['Birthday'];
-					$data['id_no'] = $temp['id_no'];
-					$data['course'] = $temp['course'];
-					$data['contact'] = $temp['contact'];
-					$data['email'] = $temp['email'];
 					
+					if(count($temp)>0)
+					{
+					
+						$data['name'] = $temp['name'];
+						$data['Gender'] = $temp['Gender'];
+						$data['address'] = $temp['address'];
+						$data['Birthday'] = $temp['Birthday'];
+						$data['contact'] = $temp['contact'];
+						$data['email'] = $temp['email'];
+						$data['id_no'] = $temp['id_no'];
+						$data['college'] = $temp['college'];
+						$data['yearsec'] = $temp['yearsec'];
+						$data['regicard'] = $temp['regicard'];
+						
+						$this->load->view('Organizer/ConfirmUsers',$data);
+					}
+					else
+					{
+						header('Location: http://localhost/buynsell/Organizer/AddDetails');
+					}
 				}
 				
-				$this->load->view('/ConfirmUsers',$data);
+				
 			}
 		}
 		else
@@ -133,6 +153,25 @@ class Organizer extends CI_Controller {
 			header('Location: http://localhost/buynsell/admin/login');
 		}
 		
+	}
+	
+	
+	
+	public function AddDetails()
+	{
+		if(isset($_POST['next2']))
+            {   
+                extract($_POST);
+                
+                $id=$_SESSION['id'];
+                $this->model->InsertAdminDesc($id,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec);
+                echo"<script>alert('Your account details are saved.')</script>";
+                  header('Location: http://localhost/buynsell/Organizer/admin');
+            }
+            else
+            {
+		$this->load->view('Organizer/AddDetails');
+			}
 	}
 	
 	

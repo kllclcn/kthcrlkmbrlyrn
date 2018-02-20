@@ -82,7 +82,7 @@ Class HomeModel extends CI_Model {
         }
     }
     
-    public function InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec)
+    public function InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec,$picfullpath)
     {
         try
         {
@@ -96,9 +96,10 @@ Class HomeModel extends CI_Model {
                 email = ?,
 				id_no = ?,
 				college = ?,
-				yearsec = ?
+				yearsec = ?,
+				regicard = ?
                 ";
-            $stmt = $this->pdo->query($sql,array($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec));
+            $stmt = $this->pdo->query($sql,array($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec,$picfullpath));
             return $stmt;
         } 
         catch (Exception $ex) 
@@ -113,7 +114,24 @@ Class HomeModel extends CI_Model {
         try
         {
 			$password = sha1($password);
-            $sql = "SELECT id FROM users WHERE username = ? AND password = ?";
+            $sql = "SELECT id FROM users WHERE username = ? AND password = ? ";
+            $stmt = $this->pdo->query($sql,array($username,$password));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function GetIDD($username,$password)
+    {
+        try
+        {
+			$password = sha1($password);
+            $sql = "SELECT id, active FROM users WHERE username = ? AND password = ? ";
             $stmt = $this->pdo->query($sql,array($username,$password));
             $result = $stmt->result();
             return (array) $result[0];

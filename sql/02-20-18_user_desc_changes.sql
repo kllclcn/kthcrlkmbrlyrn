@@ -1,0 +1,1 @@
+ALTER TABLE `user_desc` ADD `regicard` VARCHAR(200) NOT NULL AFTER `yearsec`;

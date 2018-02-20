@@ -14,24 +14,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Confirm Users</h1>
 	<b>Hi Admin!</b>
 	<form method="post">
-                      <label>ID:</label>
-	<input type="number" placeholder="ID" name="id" value="<?php echo $id; ?>" disabled><br/>
-                       <label>Name:</label>
-	<input type="text" placeholder="Name" name="name" value=" <?php echo $name; ?>" disabled><br/>
-                       <label>Sex:</label>
-	<input type="text" placeholder="Gender" name="Gender" value="<?php echo $Gender; ?>" disabled><br/>
-                       <label>Address:</label>
-	<input type="text" placeholder="address" name="address" value="<?php echo $address; ?>" disabled><br/>
-                      <label>Birthday:</label>
-	<input type="text" placeholder="Birthday" name="Birthday" value="<?php echo $Birthday; ?>" disabled><br/>
-                      <label>Student Number:</label>
-	<input type="text" placeholder="id_no" name="id_no" value="<?php echo $id_no; ?>" disabled><br/>
-                      <label>Course:</label>
-	<input type="text" placeholder="course" name="course" value="<?php echo $course; ?>" disabled><br/>
-                     <label>Contact Information:</label>
-	<input type="text" placeholder="contact" name="contact" value="<?php echo $contact; ?>" disabled><br/>
-                      <label>Email Address:</label>
-	<input type="text" placeholder="email" name="email" value="<?php echo $email; ?>" disabled><br/>
+                      
+            <label id="lbl">Full Name:</label>
+            <label id="lbl"><?php echo $name; ?></label><br><br>
+            <label id="lbl">Sex:</label>
+            <label id="lbl"><?php echo $Gender; ?></label><br><br>
+            <label id="lbl">Address:</label>
+            <label id="lbl"><?php echo $address; ?></label><br><br>
+            <label id="lbl">Birthday:</label>
+            <label id="lbl"><?php echo $Birthday; ?></label><br><br>
+            <label id="lbl">Mobile Number:</label>
+            <label id="lbl"><?php echo $contact; ?></label><br><br>
+            <label id="lbl">Email Address:</label>
+			<label id="lbl"><?php echo $email; ?></label><br><br>
+             <label id="lbl">Student Number:</label>
+			<label id="lbl"><?php echo $id_no; ?></label><br><br>
+            <label id="lbl">College:</label>
+			<label id="lbl"><?php echo $college; ?></label><br><br>
+             <label id="lbl">Year and Section:</label>
+			 <label id="lbl"><?php echo $yearsec; ?></label><br><br>
+			 <img id="pic" src="<?php echo $imageproduct; ?>" height="90" width="90"/><br><br><br><br>
 	
 	<input class="bbtn" type="submit" name="Confirm" value="Confirm">
 	</form>

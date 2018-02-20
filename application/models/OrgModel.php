@@ -15,7 +15,17 @@ Class OrgModel extends CI_Model {
             $sql = "SELECT name, Gender,address, Birthday, contact, email, id_no, college, yearsec FROM admin_desc WHERE admin_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
-            return (array) $result[0];
+			if(count($result)>0)
+			{
+				return (array) $result[0];
+			}
+			else
+			{
+				$data['name'] = "none";
+			
+				return $data;
+			}
+            
         } 
         catch (Exception $ex) 
         {
@@ -61,11 +71,11 @@ Class OrgModel extends CI_Model {
         }
     }
     
-    public function GetUserInfoById($id)
+     public function GetUserInfoById($id)
     {
         try
         {
-            $sql = "SELECT name, Gender,address, Birthday, id_no, course, contact, email FROM user_desc WHERE user_id = ?";
+            $sql = "SELECT user_id,name, Gender,address, Birthday, contact, email, id_no, college, yearsec, regicard FROM user_desc WHERE user_id = ?";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];
@@ -286,6 +296,32 @@ Class OrgModel extends CI_Model {
                     ";
             $stmt = $this->pdo->query($sql,array($id));
 
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function InsertAdminDesc($id,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec)
+    {
+        try
+        {
+            $sql = "INSERT INTO admin_desc
+                SET admin_id = ?,
+				name = ?,
+                Gender = ?,
+                address = ?,
+                Birthday = ?,
+                contact = ?,
+                email = ?,
+				id_no = ?,
+				college = ?,
+				yearsec = ?
+                ";
+            $stmt = $this->pdo->query($sql,array($id,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec));
             return $stmt;
         } 
         catch (Exception $ex) 
