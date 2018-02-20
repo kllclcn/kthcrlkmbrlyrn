@@ -1,0 +1,1 @@
+ALTER TABLE `admin_desc` ADD `Birthday` DATE NOT NULL AFTER `address`;

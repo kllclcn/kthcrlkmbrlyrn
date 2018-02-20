@@ -6,6 +6,45 @@ Class AdminModel extends CI_Model {
         $this->pdo = $this->load->database('pdo', true);
     }
     
+	
+	
+	public function GetAdminInfoById($id)
+    {
+        try
+        {
+            $sql = "SELECT name, Gender,address, Birthday, contact, email, id_no, college, yearsec FROM admin_desc WHERE admin_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	public function GetAdminInfo($id)
+    {
+        try
+        {
+            $sql = "SELECT username FROM admin WHERE id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
+	
+	
+	
+	
+	
+	
     public function GetUsers() 
 	{
         try

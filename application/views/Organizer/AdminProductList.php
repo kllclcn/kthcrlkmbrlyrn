@@ -9,7 +9,6 @@
 	<td><?php echo $status; ?></td>
 	
 	<td>
-		<a href='Btrans/?id=<?php echo $prod_id; ?>'>Buy</a> |
+		<a href='ConfirmProd/?id=<?php echo $prod_id; ?>'>Confirm</a> |
 	</td>
 </tr>
-

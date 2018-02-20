@@ -120,8 +120,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <span class="dot"></span>
                                         <span class="dots"></span><br><br>
                                         <img src="<?php echo base_url(); ?>images/pg4.png" alt="Background" style='margin-left:90px;'/><br/><br/><br><br>
-                                    
-                                            
+										<label id="sulbl"><b>Who is the president of PUP?</b></label><br>
+										<input type="text" placeholder="name of president" name="pres" style="margin-left:120px;" required><br/><br/>
+                                         <label id="sulbl"><b>Who is the founder of FEWA?</b></label><br>
+										<input type="text" placeholder="name of founder" name="found" style="margin-left:120px;" required><br/><br/>
+                                           
+										   
+										<b id="lbl">Upload the image of your registration card here:</b>
+                                            <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 110px;"><br/></br>
+										
+
                                             </div>
                                     <input id="submitbtn" type="submit" name="next2" value="SUBMIT"><br/><br/><br/>
                                             </div><br/>

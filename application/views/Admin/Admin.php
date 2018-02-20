@@ -39,18 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="contt"></div>
                       
     <div id="container">
-        <img id="pic" src="<?php echo base_url(); ?>images/acdd.png"><br><br>
-           <label id="lbl">Username:</label><br><br>
-            <label id="lbl">Full Name:</label><br><br>
-            <label id="lbl">Sex:</label><br><br>
-            <label id="lbl">Address:</label><br><br>
-            <label id="lbl">Birthday:</label><br><br>
-            <label id="lbl">Mobile Number:</label><br><br>
-            <label id="lbl">Email Address:</label><br><br>
-             <label id="lbl">Student Number:</label><br><br>
-            <label id="lbl">College:</label><br><br>
-             <label id="lbl">Department:</label><br><br>
-             <label id="lbl">Year and Section:</label><br><br><br><br><br><br>
+        
+           <p> HELLO ADMIN !!!</p>
     </div>
 
 </body>
