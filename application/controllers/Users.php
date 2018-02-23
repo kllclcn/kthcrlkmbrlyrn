@@ -109,6 +109,29 @@ class Users extends CI_Controller {
 		
 	}
 	
+	public function ConfirmBuy()
+	{
+		$data = array();
+			$data['id'] = 0;
+			
+			
+			if(isset($_GET['id']))
+			{
+				$data['id'] = $_GET['id'];
+				$temp = $this->model->GetProductsInfo($data['id']);
+				$data['prod_name'] = $temp['prod_name'];
+				$data['category'] = $temp['category'];
+				$data['price'] = $temp['price'];
+				$data['prod_desc'] = $temp['prod_desc'];
+				$data['place'] = $temp['place'];
+				$data['imageproduct'] = $temp['imageproduct'];
+				$data['date_posted'] = $temp['date_posted'];
+				$data['status'] = $temp['status'];
+			}
+
+		$this->load->view("Users/ConfirmBuy",$data);
+	}
+	
 	
 	public function Btrans()
 	{
@@ -268,13 +291,15 @@ class Users extends CI_Controller {
 			if(isset($_GET['id']))
 			{
 				
-				$temp = $this->model->GetProdInfo($data['prod_id']);
+				$temp = $this->model->GetProductsInfo($data['prod_id']);
 				$data['prod_name'] = $temp['prod_name'];
 				$data['category'] = $temp['category'];
 				$data['price'] = $temp['price'];
 				$data['prod_desc'] = $temp['prod_desc'];
 				$data['place'] = $temp['place'];
+				$data['imageproduct'] = $temp['imageproduct'];
 				$data['date_posted'] = $temp['date_posted'];
+				$data['status'] = $temp['status'];
 				
 			}
 				

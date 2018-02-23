@@ -97,7 +97,7 @@ class Admin extends CI_Controller {
 			if(isset($_POST['Confirm']))
 			{
 				$stmt = $this->model->Confirm($data['id']);
-				echo ($stmt);
+				header('Location: http://localhost/buynsell/admin/admin');
 			}
 			else
 			{
@@ -110,10 +110,11 @@ class Admin extends CI_Controller {
 					$data['Gender'] = $temp['Gender'];
 					$data['address'] = $temp['address'];
 					$data['Birthday'] = $temp['Birthday'];
-					$data['id_no'] = $temp['id_no'];
-					$data['course'] = $temp['course'];
 					$data['contact'] = $temp['contact'];
 					$data['email'] = $temp['email'];
+					$data['id_no'] = $temp['id_no'];
+					$data['college'] = $temp['college'];
+					$data['yearsec'] = $temp['yearsec'];
 					
 				}
 				

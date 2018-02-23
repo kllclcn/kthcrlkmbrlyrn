@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupxx.css">	
 </head>
-<body style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
+<body onLoad="ChangeCaptcha()" style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
                       <div id="hdr"></div>
                        <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
 	<div class="mainbutton">
@@ -126,12 +126,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<input type="text" placeholder="name of founder" name="found" style="margin-left:120px;" required><br/><br/>
                                            
 										   
-										<b id="lbl">Upload the image of your registration card here:</b>
-                                            <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 110px;"><br/></br>
-										
+																		
 
-                                            </div>
-                                    <input id="submitbtn" type="submit" name="next2" value="SUBMIT"><br/><br/><br/>
+        <input type="text" style="margin-left:120px;" id="randomfield" disabled>
+
+		<script>
+		// Do not remove this (it's just a comment and won't effect the functions)
+		// SimpleCaptcha v1.0 © Anudeep Tubati
+		function ChangeCaptcha() {
+			var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+			var string_length = 6;
+			var ChangeCaptcha = '';
+			for (var i=0; i<string_length; i++) {
+				var rnum = Math.floor(Math.random() * chars.length);
+				ChangeCaptcha += chars.substring(rnum,rnum+1);
+			}
+			document.getElementById('randomfield').value = ChangeCaptcha;
+		}
+		function check() {
+		if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value ) {
+		alert('Your account is on process.')
+		}
+		else {
+		alert('Please re-check the captcha');
+		window.open('http://localhost/buynsell/Home/signup','_self');
+		
+		}
+		}
+		</script>
+		<br><br>
+		<b id="lbl" style="margin-left:120px;">Enter captcha here:</b>
+		<input id="CaptchaEnter" size="20" maxlength="6" /><br/><br/><br/>
+		
+		<b id="lbl" style="margin-left:120px;">Upload the image of your registration card here:</b>
+                                            <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 110px;"><br/></br>
+		
+		
+                                    <input id="submitbtn" type="submit" name="next2" value="SUBMIT" onclick="check()"><br/><br/><br/>
                                             </div><br/>
                                  </div>
     
@@ -139,4 +170,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       </form>				
 </div>
 </body>
+<style>
+#randomfield { 
+-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+  width: 200px;
+  color: black;
+  border-color: black;
+  text-align: center;
+  font-size: 40px;
+  background-image: url('http://4.bp.blogspot.com/-EEMSa_GTgIo/UpAgBQaE6-I/AAAAAAAACUE/jdcxZVXelzA/s1600/ca.png');
+}
+</style>
 </html>

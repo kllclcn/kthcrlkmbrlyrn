@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <br><br><br><h1 style="text-align: center;"> ITEM IS RESERVED!  </h1>
         
-        <a  id="btb" href="buy">Back to buy</a>
+        <a  id="btb" href="http://localhost/buynsell/Users/buy">Back to buy</a>
    </div>
     
 

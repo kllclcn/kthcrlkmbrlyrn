@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       
     <div id="container">
                       <img src="<?php echo base_url(); ?>images/viewad.png" alt="Background" id="title"/><br><br><br>
-	<table border="2" style="border-color: #000; border-collapse:collapse;">
+	<table id="tble">
 	<tr>
         <th>Manager ID</th>
 		<th>Manager Username</th>
@@ -49,8 +49,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php
 		echo $list;
 	?>
-        </table><br><br><br><br><br><br><br><br><br><br>
+        </table><br><br><br>
+		<button id="btb"><a href="/buynsell/Admin/Admin">Back to Admin Menu</a></button><br><br/><br/>
     </div>
 
 </body>
+<style>
+#tble{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #34495E;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-top:50px;
+}
+#btb{
+    background-color: #dc4343;
+    padding: 13px 22px 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font: 17px "Trebuchet MS", sans-serif;
+    margin-left: 300px;
+	margin-top:-200px;	
+    position:relative;
+    
+}
+</style>
 </html>
