@@ -7,6 +7,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>SIGN UP / PUP BUY AND SELL</title>
 	<link rel="icon" href="<?php echo base_url(); ?>images/pupseal.png">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/homes/designsignupxx.css">	
+	
+<script>
+function first() {
+    var x = document.getElementById("pres");
+    x.value = x.value.toLowerCase();
+}
+function second() {
+    
+	var k = document.getElementById("found");
+    k.value = k.value.toLowerCase();
+}
+
+</script>
 </head>
 <body onLoad="ChangeCaptcha()" style="background-image: url('<?php echo base_url(); ?>images/bg.png'); background-size:100%">
                       <div id="hdr"></div>
@@ -121,9 +134,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <span class="dots"></span><br><br>
                                         <img src="<?php echo base_url(); ?>images/pg4.png" alt="Background" style='margin-left:90px;'/><br/><br/><br><br>
 										<label id="sulbl"><b>Who is the president of PUP?</b></label><br>
-										<input type="text" placeholder="name of president" name="pres" style="margin-left:120px;" required><br/><br/>
+										<input type="text" placeholder="name of president" id="pres" name="pres"  onkeyup="first()" style="margin-left:120px;" required><br/><br/>
                                          <label id="sulbl"><b>Who is the founder of FEWA?</b></label><br>
-										<input type="text" placeholder="name of founder" name="found" style="margin-left:120px;" required><br/><br/>
+										<input type="text" placeholder="name of founder" id="found" name="found" onkeyup="second()" style="margin-left:120px;" required><br/><br/>
                                            
 										   
 																		
