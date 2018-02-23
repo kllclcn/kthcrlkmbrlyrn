@@ -57,6 +57,25 @@ Class UsersModel extends CI_Model {
     }
 	
 	
+	public function GetProductsInfo($id) 
+	{
+        try
+        {
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
+                    WHERE prod_id = ? ;";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
+	
+	
     
     
 

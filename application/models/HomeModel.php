@@ -82,7 +82,7 @@ Class HomeModel extends CI_Model {
         }
     }
     
-    public function InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec,$picfullpath)
+    public function InsertUsersDesc($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec)
     {
         try
         {
@@ -96,10 +96,9 @@ Class HomeModel extends CI_Model {
                 email = ?,
 				id_no = ?,
 				college = ?,
-				yearsec = ?,
-				regicard = ?
+				yearsec = ?
                 ";
-            $stmt = $this->pdo->query($sql,array($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec,$picfullpath));
+            $stmt = $this->pdo->query($sql,array($temp,$fullname,$gender,$address,$bdate,$mobnum,$email,$studno,$college,$yrsec));
             return $stmt;
         } 
         catch (Exception $ex) 

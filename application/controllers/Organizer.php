@@ -113,7 +113,7 @@ class Organizer extends CI_Controller {
 			if(isset($_POST['Confirm']))
 			{
 				$stmt = $this->model->Confirm($data['id']);
-				echo ($stmt);
+				header('Location: http://localhost/buynsell/Organizer/admin');
 			}
 			else
 			{
@@ -135,7 +135,7 @@ class Organizer extends CI_Controller {
 						$data['id_no'] = $temp['id_no'];
 						$data['college'] = $temp['college'];
 						$data['yearsec'] = $temp['yearsec'];
-						$data['regicard'] = $temp['regicard'];
+						//$data['regicard'] = $temp['regicard'];
 						
 						$this->load->view('Organizer/ConfirmUsers',$data);
 					}

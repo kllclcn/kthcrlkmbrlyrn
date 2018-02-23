@@ -8,7 +8,7 @@
 	<td id="stat"><p id="ds">STATUS:</p><?php echo $status; ?></td>
 	
 	<td>
-		<a id ="btn" href='Btrans/?id=<?php echo $prod_id; ?>'>Buy</a> 
+		<a id ="btn" href='ConfirmBuy/?id=<?php echo $prod_id; ?>'>Buy</a> 
         </td><br>
 </tr>
 
