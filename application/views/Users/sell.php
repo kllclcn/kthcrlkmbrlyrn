@@ -56,6 +56,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <option value="Oval">Oval</option>
                                                 <option value="Sampaguita">Sampaguita</option>
                                             </select><br/><br/>
+		<b id="lbl">Meetup Time:</b>
+		<input type="time" name="time"><br/><br/>
                                             <b id="lbl">Product Image:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 110px;"><br/></br>
                                             

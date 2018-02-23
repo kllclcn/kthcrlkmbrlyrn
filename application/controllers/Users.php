@@ -124,6 +124,7 @@ class Users extends CI_Controller {
 				$data['price'] = $temp['price'];
 				$data['prod_desc'] = $temp['prod_desc'];
 				$data['place'] = $temp['place'];
+				$data['time']= $temp['time'];
 				$data['imageproduct'] = $temp['imageproduct'];
 				$data['date_posted'] = $temp['date_posted'];
 				$data['status'] = $temp['status'];
@@ -168,9 +169,9 @@ class Users extends CI_Controller {
                 $path = "\buynsell\images\\";
                 $picfullpath= "{$path}{$prodpic}" ; echo "<br>";
 				$this->SaveImage();
-				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picfullpath,$id);
-				echo "done";
-				//header("Location: http://localhost/buynsell/Users/usermain");
+				$this->model->InsertProducts($stitle,$category,$nprice,$desc,$nplace,$time,$picfullpath,$id);
+				
+				header("Location: http://localhost/buynsell/Users/usermain");
 			}
 			else
 			{

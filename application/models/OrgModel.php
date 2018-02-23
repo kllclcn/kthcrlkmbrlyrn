@@ -241,7 +241,8 @@ Class OrgModel extends CI_Model {
 	{
 		try
         {
-            $sql = "SELECT prod_name, category, price, prod_desc, place, date_posted FROM products WHERE prod_id = ?";
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
+                    WHERE prod_id = ? ;";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];

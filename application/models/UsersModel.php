@@ -61,7 +61,7 @@ Class UsersModel extends CI_Model {
 	{
         try
         {
-            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, imageproduct, date_posted, status FROM products
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, time, imageproduct, date_posted, status FROM products
                     WHERE prod_id = ? ;";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
@@ -79,23 +79,24 @@ Class UsersModel extends CI_Model {
     
     
 
-	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$picprodpic,$id)
+	public function InsertProducts($stitle,$category,$nprice,$desc,$nplace,$time,$picprodpic,$id)
 	{
 		try
 		{
 			$dte = date("Y-m-d");
+			
 			$sql = "INSERT INTO products
 					SET prod_name = ?,
 					category = ?,
 					price = ?,
 					prod_desc = ?,
 					place = ?,
-                                                                                                              imageproduct = ?,
+                    time = ?,                                                                                          imageproduct = ?,
 					date_posted = ?,
 					status = 'submit',
 					user_id = ?";
 
-			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$picprodpic,$dte,$id));
+			$this->pdo->query($sql,array($stitle,$category,$nprice,$desc,$nplace,$time,$picprodpic,$dte,$id));
 
 
 			

@@ -36,6 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label id="lbl"><?php echo $prod_desc; ?></label><br><br>
 			<label id="lbl"><b>Meet up place:</b></label>
 			<label id="lbl"><?php echo $place; ?></label><br><br>
+			<label id="lbl"><b>Meet up time:</b></label>
+			<label id="lbl"><?php echo $time; ?></label><br><br>
 			<label id="lbl"><b>Image:</b></label><br>
 			<img id="pic" src="<?php echo $imageproduct; ?>" height="250" width="200"/><br><br>
 			<label id="lbl"><b>Date Posted:</b></label>
@@ -44,13 +46,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label id="lbl"><?php echo $status; ?></label><br><br>
 			
 			<a  id="btb" href="http://localhost/buynsell/Users/Btrans/?id=<?php echo $id; ?>">Confirm Reservation?</a>
-			
+			<button id="btb"><a href="http://localhost/buynsell/Users/Buy">Back to Buy</a></button><br><br/><br/>
+		
 			
 			
 </div>
     
 
 </body>
+
+<style>
+
+#btb{
+    background-color: #dc4343;
+    padding: 13px 22px 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font: 17px "Trebuchet MS", sans-serif;
+    margin-left: 300px;
+	margin-top:-200px;	
+    position:relative;
+    
+}
+</style>
 </html>
 
 
