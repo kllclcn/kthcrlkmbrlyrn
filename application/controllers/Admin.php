@@ -333,7 +333,7 @@ class Admin extends CI_Controller {
 			if(isset($_POST['Confirm']))
 			{
 				$stmt = $this->model->ConProd($data['prod_id']);
-				echo ('success!');
+				header('Location: http://localhost/buynsell/admin/admin');
 			}
 			
 			if(isset($_GET['id']))
@@ -345,7 +345,9 @@ class Admin extends CI_Controller {
 				$data['price'] = $temp['price'];
 				$data['prod_desc'] = $temp['prod_desc'];
 				$data['place'] = $temp['place'];
+				$data['imageproduct'] = $temp['imageproduct'];
 				$data['date_posted'] = $temp['date_posted'];
+				$data['status'] = $temp['status'];
 				
 			}
 			

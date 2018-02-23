@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		// Do not remove this (it's just a comment and won't effect the functions)
 		// SimpleCaptcha v1.0 © Anudeep Tubati
 		function ChangeCaptcha() {
-			var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+			var chars = "0123456789ABCDEFGHJKLMNOPQRSTUVWXTZabcdefghikmnopqrstuvwxyz";
 			var string_length = 6;
 			var ChangeCaptcha = '';
 			for (var i=0; i<string_length; i++) {
@@ -145,24 +145,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 		function check() {
 		if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value ) {
-		alert('Your account is on process.')
+		document.getElementById('submitbtn').disabled = false;
+		document.getElementById('CaptchaEnter').disabled = true;
 		}
 		else {
 		alert('Please re-check the captcha');
-		window.open('http://localhost/buynsell/Home/signup','_self');
+		
 		
 		}
 		}
 		</script>
 		<br><br>
 		<b id="lbl" style="margin-left:120px;">Enter captcha here:</b>
-		<input id="CaptchaEnter" size="20" maxlength="6" /><br/><br/><br/>
+		<input id="CaptchaEnter" size="20" maxlength="6"  onblur= "check()" min="0" max="1"/><br/><br/><br/>
 		
 		<b id="lbl" style="margin-left:120px;">Upload the image of your registration card here:</b>
                                             <input type="file" name="pic" accept="image/*" id="fileToUpload" style="margin-left: 110px;"><br/></br>
 		
 		
-                                    <input id="submitbtn" type="submit" name="next2" value="SUBMIT" onclick="check()"><br/><br/><br/>
+                                    <input id="submitbtn" type="submit" disabled="disabled" name="next2" value="SUBMIT"><br/><br/><br/>
                                             </div><br/>
                                  </div>
     

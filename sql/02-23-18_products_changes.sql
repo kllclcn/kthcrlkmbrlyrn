@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `time` TIME NOT NULL AFTER `place`;
