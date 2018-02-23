@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `buyer_id` INT NOT NULL AFTER `user_id`;

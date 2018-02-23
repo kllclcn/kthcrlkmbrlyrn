@@ -140,14 +140,16 @@ class Users extends CI_Controller {
 			$data = array();
 			$data['id'] = 0;
 			
+			$id=($_SESSION['user_id']);
 			
 			if(isset($_GET['id']))
 			{
 				$data['id'] = $_GET['id'];
+				
 			}
 			//var_dump($data['id']);
 			//$this->model->bought($data['id']);
-			$this->model->bought2($data['id']);
+			$this->model->bought2($id,$data['id']);
 			$this->load->view("Users/Btrans");
 			
 		
@@ -281,18 +283,11 @@ class Users extends CI_Controller {
 			$data = array();
 			$data['prod_id'] = 0;
 			$data['prod_id'] = $_GET['id'];
-			if(isset($_POST['Confirm']))
-			
-			{
-				$this->model->bought($data['prod_id']);
-				$stmt = $this->model->Contrans($data['prod_id']);
-				header("Location: http://localhost/buynsell/Users/usermain");
-			}
 			
 			if(isset($_GET['id']))
 			{
 				
-				$temp = $this->model->GetProductsInfo($data['prod_id']);
+				$temp = $this->model->GetProdInfo($data['prod_id']);
 				$data['prod_name'] = $temp['prod_name'];
 				$data['category'] = $temp['category'];
 				$data['price'] = $temp['price'];
@@ -301,8 +296,18 @@ class Users extends CI_Controller {
 				$data['imageproduct'] = $temp['imageproduct'];
 				$data['date_posted'] = $temp['date_posted'];
 				$data['status'] = $temp['status'];
+				$data['buyer_id'] = $temp['buyer_id'];
 				
 			}
+			if(isset($_POST['Confirm']))
+			
+			{
+				$this->model->bought($data['prod_id'],$data['buyer_id']);
+				$stmt = $this->model->Contrans($data['prod_id']);
+				header("Location: http://localhost/buynsell/Users/usermain");
+			}
+			
+			
 				
 			$this->load->view('Users/ConfirmTrans',$data);
 		}

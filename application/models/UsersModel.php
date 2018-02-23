@@ -109,15 +109,16 @@ Class UsersModel extends CI_Model {
         
 	}
 	
-	public function bought($prod_id)
+	public function bought($prod_id,$id)
 	{
 		try
 		{
 			$dte = date("Y-m-d");
 			$sql = "INSERT INTO bought
 					SET prod_id = ?,
+					buyer_id = ?,
 					date_of_purchase= ?";
-			$this->pdo->query($sql,array($prod_id,$dte));		
+			$this->pdo->query($sql,array($prod_id,$id,$dte));		
 		}
 		catch (Exception $ex) 
 		{
@@ -127,14 +128,15 @@ Class UsersModel extends CI_Model {
 		
 	}
 	
-	public function bought2($prod_id)
+	public function bought2($id,$prod_id)
 	{
 		try
 		{
 			$sql = "UPDATE products
-					SET status = 'reserved'
+					SET status = 'reserved',
+					buyer_id = ?
 					WHERE prod_id = ?";
-			$this->pdo->query($sql,array($prod_id));
+			$this->pdo->query($sql,array($id,$prod_id));
 			
 		}
 		catch (Exception $ex) 
@@ -165,7 +167,25 @@ Class UsersModel extends CI_Model {
 	{
 		try
         {
-            $sql = "SELECT prod_name, category, price, prod_desc, place, date_posted FROM products WHERE prod_id = ?";
+            $sql = "SELECT prod_id, prod_name, category, price, prod_desc, place, time, imageproduct, date_posted, status, buyer_id FROM products
+                    WHERE prod_id = ? ;";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
+	public function GetBuyer($id)
+	{
+		try
+        {
+            $sql = "SELECT buyer_id FROM products
+                    WHERE prod_id = ? ;";
             $stmt = $this->pdo->query($sql,array($id));
             $result = $stmt->result();
             return (array) $result[0];

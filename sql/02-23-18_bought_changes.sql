@@ -1,0 +1,1 @@
+ALTER TABLE `bought` CHANGE `user_id` `buyer_id` INT(11) NOT NULL;
