@@ -161,10 +161,10 @@ Class AdminModel extends CI_Model {
     {
         try
         {
-            $sql = "SELECT id FROM admin where username = ? and password = ? and active = 1;";
+            $sql = "SELECT id FROM admin where username = ? and password = ? and active=1;";
 			$password = sha1($password);
             $stmt = $this->pdo->query($sql,array($username,$password));
-			$result = $stmt->result();
+            $result = $stmt->result();
             return (array) $result[0];
         } 
         catch (Exception $ex) 
