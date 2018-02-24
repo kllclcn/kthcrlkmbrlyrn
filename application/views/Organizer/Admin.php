@@ -20,10 +20,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   		<li id="us" class="hv">USERS</li>
                                                 <div class="usrcntnt">
                                                     <a href="http://localhost/buynsell/Organizer/Users">Confirm New Users</a>
-                                                    <a href="http://localhost/buynsell/Organizer/delus">Delete User</a></div>
+                                                    <a href="http://localhost/buynsell/Organizer/DelUsers">Delete User</a></div>
                                             <li id="pr" class="hv">PRODUCTS</li>
                                                 <div class="prodcntnt">
                                                 <a href="http://localhost/buynsell/Organizer/Prods">Confirm New Products</a>
+												<a href="http://localhost/buynsell/Organizer/DelProds">Delete Products</a>
                                                 </div>    
   		<li class="hv"><a href="/buynsell/Organizer/LogOut" >Log Out</a></li>
 	</ul>
@@ -56,7 +57,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
              <label id="lbl">Year and Section:</label>
 			 <label id="lbl"><?php echo $yearsec; ?></label><br><br><br><br><br><br>
+			 
+			 <button id="btb"><a href="http://localhost/buynsell/Organizer/Edit">Edit Details</a></button><br><br/><br/>
     </div>
 
 </body>
+<style>
+
+#btb{
+    background-color: #dc4343;
+    padding: 13px 22px 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font: 17px "Trebuchet MS", sans-serif;
+    margin-left: 300px;
+	margin-top:-200px;	
+    position:relative;
+    
+}
+</style>
 </html>

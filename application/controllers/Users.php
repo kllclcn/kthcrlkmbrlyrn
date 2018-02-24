@@ -317,6 +317,174 @@ class Users extends CI_Controller {
 		}
 	}
 	
+	public function transell()
+	{
+		if(isset($_SESSION['user_log']))
+		{
+			$id = $_SESSION['user_id'];
+			//var_dump ($id);
+			$data = array();
+				$data['list'] = '';
+				$stmt = $this->model->GetSell($id);
+				foreach($stmt->result() as $row)
+				{
+					$data['list'] .= $this->load->view('Users/transListSell',$row,TRUE);
+				}
+			$this->load->view("Users/transell",$data);
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/Home/login');
+		}
+	}
+	
+	public function ViewSell()
+	{
+		$data = array();
+			$data['id'] = 0;
+			
+			
+			if(isset($_GET['id']))
+			{
+				$data['id'] = $_GET['id'];
+				$temp = $this->model->GetProductsInfo($data['id']);
+				$data['prod_name'] = $temp['prod_name'];
+				$data['category'] = $temp['category'];
+				$data['price'] = $temp['price'];
+				$data['prod_desc'] = $temp['prod_desc'];
+				$data['place'] = $temp['place'];
+				$data['time']= $temp['time'];
+				$data['imageproduct'] = $temp['imageproduct'];
+				$data['date_posted'] = $temp['date_posted'];
+				$data['status'] = $temp['status'];
+				if($data['status'] == "reserved" ||$data['status'] == "seller confirmed")
+				{
+					$res= $this->model->GetBuyer($data['id']);
+					$data['buyer_id'] = $res['buyer_id'];
+					if($data['status'] == "seller confirmed")
+					{
+						$tr= $this->model->GetBuyDate($data['id']);
+						$data['date_of_purchase'] = $tr['date_of_purchase'];
+					}
+					else
+					{
+						$data['date_of_purchase'] = "--";
+					}
+					
+				}
+				else
+				{
+					$data['buyer_id'] = "--";
+					$data['date_of_purchase'] = "--";
+				}
+			}
+
+		$this->load->view("Users/ViewSell",$data);
+	}
+	
+	
+	public function tranbuy()
+	{
+		if(isset($_SESSION['user_log']))
+		{
+			$id = $_SESSION['user_id'];
+			//var_dump ($id);
+			$data = array();
+				$data['list'] = '';
+				$stmt = $this->model->GetBuy($id);
+				foreach($stmt->result() as $row)
+				{
+					$data['list'] .= $this->load->view('Users/transListBuy',$row,TRUE);
+				}
+			$this->load->view("Users/tranbuy",$data);
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/Home/login');
+		}
+	}
+	
+	public function ViewBuy()
+	{
+		$data = array();
+			$data['id'] = 0;
+			
+			
+			if(isset($_GET['id']))
+			{
+				$data['id'] = $_GET['id'];
+				$temp = $this->model->GetProductsInfo($data['id']);
+				$data['prod_name'] = $temp['prod_name'];
+				$data['category'] = $temp['category'];
+				$data['price'] = $temp['price'];
+				$data['prod_desc'] = $temp['prod_desc'];
+				$data['place'] = $temp['place'];
+				$data['time']= $temp['time'];
+				$data['imageproduct'] = $temp['imageproduct'];
+				$data['date_posted'] = $temp['date_posted'];
+				$data['status'] = $temp['status'];
+				if($data['status'] == "reserved" ||$data['status'] == "seller confirmed")
+				{
+					$res= $this->model->GetSeller($data['id']);
+					$data['user_id'] = $res['user_id'];
+					if($data['status'] == "seller confirmed")
+					{
+						$tr= $this->model->GetBuyDate($data['id']);
+						$data['date_of_purchase'] = $tr['date_of_purchase'];
+					}
+					else
+					{
+						$data['date_of_purchase'] = "--";
+					}
+					
+				}
+				else
+				{
+					$data['buyer_id'] = "--";
+					$data['date_of_purchase'] = "--";
+				}
+			}
+
+		$this->load->view("Users/ViewBuy",$data);
+	}
+	
+	
+	public function Edit()
+	{
+		if(isset($_POST['next2']))
+        {   
+            extract($_POST);
+			$id=($_SESSION['user_id']);
+			$this->model->UpdateAdminDesc($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id);
+			header('Location: http://localhost/buynsell/Users/usermain');
+		}		
+		if(isset($_SESSION['log']))
+		{
+			$temp = $this->model->GetUserInfoById($_SESSION['user_id']);
+	
+			
+				
+				$data['name'] = $temp['name'];
+				$data['Gender'] = $temp['Gender'];
+				$data['address'] = $temp['address'];
+				$data['contact'] = $temp['contact'];
+				$data['email'] = $temp['email'];
+				$data['id_no'] = $temp['id_no'];
+				$data['college'] = $temp['college'];
+				$data['yearsec'] = $temp['yearsec'];
+				
+				$this->load->view('Users/Edit',$data);
+			
+			
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/Home/login');
+		}
+		
+	}
+	
+	
 	public function LogOut()
 	{
 

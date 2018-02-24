@@ -163,6 +163,58 @@ Class UsersModel extends CI_Model {
         
     }
 	
+	public function GetSell($id) 
+	{
+        try
+        {
+            $sql = "SELECT prod_id, prod_name, date_posted, status FROM products
+                    WHERE user_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
+	
+	public function GetBuyDate($id) 
+	{
+        try
+        {
+            $sql = "SELECT date_of_purchase FROM bought
+                    WHERE prod_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
+	
+	public function GetBuy($id) 
+	{
+        try
+        {
+            $sql = "SELECT prod_id, date_of_purchase FROM bought
+                    WHERE buyer_id = ?";
+            $stmt = $this->pdo->query($sql,array($id));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+        
+    }
+	
 	public function GetProdInfo($id)
 	{
 		try
@@ -197,6 +249,23 @@ Class UsersModel extends CI_Model {
         }
 	}
 	
+	public function GetSeller($id)
+	{
+		try
+        {
+            $sql = "SELECT user_id FROM products
+                    WHERE prod_id = ? ;";
+            $stmt = $this->pdo->query($sql,array($id));
+            $result = $stmt->result();
+            return (array) $result[0];
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
 	public function ConTrans($prod_id)
 	{
 		try
@@ -214,6 +283,31 @@ Class UsersModel extends CI_Model {
         }
         
 	}
+	
+	public function UpdateUserDesc($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id)
+    {
+        try
+        {
+            $sql = "UPDATE user_desc
+                SET name = ?,
+                Gender = ?,
+                address = ?,
+                contact = ?,
+                email = ?,
+				id_no = ?,
+				college = ?,
+				yearsec = ?
+				WHERE admin_id = ?
+                ";
+            $stmt = $this->pdo->query($sql,array($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
 
 
 }
