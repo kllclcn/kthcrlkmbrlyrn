@@ -333,7 +333,21 @@ Class AdminModel extends CI_Model {
         }
 	}
 
-    
+    public function GetUsersToDel() 
+	{
+        try
+        {
+            $sql = "SELECT * FROM users 
+                    WHERE active = 1";
+            $stmt = $this->pdo->query($sql);
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
 
 }
 ?>

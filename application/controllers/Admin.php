@@ -408,8 +408,64 @@ class Admin extends CI_Controller {
 			$data['id'] = 0;
 			$data['id'] = $_GET['id'];
 			$stmt = $this->model->DelUser($data['id']);
-			header('Location: http://localhost/buynsell/Organizer/admin');
+			header('Location: http://localhost/buynsell/Admin/admin');
 			
+	}
+	
+	public function DelUsers()
+	{
+		if(isset($_SESSION['log']))
+		{
+			$data = array();
+			$data['list'] = '';
+			$stmt = $this->model->GetUsersToDel();
+			foreach($stmt->result() as $row)
+			{
+				$data['list'] .= $this->load->view('Admin/DelUsersList',$row,TRUE);
+			}
+			
+			$this->load->view("Admin/DelUsers",$data);
+		}
+	}
+	
+	public function ConfirmDelUser()
+	{
+		if(isset($_SESSION['log']))
+		{
+			$data = array();
+			$data['id'] = 0;
+			$data['id'] = $_GET['id'];
+			if(isset($_GET['id']))
+			{
+				$temp = $this->model->GetUserInfoById($data['id']);
+				
+				if(count($temp)>0)
+				{
+				
+					$data['name'] = $temp['name'];
+					$data['Gender'] = $temp['Gender'];
+						$data['address'] = $temp['address'];
+						$data['Birthday'] = $temp['Birthday'];
+						$data['contact'] = $temp['contact'];
+						$data['email'] = $temp['email'];
+						$data['id_no'] = $temp['id_no'];
+						$data['college'] = $temp['college'];
+						$data['yearsec'] = $temp['yearsec'];
+						//$data['regicard'] = $temp['regicard'];
+						
+						$this->load->view('Admin/ConfirmDelUser',$data);
+				}
+				
+				
+				
+				
+			}
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/admin/login');
+		}
+		
 	}
 
 	public function LogOut()

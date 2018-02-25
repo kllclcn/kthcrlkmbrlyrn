@@ -362,6 +362,62 @@ class Organizer extends CI_Controller {
 			header('Location: http://localhost/buynsell/Organizer/admin');
 			
 	}
+	
+	public function DelUsers()
+	{
+		if(isset($_SESSION['log']))
+		{
+			$data = array();
+			$data['list'] = '';
+			$stmt = $this->model->GetUsersToDel();
+			foreach($stmt->result() as $row)
+			{
+				$data['list'] .= $this->load->view('Organizer/DelUsersList',$row,TRUE);
+			}
+			
+			$this->load->view("Organizer/DelUsers",$data);
+		}
+	}
+	
+	public function ConfirmDelUser()
+	{
+		if(isset($_SESSION['log']))
+		{
+			$data = array();
+			$data['id'] = 0;
+			$data['id'] = $_GET['id'];
+			if(isset($_GET['id']))
+			{
+				$temp = $this->model->GetUserInfoById($data['id']);
+				
+				if(count($temp)>0)
+				{
+				
+					$data['name'] = $temp['name'];
+					$data['Gender'] = $temp['Gender'];
+						$data['address'] = $temp['address'];
+						$data['Birthday'] = $temp['Birthday'];
+						$data['contact'] = $temp['contact'];
+						$data['email'] = $temp['email'];
+						$data['id_no'] = $temp['id_no'];
+						$data['college'] = $temp['college'];
+						$data['yearsec'] = $temp['yearsec'];
+						//$data['regicard'] = $temp['regicard'];
+						
+						$this->load->view('Organizer/ConfirmDelUser',$data);
+				}
+				
+				
+				
+				
+			}
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/admin/login');
+		}
+		
+	}
 
 	public function LogOut()
 	{
