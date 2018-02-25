@@ -356,6 +356,42 @@ Class OrgModel extends CI_Model {
         }
     }
     
-
+	
+	public function DeleteProd($id)
+	{
+		try
+		{
+			$sql = "UPDATE products
+					SET status = 'deleted'
+					WHERE prod_id = ?";
+					
+			$this->pdo->query($sql,array($id));
+			
+		}
+		catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
+	
+	public function DelUser($id)
+	{
+		
+		try
+		{
+			$sql = "UPDATE users
+					SET active = 0
+					WHERE id = ?";
+					
+			$this->pdo->query($sql,array($id));
+			
+		}
+		catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+	}
 }
 ?>

@@ -9,6 +9,6 @@
 	<td><?php echo $status; ?></td>
 	
 	<td>
-		<a href='ConfirmProd/?id=<?php echo $prod_id; ?>'>Confirm</a> 
+		<a href='ConfirmProd/?id=<?php echo $prod_id; ?>'>View</a> 
 	</td>
 </tr>

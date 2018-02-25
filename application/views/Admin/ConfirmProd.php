@@ -36,6 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="container">
 	<h1>Confirm Product</h1>
 	<form method="post">
+      <label id="lbl"><b>Product ID:</b></label>
+			<label id="lbl"><?php echo $prod_id; ?></label><br><br>
       <label id="lbl"><b>Product Name:</b></label>
 			<label id="lbl"><?php echo $prod_name; ?></label><br><br>
 			<label id="lbl"><b>Category:</b></label>
@@ -53,7 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label id="lbl"><b>Status:</b></label>
 			<label id="lbl"><?php echo $status; ?></label><br><br>
 	
-	<input id="btb" type="submit" name="Confirm" value="Confirm"><br/><br/><br/><br/><br/><br/>
+	<input id="btb" type="submit" name="Confirm" value="Confirm"><br/><br/><br/>
+	<button id="btb"><a href="http://localhost/buynsell/Admin/DeleteProduct/?id=<?php echo $prod_id; ?>'">Delete Product</a></button><br><br/><br/>
 	</form>
 </div>
 

@@ -130,6 +130,7 @@ function second() {
 								<label id="sulbl"><b>Who is the president of PUP?</b></label><br>
 										<input type="text" placeholder="name of president" id="pres" name="pres"  onkeyup="first()" style="margin-left:120px;" required><br/><br/>
                                          <label id="sulbl"><b>Who is the founder of FEWA?</b></label><br>
+                                         
                                            
 										   
 																		

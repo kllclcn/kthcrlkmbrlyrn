@@ -249,7 +249,7 @@ class Organizer extends CI_Controller {
 			$stmt = $this->model->GetProds();
 			foreach($stmt->result() as $row)
 			{
-				$data['list'] .= $this->load->view('Admin/AdminProductList',$row,TRUE);
+				$data['list'] .= $this->load->view('Organizer/AdminProductList',$row,TRUE);
 			}
 			
 			$this->load->view("Organizer/Prods",$data);
@@ -332,9 +332,35 @@ class Organizer extends CI_Controller {
 		
 	}
 	
-	public function DelProds()
+	
+	
+	public function DeleteProduct()
 	{
-		$this->load->view('Organizer/DelProds');
+		if(isset($_SESSION['log']))
+		{
+			$data = array();
+			$data['prod_id'] = 0;
+			$data['prod_id'] = $_GET['id'];
+			
+				$stmt = $this->model->DeleteProd($data['prod_id']);
+				header('Location: http://localhost/buynsell/Organizer/admin');
+			
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/admin/login');
+		}
+		
+	}
+	
+	public function DeleteUser()
+	{
+		$data = array();
+			$data['id'] = 0;
+			$data['id'] = $_GET['id'];
+			$stmt = $this->model->DelUser($data['id']);
+			header('Location: http://localhost/buynsell/Organizer/admin');
+			
 	}
 
 	public function LogOut()
