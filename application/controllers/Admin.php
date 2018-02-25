@@ -135,7 +135,6 @@ class Admin extends CI_Controller {
 		{
 			extract($_POST);
             $result = $this->model->AuthenticateUser($username,$password);
-			//var_dump($_POST);
 
             if(count($result)>0)
             {       

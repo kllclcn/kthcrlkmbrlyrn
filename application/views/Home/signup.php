@@ -92,24 +92,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<option value="College of Computer and Information Sciences (CCIS)</">College of Computer and Information Sciences (CCIS)</option>
 			<option value="College of Education (COED)">College of Education (COED)</option>
 			<option value="College of Engineering (CE">College of Engineering (CE)</option>
-            <option value="College of Human Kinetics (CHK)">College of Human Kinetics (CHK)</option>
+                                                                    <option value="College of Human Kinetics (CHK)">College of Human Kinetics (CHK)</option>
 			<option value="College of Political Science and Public Administration (CPSPA)">College of Political Science and Public Administration (CPSPA)</option>
 			<option value="College of Social Sciences and Development (CSSD">College of Social Sciences and Development (CSSD)</option>
 			<option value="College of Science (CS)">College of Science (CS)</option>
-            <option value="College of Tourism, Hospitality and Transportation Management(CTHTM))">College of Tourism, Hospitality and Transportation Management(CTHTM))</option>
+                                                                   <option value="College of Tourism, Hospitality and Transportation Management(CTHTM))">College of Tourism, Hospitality and Transportation Management(CTHTM))</option>
 			<option value="Institute of Technology (ITECH)">Institute of Technology (ITECH)</option>
 		</select><br/><br/>
-                                            <label id="sulbl"><b>Department:</b></label>
-                                            <select id="dept1" name="term">
-                                                <option value="da1">Bachelor of Science in Accountancy (BSA)</option>
-                                                <option value="da2">Bachelor in Banking and Finance</option>
-                                            </select><br/><br/>
-                                            <select id="dept2" name="term">
-                                                <option value="db1">Bachelor of Science in Acrchitecture (BS ARCH)</option>
-                                                <option value="db2">Bachelor of Science in Interior Design (BSID)</option>
-                                            </select><br>
-                
-                                            <label id="sulbl"><b>Year and Section:</b></label><br>
+                                            <label id="sulbl"><b>Course Year and Section:</b></label><br>
 		<input type="text" placeholder="Year and Section" name="yrsec" style="margin-left:120px;" required><br/><br/>
 
                                             </div>
@@ -120,10 +110,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <span class="dot"></span>
                                         <span class="dots"></span><br><br>
                                         <img src="<?php echo base_url(); ?>images/pg4.png" alt="Background" style='margin-left:90px;'/><br/><br/><br><br>
-										<label id="sulbl"><b>Who is the president of PUP?</b></label><br>
-										<input type="text" placeholder="name of president" name="pres" style="margin-left:120px;" required><br/><br/>
+                                        <label id="sulbl"><b>Who is the president of PUP?</b></label><br>
+                                         <input type="text" placeholder="name of president" name="pres" style="margin-left:120px;" required><br/><br/>
                                          <label id="sulbl"><b>Who is the founder of FEWA?</b></label><br>
-										<input type="text" placeholder="name of founder" name="found" style="margin-left:120px;" required><br/><br/>
+                                         <input type="text" placeholder="name of founder" name="found" style="margin-left:120px;" required><br/><br/>
                                            
 										   
 																		
