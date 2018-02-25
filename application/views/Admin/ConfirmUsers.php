@@ -15,20 +15,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <img id="logo" src="<?php echo base_url(); ?>images/logoo.png" alt="Background"/>
 	<div class="mainbutton">
 	<ul>    
-                                            <li class="hv"><a href="Admin">ACCOUNT</a></li>
+                                            <li class="hv"><a href="http://localhost/buynsell/admin/Admin">ACCOUNT</a></li>
                                             <li id="ad" class="hv">ORGANIZERS</li>
                                             <div class="admncntnt">
-                                                <a href="viewad">View Organizers</a>
-                                                <a href="add">Add Organizer</a>
-                                                <a href="delad">Delete Organizer</a>
+                                                <a href="http://localhost/buynsell/admin/viewad">View Organizers</a>
+                                                <a href="http://localhost/buynsell/admin/add">Add Organizer</a>
+                                                <a href="http://localhost/buynsell/admin/delad">Delete Organizer</a>
                                             </div>
   		<li id="us" style="color: #000; background-color: #E5E8E8;">USERS</li>
                                                 <div class="usrcntnt">
-                                                    <a href="Users">Confirm New Users</a>
-                                                    <a href="delus">Delete User</a></div>
+                                                    <a href="http://localhost/buynsell/admin/Users">Confirm New Users</a>
+                                                    </div>
                                             <li id="pr" class="hv">PRODUCTS</li>
                                                 <div class="prodcntnt">
-                                                <a href="Prods">Confirm New Products</a>
+                                                <a href="http://localhost/buynsell/admin/Prods">Confirm New Products</a>
                                                 </div>    
   		<li class="hv"><a href="/buynsell/Admin/LogOut" >Log Out</a></li>
 	</ul>
@@ -43,7 +43,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Confirm Users</h1>
 	
 	<form method="post">
-     
+			<label id="lbl">User ID:</label>
+            <label id="lbl"><?php echo $id; ?></label><br><br>
             <label id="lbl">Full Name:</label>
             <label id="lbl"><?php echo $name; ?></label><br><br>
             <label id="lbl">Sex:</label>
@@ -64,6 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			 <label id="lbl"><?php echo $yearsec; ?></label><br><br><br><br><br><br>
 	
 	<input id="btb" type="submit" name="Confirm" value="Confirm">
+	<button id="btb"><a href="http://localhost/buynsell/Admin/DeleteUser/?id=<?php echo $id; ?>'">Delete User</a></button><br><br/><br/>
 	</form>
 </div>
 

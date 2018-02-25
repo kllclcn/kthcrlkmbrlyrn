@@ -43,7 +43,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Confirm Users</h1>
 	
 	<form method="post">
-     
+			<label id="lbl">User ID:</label>
+            <label id="lbl"><?php echo $id; ?></label><br><br>
             <label id="lbl">Full Name:</label>
             <label id="lbl"><?php echo $name; ?></label><br><br>
             <label id="lbl">Sex:</label>
@@ -64,6 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			 <label id="lbl"><?php echo $yearsec; ?></label><br><br><br><br><br><br>
 	
 	<input id="btb" type="submit" name="Confirm" value="Confirm">
+	<button id="btb"><a href="http://localhost/buynsell/Organizer/DeleteUser/?id=<?php echo $id; ?>'">Delete User</a></button><br><br/><br/>
 	</form>
 </div>
 

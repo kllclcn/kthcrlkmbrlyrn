@@ -20,11 +20,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   		<li id="us" class="hv">USERS</li>
                                                 <div class="usrcntnt">
                                                     <a href="http://localhost/buynsell/Organizer/Users">Confirm New Users</a>
-                                                    <a href="http://localhost/buynsell/Organizer/DelUsers">Delete User</a></div>
+                                                    </div>
                                             <li id="pr" class="hv">PRODUCTS</li>
                                                 <div class="prodcntnt">
                                                 <a href="http://localhost/buynsell/Organizer/Prods">Confirm New Products</a>
-												<a href="http://localhost/buynsell/Organizer/DelProds">Delete Products</a>
+												
                                                 </div>    
   		<li class="hv"><a href="/buynsell/Organizer/LogOut" >Log Out</a></li>
 	</ul>

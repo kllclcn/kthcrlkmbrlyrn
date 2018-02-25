@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   		<li id="us" class="hv">USERS</li>
                                                 <div class="usrcntnt">
                                                     <a href="Users">Confirm New Users</a>
-                                                    <a href="delus">Delete User</a></div>
+                                                    </div>
                                             <li id="pr" class="hv">PRODUCTS</li>
                                                 <div class="prodcntnt">
                                                 <a href="Prods">Confirm New Products</a>
