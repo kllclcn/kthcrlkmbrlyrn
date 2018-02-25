@@ -14,9 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	<div class="mainbutton">
                       <ul>
   		<li><a href="http://localhost/buynsell/Users/usermain">ACCOUNT</a></li>
-                                            <li style="color: #000; background-color: #E5E8E8;">BUY</li>
+        <li><a href="http://localhost/buynsell/Users/buy" >BUY</a></li>
   		<li><a href="http://localhost/buynsell/Users/sell" >SELL</a></li>
-  		<li id="ad" class="hv"> TRANSACTIONS </li>
+  		<li id="ad" class="hv" style="color: #000; background-color: #E5E8E8;"> TRANSACTIONS </li>
 			<div class="admncntnt">
 			<a href="http://localhost/buynsell/Users/transact" >Confirm Transaction</a>
 			
@@ -31,9 +31,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <img id="picc" src="<?php echo base_url(); ?>images/woman.png">
         </div>
     <div class="contt"></div>
-    <div class="container" style="text-align: center;">
-        <img src="<?php echo base_url(); ?>images/buy.png" style="margin-top: 20px;"><br><br><br>
-             <label id="lbl"><b>Product Name:</b></label>
+     <div class="container" style="text-align: center;">
+			<br><br>
+			<h1> ITEM BOUGHT </h1>
+            <label id="lbl"><b>Product Name:</b></label>
 			<label id="lbl"><?php echo $prod_name; ?></label><br><br>
 			<label id="lbl"><b>Category:</b></label>
 			<label id="lbl"><?php echo $category; ?></label><br><br>
@@ -51,9 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label id="lbl"><?php echo $date_posted; ?></label><br><br>
 			<label id="lbl"><b>Status:</b></label>
 			<label id="lbl"><?php echo $status; ?></label><br><br>
+			<label id="lbl"><b>Seller ID:</b></label>
+			<label id="lbl"><?php echo $user_id; ?></label><br><br>
+			<label id="lbl"><b>Date Purchased:</b></label>
+			<label id="lbl"><?php echo $date_of_purchase; ?></label><br><br>
 			
-			<a  id="btb" href="http://localhost/buynsell/Users/Btrans/?id=<?php echo $id; ?>">Confirm Reservation?</a>
-			<button id="btb"><a href="http://localhost/buynsell/Users/Buy">Back to Buy</a></button><br><br/><br/>
+			
+			<button id="btb"><a href="http://localhost/buynsell/Users/tranbuy">Back to Buy History</a></button><br><br/><br/>
 		
 			
 			

@@ -331,7 +331,30 @@ Class OrgModel extends CI_Model {
             exit;
         }
     }
-
+	public function UpdateAdminDesc($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id)
+    {
+        try
+        {
+            $sql = "UPDATE admin_desc
+                SET name = ?,
+                Gender = ?,
+                address = ?,
+                contact = ?,
+                email = ?,
+				id_no = ?,
+				college = ?,
+				yearsec = ?
+				WHERE admin_id = ?
+                ";
+            $stmt = $this->pdo->query($sql,array($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id));
+            return $stmt;
+        } 
+        catch (Exception $ex) 
+        {
+            echo $ex;
+            exit;
+        }
+    }
     
 
 }

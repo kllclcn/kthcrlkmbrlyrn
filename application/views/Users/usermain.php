@@ -17,7 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   		<li style="color: #000; background-color: #E5E8E8;">ACCOUNT</li>
   		<li><a href="http://localhost/buynsell/Users/buy" >BUY</a></li>
   		<li><a href="http://localhost/buynsell/Users/sell" >SELL</a></li>
-  		<li><a href="http://localhost/buynsell/Users/transact" >TRANSACTIONS</a></li>
+		<li id="ad" class="hv"> TRANSACTIONS </li>
+			<div class="admncntnt">
+			<a href="http://localhost/buynsell/Users/transact" >Confirm Transaction</a>
+			
+			<a href="http://localhost/buynsell/Users/transell" > Sell History </a>
+			<a href="http://localhost/buynsell/Users/tranbuy" > Buy History </a>
+				
+			</div>
         <li><a href="/buynsell/Users/LogOut">LOG OUT</a></li>
 	</ul>
 	</div>
@@ -50,5 +57,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label id="lbl"><?php echo $college; ?></label><br><br>
              <label id="lbl">Year and Section:</label>
 			 <label id="lbl"><?php echo $yearsec; ?></label><br><br><br><br><br><br>
+			 
+			  <button id="btb"><a href="http://localhost/buynsell/Users/Edit">Edit Details</a></button><br><br/><br/>
 </body>
+
+<style>
+
+#btb{
+    background-color: #dc4343;
+    padding: 13px 22px 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font: 17px "Trebuchet MS", sans-serif;
+    margin-left: 300px;
+	margin-top: 10px;	
+    position:relative;
+    
+}
+
+.mainbutton li{
+	display: inline-block;
+	padding: 25px 25px 25px 25px;
+                       margin-right:40px;
+}
+
+.hv, .hv a{
+	text-decoration: none;
+	color: #000;
+}
+
+.mainbutton li:hover{
+	background-color: #dc4343;
+}
+
+.admncntnt{
+    font: 17px "Gill Sans MT",sans-serif;
+    display: none;
+    position: absolute;
+    right:150px;
+    background-color:#E5E8E8;
+    width: 140px;
+    z-index: 1;
+}
+
+.admncntnt a{
+    text-align: center;
+    display:none;
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+#ad:hover ~ .admncntnt, .admncntnt:hover{
+    display: block;
+}
+
+.admncntnt a:hover{
+    background-color: #f1f1f1;
+}
+
+
+</style>
 </html>

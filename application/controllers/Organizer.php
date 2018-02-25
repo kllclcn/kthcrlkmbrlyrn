@@ -299,7 +299,43 @@ class Organizer extends CI_Controller {
 	}
 	
 	
-    
+
+	public function Edit()
+	{
+		if(isset($_POST['next2']))
+        {   
+            extract($_POST);
+			$id=($_SESSION['id']);
+			$this->model->UpdateAdminDesc($fullname,$gender,$address,$mobnum,$email,$studno,$college,$yrsec,$id);
+			header('Location: http://localhost/buynsell/Organizer/admin');
+		}		
+		if(isset($_SESSION['log']))
+		{
+			$temp = $this->model->GetAdminInfoById($_SESSION['id']);
+	
+				$data['name'] = $temp['name'];
+				$data['Gender'] = $temp['Gender'];
+				$data['address'] = $temp['address'];
+				$data['contact'] = $temp['contact'];
+				$data['email'] = $temp['email'];
+				$data['id_no'] = $temp['id_no'];
+				$data['college'] = $temp['college'];
+				$data['yearsec'] = $temp['yearsec'];
+				
+				$this->load->view('Organizer/Edit',$data);
+			
+		}
+		else
+		{
+			header('Location: http://localhost/buynsell/admin/login');
+		}
+		
+	}
+	
+	public function DelProds()
+	{
+		$this->load->view('Organizer/DelProds');
+	}
 
 	public function LogOut()
 	{
